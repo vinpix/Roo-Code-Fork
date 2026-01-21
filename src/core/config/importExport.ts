@@ -6,10 +6,10 @@ import fs from "fs/promises"
 import * as vscode from "vscode"
 import { z, ZodError } from "zod"
 
-import { globalSettingsSchema } from "@roo-code/types"
+import { globalSettingsSchema, type GlobalSettings } from "@roo-code/types"
 import { TelemetryService } from "@roo-code/telemetry"
 
-import { ProviderSettingsManager, providerProfilesSchema } from "./ProviderSettingsManager"
+import { ProviderSettingsManager, providerProfilesSchema, type ProviderProfiles } from "./ProviderSettingsManager"
 import { ContextProxy } from "./ContextProxy"
 import { CustomModesManager } from "./CustomModesManager"
 import { t } from "../../i18n"
@@ -31,6 +31,11 @@ type ImportWithProviderOptions = ImportOptions & {
 	}
 }
 
+type ImportSchema = {
+	providerProfiles: ProviderProfiles
+	globalSettings?: GlobalSettings
+}
+
 /**
  * Imports configuration from a specific file path
  * Shares base functionality for import settings for both the manual
@@ -41,16 +46,17 @@ export async function importSettingsFromPath(
 	{ providerSettingsManager, contextProxy, customModesManager }: ImportOptions,
 ) {
 	const schema = z.object({
-		providerProfiles: providerProfilesSchema,
-		globalSettings: globalSettingsSchema.optional(),
+		providerProfiles: providerProfilesSchema as unknown as z.ZodTypeAny,
+		globalSettings: globalSettingsSchema.optional() as unknown as z.ZodTypeAny,
 	})
 
 	try {
 		const previousProviderProfiles = await providerSettingsManager.export()
 
-		const { providerProfiles: newProviderProfiles, globalSettings = {} } = schema.parse(
+		const { providerProfiles: newProviderProfiles, globalSettings } = schema.parse(
 			JSON.parse(await fs.readFile(filePath, "utf-8")),
-		)
+		) as ImportSchema
+		const resolvedGlobalSettings: GlobalSettings = globalSettings ?? {}
 
 		const providerProfiles = {
 			currentApiConfigName: newProviderProfiles.currentApiConfigName,
@@ -65,14 +71,16 @@ export async function importSettingsFromPath(
 		}
 
 		await Promise.all(
-			(globalSettings.customModes ?? []).map((mode) => customModesManager.updateCustomMode(mode.slug, mode)),
+			(resolvedGlobalSettings.customModes ?? []).map((mode) =>
+				customModesManager.updateCustomMode(mode.slug, mode),
+			),
 		)
 
 		// OpenAI Compatible settings are now correctly stored in codebaseIndexConfig
 		// They will be imported automatically with the config - no special handling needed
 
 		await providerSettingsManager.import(providerProfiles)
-		await contextProxy.setValues(globalSettings)
+		await contextProxy.setValues(resolvedGlobalSettings)
 
 		// Set the current provider.
 		const currentProviderName = providerProfiles.currentApiConfigName
@@ -88,7 +96,7 @@ export async function importSettingsFromPath(
 
 		contextProxy.setValue("listApiConfigMeta", await providerSettingsManager.listConfig())
 
-		return { providerProfiles, globalSettings, success: true }
+		return { providerProfiles, globalSettings: resolvedGlobalSettings, success: true }
 	} catch (e) {
 		let error = "Unknown error"
 

@@ -212,6 +212,39 @@ export class FileContextTracker {
 		return files
 	}
 
+	// Returns true if Roo has read the file after the most recent edit (user or Roo).
+	async wasFileReadAfterLastEdit(
+		filePath: string,
+		options?: {
+			requireToolRead?: boolean
+		},
+	): Promise<boolean> {
+		const metadata = await this.getTaskMetadata(this.taskId)
+		const entries = metadata.files_in_context.filter((entry) => entry.path === filePath)
+		const requireToolRead = options?.requireToolRead ?? false
+
+		if (entries.length === 0) {
+			return false
+		}
+
+		let latestRead = 0
+		let latestEdit = 0
+
+		for (const entry of entries) {
+			const canCountRead = !requireToolRead || entry.record_source === "read_tool"
+			if (canCountRead && entry.roo_read_date && entry.roo_read_date > latestRead) {
+				latestRead = entry.roo_read_date
+			}
+
+			const entryEditDate = Math.max(entry.roo_edit_date ?? 0, entry.user_edit_date ?? 0)
+			if (entryEditDate > latestEdit) {
+				latestEdit = entryEditDate
+			}
+		}
+
+		return latestRead > latestEdit
+	}
+
 	// Marks a file as edited by Roo to prevent false positives in file watchers
 	markFileAsEditedByRoo(filePath: string): void {
 		this.recentlyEditedByRoo.add(filePath)

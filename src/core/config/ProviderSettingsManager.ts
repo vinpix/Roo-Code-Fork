@@ -37,7 +37,7 @@ export interface SyncCloudProfilesResult {
 
 export const providerProfilesSchema = z.object({
 	currentApiConfigName: z.string(),
-	apiConfigs: z.record(z.string(), providerSettingsWithIdSchema),
+	apiConfigs: z.record(z.string(), providerSettingsWithIdSchema as unknown as z.ZodTypeAny),
 	modeApiConfigs: z.record(z.string(), z.string()).optional(),
 	cloudProfileIds: z.array(z.string()).optional(),
 	migrations: z

@@ -11,11 +11,11 @@ import {
 import { getRooCodeApiUrl } from "@roo-code/cloud"
 
 const modeMarketplaceResponse = z.object({
-	items: z.array(modeMarketplaceItemSchema),
+	items: z.array(modeMarketplaceItemSchema as unknown as z.ZodTypeAny),
 })
 
 const mcpMarketplaceResponse = z.object({
-	items: z.array(mcpMarketplaceItemSchema),
+	items: z.array(mcpMarketplaceItemSchema as unknown as z.ZodTypeAny),
 })
 
 export class RemoteConfigLoader {

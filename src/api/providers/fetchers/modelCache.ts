@@ -33,7 +33,7 @@ import { getChutesModels } from "./chutes"
 const memoryCache = new NodeCache({ stdTTL: 5 * 60, checkperiod: 5 * 60 })
 
 // Zod schema for validating ModelRecord structure from disk cache
-const modelRecordSchema = z.record(z.string(), modelInfoSchema)
+const modelRecordSchema = z.record(z.string(), modelInfoSchema as unknown as z.ZodTypeAny)
 
 // Track in-flight refresh requests to prevent concurrent API calls for the same provider
 // This prevents race conditions where multiple calls might overwrite each other's results

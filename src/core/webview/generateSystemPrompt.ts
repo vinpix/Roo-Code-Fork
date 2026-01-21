@@ -34,10 +34,11 @@ export const generateSystemPrompt = async (provider: ClineProvider, message: Web
 		experiments ?? {},
 		EXPERIMENT_IDS.MULTI_FILE_APPLY_DIFF,
 	)
+	const isLineNumberDiffEnabled = experimentsModule.isEnabled(experiments ?? {}, EXPERIMENT_IDS.LINE_NUMBER_DIFF)
 
 	const diffStrategy = isMultiFileApplyDiffEnabled
-		? new MultiFileSearchReplaceDiffStrategy(fuzzyMatchThreshold)
-		: new MultiSearchReplaceDiffStrategy(fuzzyMatchThreshold)
+		? new MultiFileSearchReplaceDiffStrategy(fuzzyMatchThreshold, undefined, isLineNumberDiffEnabled)
+		: new MultiSearchReplaceDiffStrategy(fuzzyMatchThreshold, undefined, isLineNumberDiffEnabled)
 
 	const cwd = provider.cwd
 

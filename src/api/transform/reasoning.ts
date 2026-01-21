@@ -1,6 +1,5 @@
 import { BetaThinkingConfigParam } from "@anthropic-ai/sdk/resources/beta"
 import OpenAI from "openai"
-import type { GenerateContentConfig } from "@google/genai"
 
 import type { ModelInfo, ProviderSettings, ReasoningEffortExtended } from "@roo-code/types"
 
@@ -30,7 +29,9 @@ export function isGeminiThinkingLevel(value: unknown): value is GeminiThinkingLe
 	return typeof value === "string" && GEMINI_THINKING_LEVELS.includes(value as GeminiThinkingLevel)
 }
 
-export type GeminiReasoningParams = GenerateContentConfig["thinkingConfig"] & {
+export type GeminiReasoningParams = {
+	includeThoughts?: boolean
+	thinkingBudget?: number
 	thinkingLevel?: GeminiThinkingLevel
 }
 

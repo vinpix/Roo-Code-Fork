@@ -568,9 +568,23 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 					state.experiments ?? {},
 					EXPERIMENT_IDS.MULTI_FILE_APPLY_DIFF,
 				)
+				const isLineNumberDiffEnabled = experiments.isEnabled(
+					state.experiments ?? {},
+					EXPERIMENT_IDS.LINE_NUMBER_DIFF,
+				)
 
 				if (isMultiFileApplyDiffEnabled) {
-					this.diffStrategy = new MultiFileSearchReplaceDiffStrategy(this.fuzzyMatchThreshold)
+					this.diffStrategy = new MultiFileSearchReplaceDiffStrategy(
+						this.fuzzyMatchThreshold,
+						undefined,
+						isLineNumberDiffEnabled,
+					)
+				} else if (isLineNumberDiffEnabled) {
+					this.diffStrategy = new MultiSearchReplaceDiffStrategy(
+						this.fuzzyMatchThreshold,
+						undefined,
+						isLineNumberDiffEnabled,
+					)
 				}
 			})
 		}

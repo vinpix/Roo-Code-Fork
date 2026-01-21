@@ -204,6 +204,26 @@ function helloWorld() {
 				}
 			})
 
+			it("should replace by line number when line-number mode is enabled", async () => {
+				const lineNumberStrategy = new MultiSearchReplaceDiffStrategy(1.0, 5, true)
+				const originalContent = "first\nsecond\nthird\n"
+				const diffContent = `test.ts
+<<<<<<< SEARCH
+:start_line:2
+-------
+:end_line:2
+-------
+=======
+second updated
+>>>>>>> REPLACE`
+
+				const result = await lineNumberStrategy.applyDiff(originalContent, diffContent)
+				expect(result.success).toBe(true)
+				if (result.success) {
+					expect(result.content).toBe("first\nsecond updated\nthird\n")
+				}
+			})
+
 			it("should replace matching content when end_line is passed in", async () => {
 				const originalContent = 'function hello() {\n    console.log("hello")\n}\n'
 				const diffContent = `test.ts

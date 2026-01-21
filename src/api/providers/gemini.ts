@@ -6,6 +6,7 @@ import {
 	type GenerateContentConfig,
 	type GroundingMetadata,
 	FunctionCallingConfigMode,
+	ThinkingLevel,
 } from "@google/genai"
 import type { JWTInput } from "google-auth-library"
 
@@ -25,12 +26,34 @@ import { convertAnthropicMessageToGemini } from "../transform/gemini-format"
 import { t } from "i18next"
 import type { ApiStream, GroundingSource } from "../transform/stream"
 import { getModelParams } from "../transform/model-params"
+import type { GeminiReasoningParams, GeminiThinkingLevel } from "../transform/reasoning"
 
 import type { SingleCompletionHandler, ApiHandlerCreateMessageMetadata } from "../index"
 import { BaseProvider } from "./base-provider"
 
 type GeminiHandlerOptions = ApiHandlerOptions & {
 	isVertex?: boolean
+}
+
+const GEMINI_THINKING_LEVEL_MAP: Record<GeminiThinkingLevel, ThinkingLevel> = {
+	// "minimal" is not a native enum value, so map it to the lowest supported level.
+	minimal: ThinkingLevel.LOW,
+	low: ThinkingLevel.LOW,
+	medium: ThinkingLevel.MEDIUM,
+	high: ThinkingLevel.HIGH,
+}
+
+const toGeminiThinkingConfig = (
+	reasoning: GeminiReasoningParams | undefined,
+): GenerateContentConfig["thinkingConfig"] | undefined => {
+	if (!reasoning) return undefined
+	const { includeThoughts, thinkingBudget, thinkingLevel } = reasoning
+
+	return {
+		...(includeThoughts !== undefined ? { includeThoughts } : {}),
+		...(thinkingBudget !== undefined ? { thinkingBudget } : {}),
+		...(thinkingLevel ? { thinkingLevel: GEMINI_THINKING_LEVEL_MAP[thinkingLevel] } : {}),
+	}
 }
 
 export class GeminiHandler extends BaseProvider implements SingleCompletionHandler {
@@ -76,7 +99,8 @@ export class GeminiHandler extends BaseProvider implements SingleCompletionHandl
 		messages: Anthropic.Messages.MessageParam[],
 		metadata?: ApiHandlerCreateMessageMetadata,
 	): ApiStream {
-		const { id: model, info, reasoning: thinkingConfig, maxTokens } = this.getModel()
+		const { id: model, info, reasoning, maxTokens } = this.getModel()
+		const thinkingConfig = toGeminiThinkingConfig(reasoning)
 		// Reset per-request metadata that we persist into apiConversationHistory.
 		this.lastThoughtSignature = undefined
 		this.lastResponseId = undefined

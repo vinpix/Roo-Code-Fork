@@ -77,20 +77,26 @@ function fuzzySearch(lines: string[], searchChunk: string, startIndex: number, e
 export class MultiSearchReplaceDiffStrategy implements DiffStrategy {
 	private fuzzyThreshold: number
 	private bufferLines: number
+	private lineNumberMode: boolean
 
 	getName(): string {
 		return "MultiSearchReplace"
 	}
 
-	constructor(fuzzyThreshold?: number, bufferLines?: number) {
+	constructor(fuzzyThreshold?: number, bufferLines?: number, lineNumberMode?: boolean) {
 		// Use provided threshold or default to exact matching (1.0)
 		// Note: fuzzyThreshold is inverted in UI (0% = 1.0, 10% = 0.9)
 		// so we use it directly here
 		this.fuzzyThreshold = fuzzyThreshold ?? 1.0
 		this.bufferLines = bufferLines ?? BUFFER_LINES
+		this.lineNumberMode = lineNumberMode ?? false
 	}
 
 	getToolDescription(args: { cwd: string; toolOptions?: { [key: string]: string } }): string {
+		const lineNumberNote = this.lineNumberMode
+			? "\nLine-number mode is enabled: diffs are applied by line number ranges only. Always read the file before each edit to keep line numbers accurate. Provide :start_line: and :end_line:, and leave the SEARCH content empty.\n"
+			: ""
+
 		return `## apply_diff
 Description: Request to apply PRECISE, TARGETED modifications to an existing file by searching for specific sections of content and replacing them. This tool is for SURGICAL EDITS ONLY - specific changes to existing code.
 You can perform multiple distinct search and replace operations within a single \`apply_diff\` call by providing multiple SEARCH/REPLACE blocks in the \`diff\` parameter. This is the preferred way to make several targeted changes efficiently.
@@ -98,6 +104,7 @@ The SEARCH section must exactly match existing content including whitespace and 
 If you're not confident in the exact content to search for, use the read_file tool first to get the exact content.
 When applying the diffs, be extra careful to remember to change any closing brackets or other syntax that may be affected by the diff farther down in the file.
 ALWAYS make as many changes in a single 'apply_diff' request as possible using multiple SEARCH/REPLACE blocks
+${lineNumberNote}
 
 Parameters:
 - path: (required) The path of the file to modify (relative to the current workspace directory ${args.cwd})
@@ -398,6 +405,7 @@ Only use a single line of '=======' between search and replacement content, beca
 		const replacements = matches
 			.map((match) => ({
 				startLine: Number(match[2] ?? 0),
+				endLine: Number(match[4] ?? 0),
 				searchContent: match[6],
 				replaceContent: match[7],
 			}))
@@ -426,7 +434,7 @@ Only use a single line of '=======' between search and replacement content, beca
 			}
 
 			// Validate that search and replace content are not identical
-			if (searchContent === replaceContent) {
+			if (!this.lineNumberMode && searchContent === replaceContent) {
 				diffResults.push({
 					success: false,
 					error:
@@ -442,8 +450,8 @@ Only use a single line of '=======' between search and replacement content, beca
 			let searchLines = searchContent === "" ? [] : searchContent.split(/\r?\n/)
 			let replaceLines = replaceContent === "" ? [] : replaceContent.split(/\r?\n/)
 
-			// Validate that search content is not empty
-			if (searchLines.length === 0) {
+			// Validate that search content is not empty for text-matching mode
+			if (!this.lineNumberMode && searchLines.length === 0) {
 				diffResults.push({
 					success: false,
 					error: `Empty search content is not allowed\n\nDebug Info:\n- Search content cannot be empty\n- For insertions, provide a specific line using :start_line: and include content to search for\n- For example, match a single line to insert before/after it`,
@@ -452,6 +460,107 @@ Only use a single line of '=======' between search and replacement content, beca
 			}
 
 			let endLine = replacement.startLine + searchLines.length - 1
+
+			if (this.lineNumberMode) {
+				if (!replacement.startLine) {
+					diffResults.push({
+						success: false,
+						error:
+							`Line-number mode requires :start_line: and :end_line: for every SEARCH block\n\n` +
+							`Debug Info:\n- Missing :start_line:\n- Tip: Use read_file to get the latest content and accurate line numbers before editing`,
+					})
+					continue
+				}
+
+				if (!replacement.endLine) {
+					diffResults.push({
+						success: false,
+						error:
+							`Line-number mode requires :end_line: to be provided for every SEARCH block\n\n` +
+							`Debug Info:\n- Missing :end_line:\n- Tip: Use read_file to get the latest content and accurate line numbers before editing`,
+					})
+					continue
+				}
+
+				if (replacement.endLine < replacement.startLine) {
+					diffResults.push({
+						success: false,
+						error: `Invalid line range: :end_line: (${replacement.endLine}) cannot be less than :start_line: (${replacement.startLine})`,
+					})
+					continue
+				}
+
+				const rangeLength = replacement.endLine - replacement.startLine + 1
+
+				if (rangeLength <= 0) {
+					diffResults.push({
+						success: false,
+						error: `Invalid line range: no lines selected for replacement`,
+					})
+					continue
+				}
+
+				const effectiveStartLine = replacement.startLine + delta
+				const startIndex = effectiveStartLine - 1
+				const endIndex = startIndex + rangeLength
+
+				if (effectiveStartLine < 1 || startIndex < 0 || endIndex > resultLines.length) {
+					diffResults.push({
+						success: false,
+						error:
+							`Line range out of bounds (start ${effectiveStartLine}, length ${rangeLength}). ` +
+							`File has ${resultLines.length} lines.`,
+					})
+					continue
+				}
+
+				const matchedLines = resultLines.slice(startIndex, endIndex)
+				searchLines = matchedLines
+
+				// Get the exact indentation (preserving tabs/spaces) of each line
+				const originalIndents = matchedLines.map((line) => {
+					const match = line.match(/^[\t ]*/)
+					return match ? match[0] : ""
+				})
+
+				// Get the exact indentation of each line in the search block
+				const searchIndents = searchLines.map((line) => {
+					const match = line.match(/^[\t ]*/)
+					return match ? match[0] : ""
+				})
+
+				// Apply the replacement while preserving exact indentation
+				const indentedReplaceLines = replaceLines.map((line) => {
+					// Get the matched line's exact indentation
+					const matchedIndent = originalIndents[0] || ""
+
+					// Get the current line's indentation relative to the search content
+					const currentIndentMatch = line.match(/^[\t ]*/)
+					const currentIndent = currentIndentMatch ? currentIndentMatch[0] : ""
+					const searchBaseIndent = searchIndents[0] || ""
+
+					// Calculate the relative indentation level
+					const searchBaseLevel = searchBaseIndent.length
+					const currentLevel = currentIndent.length
+					const relativeLevel = currentLevel - searchBaseLevel
+
+					// If relative level is negative, remove indentation from matched indent
+					// If positive, add to matched indent
+					const finalIndent =
+						relativeLevel < 0
+							? matchedIndent.slice(0, Math.max(0, matchedIndent.length + relativeLevel))
+							: matchedIndent + currentIndent.slice(searchBaseLevel)
+
+					return finalIndent + line.trim()
+				})
+
+				const beforeMatch = resultLines.slice(0, startIndex)
+				const afterMatch = resultLines.slice(endIndex)
+				resultLines = [...beforeMatch, ...indentedReplaceLines, ...afterMatch]
+				delta = delta - matchedLines.length + replaceLines.length
+				appliedCount++
+				continue
+			}
 
 			// Initialize search variables
 			let matchIndex = -1

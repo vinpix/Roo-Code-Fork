@@ -23,11 +23,21 @@ describe("experiments", () => {
 		})
 	})
 
+	describe("LINE_NUMBER_DIFF", () => {
+		it("is configured correctly", () => {
+			expect(EXPERIMENT_IDS.LINE_NUMBER_DIFF).toBe("lineNumberDiff")
+			expect(experimentConfigsMap.LINE_NUMBER_DIFF).toMatchObject({
+				enabled: false,
+			})
+		})
+	})
+
 	describe("isEnabled", () => {
 		it("returns false when POWER_STEERING experiment is not enabled", () => {
 			const experiments: Record<ExperimentId, boolean> = {
 				powerSteering: false,
 				multiFileApplyDiff: false,
+				lineNumberDiff: false,
 				preventFocusDisruption: false,
 				imageGeneration: false,
 				runSlashCommand: false,
@@ -41,6 +51,7 @@ describe("experiments", () => {
 			const experiments: Record<ExperimentId, boolean> = {
 				powerSteering: true,
 				multiFileApplyDiff: false,
+				lineNumberDiff: false,
 				preventFocusDisruption: false,
 				imageGeneration: false,
 				runSlashCommand: false,
@@ -54,6 +65,7 @@ describe("experiments", () => {
 			const experiments: Record<ExperimentId, boolean> = {
 				powerSteering: false,
 				multiFileApplyDiff: false,
+				lineNumberDiff: false,
 				preventFocusDisruption: false,
 				imageGeneration: false,
 				runSlashCommand: false,
