@@ -70,30 +70,6 @@ export class ApplyDiffTool extends BaseTool<"apply_diff"> {
 
 			const provider = task.providerRef.deref()
 			const state = await provider?.getState()
-			const isLineNumberDiffEnabled = experiments.isEnabled(
-				state?.experiments ?? {},
-				EXPERIMENT_IDS.LINE_NUMBER_DIFF,
-			)
-
-			if (isLineNumberDiffEnabled) {
-				const hasFreshRead = await task.fileContextTracker.wasFileReadAfterLastEdit(relPath, {
-					requireToolRead: true,
-				})
-				if (!hasFreshRead) {
-					task.consecutiveMistakeCount++
-					task.recordToolError("apply_diff")
-					const formattedError =
-						`Line-number diff mode requires a fresh read before each edit.\n\n` +
-						`<error_details>\n` +
-						`Use the read_file tool to read ${relPath} again, then retry the edit.\n` +
-						`</error_details>`
-					await task.say("error", formattedError)
-					task.didToolFailInCurrentTurn = true
-					pushToolResult(formattedError)
-					return
-				}
-			}
-
 			const originalContent: string = await fs.readFile(absolutePath, "utf-8")
 
 			// Apply the diff to the original content

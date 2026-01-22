@@ -94,7 +94,7 @@ export class MultiSearchReplaceDiffStrategy implements DiffStrategy {
 
 	getToolDescription(args: { cwd: string; toolOptions?: { [key: string]: string } }): string {
 		const lineNumberNote = this.lineNumberMode
-			? "\nLine-number mode is enabled: diffs are applied by line number ranges only. Always read the file before each edit to keep line numbers accurate. Provide :start_line: and :end_line:, and leave the SEARCH content empty.\n"
+			? "\nLine-number mode is enabled: diffs are applied by line number ranges only. Provide :start_line: and :end_line:, and leave the SEARCH content empty. Use read_file only if you need updated line numbers.\n"
 			: ""
 
 		return `## apply_diff
