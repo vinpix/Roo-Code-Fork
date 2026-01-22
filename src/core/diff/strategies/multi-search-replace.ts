@@ -94,7 +94,42 @@ export class MultiSearchReplaceDiffStrategy implements DiffStrategy {
 
 	getToolDescription(args: { cwd: string; toolOptions?: { [key: string]: string } }): string {
 		const lineNumberNote = this.lineNumberMode
-			? "\nLine-number mode is enabled: diffs are applied by line number ranges only. Provide :start_line: and :end_line:, and leave the SEARCH content empty. Use read_file only if you need updated line numbers.\n"
+			? `
+Line-number mode is enabled: diffs are applied by line number ranges only. Provide :start_line: and :end_line: in every SEARCH block, and leave the SEARCH content empty (no text between "-------" and "======="). Use read_file only if you need updated line numbers.
+
+Line-number mode format:
+\`\`\`
+<<<<<<< SEARCH
+:start_line:10
+:end_line:12
+-------
+=======
+[new content for lines 10-12]
+>>>>>>> REPLACE
+\`\`\`
+
+Line-number mode delete example (remove lines 10-12):
+\`\`\`
+<<<<<<< SEARCH
+:start_line:10
+:end_line:12
+-------
+=======
+>>>>>>> REPLACE
+\`\`\`
+
+Line-number mode insert example (insert above line 10 by keeping the original line):
+\`\`\`
+<<<<<<< SEARCH
+:start_line:10
+:end_line:10
+-------
+=======
+[new line to insert]
+[original line 10]
+>>>>>>> REPLACE
+\`\`\`
+`
 			: ""
 
 		return `## apply_diff
