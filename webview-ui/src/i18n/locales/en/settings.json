@@ -879,6 +879,10 @@
 			"refreshSuccess": "Tools refreshed successfully",
 			"refreshError": "Failed to refresh tools",
 			"toolParameters": "Parameters"
+		},
+		"DISABLE_OTHER_MODE_AWARENESS": {
+			"name": "Disable other mode awareness",
+			"description": "When enabled, Roo will not include information about other modes and will not be able to switch modes. This reduces context usage and keeps the model focused on the current mode."
 		}
 	},
 	"promptCaching": {

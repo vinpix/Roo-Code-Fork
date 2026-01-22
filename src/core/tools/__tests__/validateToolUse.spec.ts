@@ -166,6 +166,15 @@ describe("mode-validator", () => {
 		})
 	})
 
+	describe("disableOtherModeAwareness experiment", () => {
+		it("disallows switch_mode and new_task when enabled", () => {
+			const experiments = { disableOtherModeAwareness: true }
+
+			expect(isToolAllowedForMode("switch_mode", codeMode, [], undefined, undefined, experiments)).toBe(false)
+			expect(isToolAllowedForMode("new_task", codeMode, [], undefined, undefined, experiments)).toBe(false)
+		})
+	})
+
 	describe("validateToolUse", () => {
 		it("throws error for unknown/invalid tools", () => {
 			// Unknown tools should throw with a specific "Unknown tool" error
@@ -199,6 +208,18 @@ describe("mode-validator", () => {
 
 		it("handles undefined requirements gracefully", () => {
 			expect(() => validateToolUse("apply_diff", codeMode, [], undefined)).not.toThrow()
+		})
+
+		it("throws error for switch_mode when other mode awareness is disabled", () => {
+			expect(() =>
+				validateToolUse("switch_mode", codeMode, [], undefined, undefined, { disableOtherModeAwareness: true }),
+			).toThrow('Tool "switch_mode" is not allowed in code mode.')
+		})
+
+		it("throws error for new_task when other mode awareness is disabled", () => {
+			expect(() =>
+				validateToolUse("new_task", codeMode, [], undefined, undefined, { disableOtherModeAwareness: true }),
+			).toThrow('Tool "new_task" is not allowed in code mode.')
 		})
 	})
 })

@@ -8,9 +8,14 @@ import { ensureSettingsDirectoryExists } from "../../../utils/globalContext"
 export async function getModesSection(
 	context: vscode.ExtensionContext,
 	skipXmlExamples: boolean = false,
+	disableOtherModeAwareness: boolean = false,
 ): Promise<string> {
 	// Make sure path gets created
 	await ensureSettingsDirectoryExists(context)
+
+	if (disableOtherModeAwareness) {
+		return ""
+	}
 
 	// Get all modes with their overrides from extension state
 	const allModes = await getAllModesWithPrompts(context)

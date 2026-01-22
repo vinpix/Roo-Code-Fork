@@ -871,6 +871,10 @@
 			"refreshSuccess": "Làm mới công cụ thành công",
 			"refreshError": "Không thể làm mới công cụ",
 			"toolParameters": "Thông số"
+		},
+		"DISABLE_OTHER_MODE_AWARENESS": {
+			"name": "Tắt nhận biết các mode khác",
+			"description": "Khi được bật, Roo sẽ không đưa thông tin về các mode khác và sẽ không thể chuyển mode. Điều này giảm dùng context và giúp mô hình tập trung vào mode hiện tại."
 		}
 	},
 	"promptCaching": {

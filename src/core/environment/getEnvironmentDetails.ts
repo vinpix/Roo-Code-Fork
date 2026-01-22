@@ -10,7 +10,7 @@ import { DEFAULT_TERMINAL_OUTPUT_CHARACTER_LIMIT } from "@roo-code/types"
 
 import { EXPERIMENT_IDS, experiments as Experiments } from "../../shared/experiments"
 import { formatLanguage } from "../../shared/language"
-import { defaultModeSlug, getFullModeDetails } from "../../shared/modes"
+import { defaultModeSlug, getFullModeDetails, stripOtherModeAwareness } from "../../shared/modes"
 import { getApiMetrics } from "../../shared/getApiMetrics"
 import { listFiles } from "../../services/glob/list-files"
 import { TerminalRegistry } from "../../integrations/terminal/TerminalRegistry"
@@ -234,21 +234,32 @@ export async function getEnvironmentDetails(cline: Task, includeFileDetails: boo
 		globalCustomInstructions,
 		language: language ?? formatLanguage(vscode.env.language),
 	})
+	const disableOtherModeAwareness = Experiments.isEnabled(
+		experiments ?? {},
+		EXPERIMENT_IDS.DISABLE_OTHER_MODE_AWARENESS,
+	)
+	const effectiveModeDetails = disableOtherModeAwareness
+		? {
+				...modeDetails,
+				roleDefinition: stripOtherModeAwareness(modeDetails.roleDefinition),
+				customInstructions: stripOtherModeAwareness(modeDetails.customInstructions ?? ""),
+			}
+		: modeDetails
 
 	// Tool calling is native-only.
 	const toolFormat = "native"
 
 	details += `\n\n# Current Mode\n`
 	details += `<slug>${currentMode}</slug>\n`
-	details += `<name>${modeDetails.name}</name>\n`
+	details += `<name>${effectiveModeDetails.name}</name>\n`
 	details += `<model>${modelId}</model>\n`
 	details += `<tool_format>${toolFormat}</tool_format>\n`
 
 	if (Experiments.isEnabled(experiments ?? {}, EXPERIMENT_IDS.POWER_STEERING)) {
-		details += `<role>${modeDetails.roleDefinition}</role>\n`
+		details += `<role>${effectiveModeDetails.roleDefinition}</role>\n`
 
-		if (modeDetails.customInstructions) {
-			details += `<custom_instructions>${modeDetails.customInstructions}</custom_instructions>\n`
+		if (effectiveModeDetails.customInstructions) {
+			details += `<custom_instructions>${effectiveModeDetails.customInstructions}</custom_instructions>\n`
 		}
 	}
 

@@ -131,6 +131,35 @@ export function getModeSelection(mode: string, promptComponent?: PromptComponent
 	}
 }
 
+const MODE_AWARENESS_LINE_PATTERN = /\b(switch_mode|new_task)\b/i
+
+const MODE_AWARENESS_PHRASE_PATTERNS = [
+	/,?\s*before they switch (?:into|to) another mode[^.]*\.?/gi,
+	/,?\s*before you switch (?:into|to) another mode[^.]*\.?/gi,
+	/,?\s*before switching to another mode[^.]*\.?/gi,
+]
+
+export function stripOtherModeAwareness(text: string): string {
+	if (!text) {
+		return text
+	}
+
+	const filteredLines = text.split(/\r?\n/).filter((line) => !MODE_AWARENESS_LINE_PATTERN.test(line))
+
+	let result = filteredLines.join("\n")
+
+	for (const pattern of MODE_AWARENESS_PHRASE_PATTERNS) {
+		result = result.replace(pattern, ".")
+	}
+
+	result = result
+		.replace(/\s+\./g, ".")
+		.replace(/\.\s*\./g, ".")
+		.replace(/\n{3,}/g, "\n\n")
+
+	return result.trim()
+}
+
 // Custom error class for file restrictions
 export class FileRestrictionError extends Error {
 	constructor(mode: string, pattern: string, description: string | undefined, filePath: string, tool?: string) {

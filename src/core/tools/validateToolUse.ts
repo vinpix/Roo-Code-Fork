@@ -87,6 +87,10 @@ export function isToolAllowedForMode(
 	experiments?: Record<string, boolean>,
 	includedTools?: string[], // Opt-in tools explicitly included (e.g., from modelInfo)
 ): boolean {
+	if (experiments?.disableOtherModeAwareness && (tool === "switch_mode" || tool === "new_task")) {
+		return false
+	}
+
 	// Always allow these tools
 	if (ALWAYS_AVAILABLE_TOOLS.includes(tool as any)) {
 		return true

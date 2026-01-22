@@ -3,10 +3,19 @@ import * as os from "os"
 
 import { type ModeConfig, type PromptComponent, type CustomModePrompts, type TodoItem } from "@roo-code/types"
 
-import { Mode, modes, defaultModeSlug, getModeBySlug, getGroupName, getModeSelection } from "../../shared/modes"
+import {
+	Mode,
+	modes,
+	defaultModeSlug,
+	getModeBySlug,
+	getGroupName,
+	getModeSelection,
+	stripOtherModeAwareness,
+} from "../../shared/modes"
 import { DiffStrategy } from "../../shared/tools"
 import { formatLanguage } from "../../shared/language"
 import { isEmpty } from "../../utils/object"
+import { experiments as experimentsModule, EXPERIMENT_IDS } from "../../shared/experiments"
 
 import { McpHub } from "../../services/mcp/McpHub"
 import { CodeIndexManager } from "../../services/code-index/manager"
@@ -71,9 +80,18 @@ async function generatePrompt(
 	// If diff is disabled, don't pass the diffStrategy
 	const effectiveDiffStrategy = diffEnabled ? diffStrategy : undefined
 
+	const disableOtherModeAwareness = experimentsModule.isEnabled(
+		experiments ?? {},
+		EXPERIMENT_IDS.DISABLE_OTHER_MODE_AWARENESS,
+	)
+
 	// Get the full mode config to ensure we have the role definition (used for groups, etc.)
 	const modeConfig = getModeBySlug(mode, customModeConfigs) || modes.find((m) => m.slug === mode) || modes[0]
 	const { roleDefinition, baseInstructions } = getModeSelection(mode, promptComponent, customModeConfigs)
+	const effectiveRoleDefinition = disableOtherModeAwareness ? stripOtherModeAwareness(roleDefinition) : roleDefinition
+	const effectiveBaseInstructions = disableOtherModeAwareness
+		? stripOtherModeAwareness(baseInstructions)
+		: baseInstructions
 
 	// Check if MCP functionality should be included
 	const hasMcpGroup = modeConfig.groups.some((groupEntry) => getGroupName(groupEntry) === "mcp")
@@ -86,7 +104,7 @@ async function generatePrompt(
 	const effectiveProtocol = "native"
 
 	const [modesSection, mcpServersSection, skillsSection] = await Promise.all([
-		getModesSection(context),
+		getModesSection(context, false, disableOtherModeAwareness),
 		shouldIncludeMcp
 			? getMcpServersSection(mcpHub, effectiveDiffStrategy, enableMcpServerCreation, false)
 			: Promise.resolve(""),
@@ -96,7 +114,22 @@ async function generatePrompt(
 	// Tools catalog is not included in the system prompt in native-only mode.
 	const toolsCatalog = ""
 
-	const basePrompt = `${roleDefinition}
+	const customInstructions = await addCustomInstructions(
+		effectiveBaseInstructions,
+		globalCustomInstructions || "",
+		cwd,
+		mode,
+		{
+			language: language ?? formatLanguage(vscode.env.language),
+			rooIgnoreInstructions,
+			settings,
+		},
+	)
+	const effectiveCustomInstructions = disableOtherModeAwareness
+		? stripOtherModeAwareness(customInstructions)
+		: customInstructions
+
+	const basePrompt = `${effectiveRoleDefinition}
 
 ${markdownFormattingSection()}
 
@@ -110,17 +143,13 @@ ${getCapabilitiesSection(cwd, shouldIncludeMcp ? mcpHub : undefined)}
 
 ${modesSection}
 ${skillsSection ? `\n${skillsSection}` : ""}
-${getRulesSection(cwd, settings)}
+${getRulesSection(cwd, settings, disableOtherModeAwareness)}
 
 ${getSystemInfoSection(cwd)}
 
 ${getObjectiveSection()}
 
-${await addCustomInstructions(baseInstructions, globalCustomInstructions || "", cwd, mode, {
-	language: language ?? formatLanguage(vscode.env.language),
-	rooIgnoreInstructions,
-	settings,
-})}`
+${effectiveCustomInstructions}`
 
 	return basePrompt
 }
@@ -166,6 +195,10 @@ export const SYSTEM_PROMPT = async (
 
 	// Get full mode config from custom modes or fall back to built-in modes
 	const currentMode = getModeBySlug(mode, customModes) || modes.find((m) => m.slug === mode) || modes[0]
+	const disableOtherModeAwareness = experimentsModule.isEnabled(
+		experiments ?? {},
+		EXPERIMENT_IDS.DISABLE_OTHER_MODE_AWARENESS,
+	)
 
 	// If a file-based custom system prompt exists, use it
 	if (fileCustomSystemPrompt) {
@@ -174,9 +207,15 @@ export const SYSTEM_PROMPT = async (
 			promptComponent,
 			customModes,
 		)
+		const effectiveRoleDefinition = disableOtherModeAwareness
+			? stripOtherModeAwareness(roleDefinition)
+			: roleDefinition
+		const effectiveBaseInstructions = disableOtherModeAwareness
+			? stripOtherModeAwareness(baseInstructionsForFile)
+			: baseInstructionsForFile
 
 		const customInstructions = await addCustomInstructions(
-			baseInstructionsForFile,
+			effectiveBaseInstructions,
 			globalCustomInstructions || "",
 			cwd,
 			mode,
@@ -186,13 +225,16 @@ export const SYSTEM_PROMPT = async (
 				settings,
 			},
 		)
+		const effectiveCustomInstructions = disableOtherModeAwareness
+			? stripOtherModeAwareness(customInstructions)
+			: customInstructions
 
 		// For file-based prompts, don't include the tool sections
-		return `${roleDefinition}
+		return `${effectiveRoleDefinition}
 
 ${fileCustomSystemPrompt}
 
-${customInstructions}`
+${effectiveCustomInstructions}`
 	}
 
 	// If diff is disabled, don't pass the diffStrategy
