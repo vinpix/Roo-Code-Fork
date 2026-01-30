@@ -883,6 +883,10 @@
 		"DISABLE_OTHER_MODE_AWARENESS": {
 			"name": "Disable other mode awareness",
 			"description": "When enabled, Roo will not include information about other modes and will not be able to switch modes. This reduces context usage and keeps the model focused on the current mode."
+		},
+		"AGGREGATED_FILE_CONTEXT": {
+			"name": "Aggregate file context in environment details",
+			"description": "When enabled, read_file outputs are consolidated into a single \"Current File Context\" block in environment details and trimmed from history to reduce token usage."
 		}
 	},
 	"promptCaching": {

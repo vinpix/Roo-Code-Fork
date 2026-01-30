@@ -225,6 +225,7 @@ export class ApplyDiffTool extends BaseTool<"apply_diff"> {
 			// Track file edit operation
 			if (relPath) {
 				await task.fileContextTracker.trackFileContext(relPath, "roo_edited" as RecordSource)
+				task.updateFileRegistry?.(relPath, `File: ${relPath}\n${diffResult.content}`)
 			}
 
 			// Used to determine if we should wait for busy terminal to update before sending api request

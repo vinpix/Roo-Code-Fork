@@ -16,6 +16,7 @@ export const experimentIds = [
 	"multipleNativeToolCalls",
 	"customTools",
 	"disableOtherModeAwareness",
+	"aggregatedFileContext",
 ] as const
 
 export const experimentIdsSchema = z.enum(experimentIds)
@@ -36,6 +37,7 @@ export const experimentsSchema = z.object({
 	multipleNativeToolCalls: z.boolean().optional(),
 	customTools: z.boolean().optional(),
 	disableOtherModeAwareness: z.boolean().optional(),
+	aggregatedFileContext: z.boolean().optional(),
 })
 
 export type Experiments = z.infer<typeof experimentsSchema>

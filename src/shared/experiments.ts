@@ -10,6 +10,7 @@ export const EXPERIMENT_IDS = {
 	MULTIPLE_NATIVE_TOOL_CALLS: "multipleNativeToolCalls",
 	CUSTOM_TOOLS: "customTools",
 	DISABLE_OTHER_MODE_AWARENESS: "disableOtherModeAwareness",
+	AGGREGATED_FILE_CONTEXT: "aggregatedFileContext",
 } as const satisfies Record<string, ExperimentId>
 
 type _AssertExperimentIds = AssertEqual<Equals<ExperimentId, Values<typeof EXPERIMENT_IDS>>>
@@ -30,6 +31,7 @@ export const experimentConfigsMap: Record<ExperimentKey, ExperimentConfig> = {
 	MULTIPLE_NATIVE_TOOL_CALLS: { enabled: false },
 	CUSTOM_TOOLS: { enabled: false },
 	DISABLE_OTHER_MODE_AWARENESS: { enabled: false },
+	AGGREGATED_FILE_CONTEXT: { enabled: false },
 }
 
 export const experimentDefault = Object.fromEntries(

@@ -93,6 +93,7 @@ describe("getEnvironmentDetails", () => {
 			cwd: mockCwd,
 			taskId: mockTaskId,
 			didEditFile: false,
+			fileRegistry: new Map(),
 			fileContextTracker: {
 				getAndClearRecentlyModifiedFiles: vi.fn().mockReturnValue([]),
 			} as unknown as FileContextTracker,
@@ -223,6 +224,17 @@ describe("getEnvironmentDetails", () => {
 		expect(result).toContain("# Recently Modified Files")
 		expect(result).toContain("modified1.ts")
 		expect(result).toContain("modified2.ts")
+	})
+
+	it("should include current file context when experiment is enabled", async () => {
+		mockState.experiments = { aggregatedFileContext: true }
+		mockCline.fileRegistry = new Map([["fileA.ts", "File: fileA.ts\nconst a = 1"]])
+
+		const result = await getEnvironmentDetails(mockCline as Task)
+
+		expect(result).toContain("# Current File Context")
+		expect(result).toContain("File: fileA.ts")
+		expect(result).toContain("const a = 1")
 	})
 
 	it("should include active terminal information", async () => {

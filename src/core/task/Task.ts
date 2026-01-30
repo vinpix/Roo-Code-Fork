@@ -303,6 +303,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 	rooIgnoreController?: RooIgnoreController
 	rooProtectedController?: RooProtectedController
 	fileContextTracker: FileContextTracker
+	fileRegistry: Map<string, string> = new Map()
 	urlContentFetcher: UrlContentFetcher
 	terminalProcess?: RooTerminalProcess
 
@@ -380,6 +381,32 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 		}
 		this.userMessageContent.push(toolResult)
 		return true
+	}
+
+	private normalizeFileRegistryPath(filePath: string): string {
+		if (!filePath) {
+			return filePath
+		}
+		const normalizedPath = path.isAbsolute(filePath) ? path.relative(this.cwd, filePath) : filePath
+		return typeof (normalizedPath as any).toPosix === "function"
+			? (normalizedPath as any).toPosix()
+			: normalizedPath
+	}
+
+	public updateFileRegistry(filePath: string, content: string): void {
+		if (!filePath || content === undefined) {
+			return
+		}
+		const normalizedPath = this.normalizeFileRegistryPath(filePath)
+		this.fileRegistry.set(normalizedPath, content)
+	}
+
+	public removeFileRegistryEntry(filePath: string): void {
+		if (!filePath) {
+			return
+		}
+		const normalizedPath = this.normalizeFileRegistryPath(filePath)
+		this.fileRegistry.delete(normalizedPath)
 	}
 	didRejectTool = false
 	didAlreadyUseTool = false
@@ -4002,7 +4029,13 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 		const effectiveHistory = getEffectiveApiHistory(this.apiConversationHistory)
 		const messagesSinceLastSummary = getMessagesSinceLastSummary(effectiveHistory)
 		const messagesWithoutImages = maybeRemoveImageBlocks(messagesSinceLastSummary, this.api)
-		const cleanConversationHistory = this.buildCleanConversationHistory(messagesWithoutImages as ApiMessage[])
+		const aggregatedFileContextEnabled = experiments.isEnabled(
+			state?.experiments ?? {},
+			EXPERIMENT_IDS.AGGREGATED_FILE_CONTEXT,
+		)
+		const cleanConversationHistory = this.buildCleanConversationHistory(messagesWithoutImages as ApiMessage[], {
+			pruneReadFileToolResults: aggregatedFileContextEnabled,
+		})
 
 		// Check auto-approval limits
 		const approvalResult = await this.autoApprovalHandler.checkAutoApprovalLimits(
@@ -4264,6 +4297,9 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 
 	private buildCleanConversationHistory(
 		messages: ApiMessage[],
+		options?: {
+			pruneReadFileToolResults?: boolean
+		},
 	): Array<
 		Anthropic.Messages.MessageParam | { type: "reasoning"; encrypted_content: string; id?: string; summary?: any[] }
 	> {
@@ -4274,25 +4310,191 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 			summary?: any[]
 		}
 
+		const shouldPruneReadFileToolResults = options?.pruneReadFileToolResults === true
+		const toolUseIdToName = new Map<string, string>()
+		const toolUseIdToReadFilePaths = new Map<string, string[]>()
+		const isEnvironmentDetailsBlock = (block: unknown): block is Anthropic.Messages.TextBlockParam => {
+			if (!block || (block as any).type !== "text") {
+				return false
+			}
+			const text = (block as any).text
+			return (
+				typeof text === "string" &&
+				text.trim().startsWith("<environment_details>") &&
+				text.trim().endsWith("</environment_details>")
+			)
+		}
+		const messageHasEnvironmentDetails = (content: unknown): boolean => {
+			if (Array.isArray(content)) {
+				return content.some((block) => isEnvironmentDetailsBlock(block))
+			}
+			if (typeof content === "string") {
+				const trimmed = content.trim()
+				return trimmed.startsWith("<environment_details>") && trimmed.endsWith("</environment_details>")
+			}
+			return false
+		}
+		const latestEnvDetailsUserIndex = (() => {
+			for (let i = messages.length - 1; i >= 0; i--) {
+				const msg = messages[i]
+				if (msg?.role === "user" && messageHasEnvironmentDetails(msg.content)) {
+					return i
+				}
+			}
+			return -1
+		})()
+
+		const extractReadFilePaths = (input: unknown): string[] => {
+			if (!input || typeof input !== "object") {
+				return []
+			}
+
+			const inputObj = input as {
+				files?: Array<{ path?: string }>
+				path?: string
+				file_path?: string
+			}
+
+			if (Array.isArray(inputObj.files)) {
+				return inputObj.files.map((file) => file?.path).filter(Boolean) as string[]
+			}
+			if (typeof inputObj.path === "string") {
+				return [inputObj.path]
+			}
+			if (typeof inputObj.file_path === "string") {
+				return [inputObj.file_path]
+			}
+			return []
+		}
+
+		const registerToolUses = (content: unknown) => {
+			if (!Array.isArray(content)) {
+				return
+			}
+
+			for (const block of content) {
+				if (block && (block as any).type === "tool_use") {
+					const toolUseId = (block as any).id
+					const toolName = (block as any).name
+
+					if (toolUseId && typeof toolName === "string") {
+						toolUseIdToName.set(toolUseId, toolName)
+					}
+
+					if (toolUseId && toolName === "read_file") {
+						const rawInput = (block as any).input ?? (block as any).params ?? (block as any).arguments
+						let parsedInput = rawInput
+						if (typeof rawInput === "string") {
+							try {
+								parsedInput = JSON.parse(rawInput)
+							} catch {
+								parsedInput = rawInput
+							}
+						}
+						const filePaths = extractReadFilePaths(parsedInput)
+						if (filePaths.length > 0) {
+							toolUseIdToReadFilePaths.set(toolUseId, filePaths)
+						}
+					}
+				}
+			}
+		}
+
+		const maybePruneReadFileToolResults = (
+			content: unknown,
+		): Anthropic.Messages.ContentBlockParam[] | string | undefined => {
+			if (!shouldPruneReadFileToolResults || !Array.isArray(content) || this.fileRegistry.size === 0) {
+				return content as Anthropic.Messages.ContentBlockParam[] | string | undefined
+			}
+
+			let didPrune = false
+			const prunedContent = content.map((block) => {
+				if (!block || (block as any).type !== "tool_result") {
+					return block
+				}
+
+				const toolUseId = (block as any).tool_use_id as string | undefined
+				const toolName = toolUseId ? toolUseIdToName.get(toolUseId) : undefined
+
+				if (toolName !== "read_file" || !toolUseId) {
+					return block
+				}
+
+				const blockContent = (block as any).content
+				const hasImages =
+					Array.isArray(blockContent) && blockContent.some((item) => item && (item as any).type === "image")
+
+				if (hasImages) {
+					return block
+				}
+
+				const filePaths = toolUseIdToReadFilePaths.get(toolUseId)
+				if (!filePaths || filePaths.length === 0) {
+					return block
+				}
+
+				const hasAllFiles = filePaths.every((filePath) =>
+					this.fileRegistry.has(this.normalizeFileRegistryPath(filePath)),
+				)
+
+				if (!hasAllFiles) {
+					return block
+				}
+
+				didPrune = true
+				return {
+					...(block as Anthropic.ToolResultBlockParam),
+					content: "Read file output moved to # Current File Context.",
+				} satisfies Anthropic.ToolResultBlockParam
+			})
+
+			return didPrune ? (prunedContent as Anthropic.Messages.ContentBlockParam[]) : (content as any)
+		}
+		const maybePruneEnvironmentDetails = (
+			content: unknown,
+			keepEnvironmentDetails: boolean,
+		): Anthropic.Messages.ContentBlockParam[] | string | undefined => {
+			if (keepEnvironmentDetails || !Array.isArray(content)) {
+				return content as Anthropic.Messages.ContentBlockParam[] | string | undefined
+			}
+			const filteredContent = content.filter((block) => !isEnvironmentDetailsBlock(block))
+			return filteredContent.length === content.length
+				? (content as Anthropic.Messages.ContentBlockParam[] | string | undefined)
+				: (filteredContent as Anthropic.Messages.ContentBlockParam[])
+		}
+
 		const cleanConversationHistory: (Anthropic.Messages.MessageParam | ReasoningItemForRequest)[] = []
 
-		for (const msg of messages) {
+		for (let i = 0; i < messages.length; i++) {
+			const msg = messages[i]
+			if (msg.role === "assistant") {
+				registerToolUses(msg.content)
+			}
+
+			let prunedContent = msg.role === "user" ? maybePruneReadFileToolResults(msg.content) : (msg.content as any)
+			if (msg.role === "user") {
+				const keepEnvironmentDetails = i === latestEnvDetailsUserIndex
+				prunedContent = maybePruneEnvironmentDetails(prunedContent, keepEnvironmentDetails)
+			}
+			const messageForProcessing =
+				msg.role === "user" && prunedContent !== msg.content ? { ...msg, content: prunedContent } : msg
+
 			// Standalone reasoning: send encrypted, skip plain text
-			if (msg.type === "reasoning") {
-				if (msg.encrypted_content) {
+			if (messageForProcessing.type === "reasoning") {
+				if (messageForProcessing.encrypted_content) {
 					cleanConversationHistory.push({
 						type: "reasoning",
-						summary: msg.summary,
-						encrypted_content: msg.encrypted_content!,
-						...(msg.id ? { id: msg.id } : {}),
+						summary: messageForProcessing.summary,
+						encrypted_content: messageForProcessing.encrypted_content!,
+						...(messageForProcessing.id ? { id: messageForProcessing.id } : {}),
 					})
 				}
 				continue
 			}
 
 			// Preferred path: assistant message with embedded reasoning as first content block
-			if (msg.role === "assistant") {
-				const rawContent = msg.content
+			if (messageForProcessing.role === "assistant") {
+				const rawContent = messageForProcessing.content
 
 				const contentArray: Anthropic.Messages.ContentBlockParam[] = Array.isArray(rawContent)
 					? (rawContent as Anthropic.Messages.ContentBlockParam[])
@@ -4305,7 +4507,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 				const [first, ...rest] = contentArray
 
 				// Check if this message has reasoning_details (OpenRouter format for Gemini 3, etc.)
-				const msgWithDetails = msg
+				const msgWithDetails = messageForProcessing
 				if (msgWithDetails.reasoning_details && Array.isArray(msgWithDetails.reasoning_details)) {
 					// Build the assistant message with reasoning_details
 					let assistantContent: Anthropic.Messages.MessageParam["content"]
@@ -4393,10 +4595,10 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 			}
 
 			// Default path for regular messages (no embedded reasoning)
-			if (msg.role) {
+			if (messageForProcessing.role) {
 				cleanConversationHistory.push({
-					role: msg.role,
-					content: msg.content as Anthropic.Messages.ContentBlockParam[] | string,
+					role: messageForProcessing.role,
+					content: messageForProcessing.content as Anthropic.Messages.ContentBlockParam[] | string,
 				})
 			}
 		}

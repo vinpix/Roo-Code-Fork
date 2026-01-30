@@ -87,6 +87,14 @@ export class ReadFileTool extends BaseTool<"read_file"> {
 				fileResults[index] = { ...fileResults[index], ...updates }
 			}
 		}
+		const updateFileResultWithContent = (
+			filePath: string,
+			nativeContent: string,
+			updates: Partial<FileResult> = {},
+		) => {
+			updateFileResult(filePath, { ...updates, nativeContent })
+			task.updateFileRegistry?.(filePath, nativeContent)
+		}
 
 		try {
 			const filesToApprove: FileResult[] = []
@@ -312,9 +320,10 @@ export class ReadFileTool extends BaseTool<"read_file"> {
 
 								if (!validationResult.isValid) {
 									await task.fileContextTracker.trackFileContext(relPath, "read_tool" as RecordSource)
-									updateFileResult(relPath, {
-										nativeContent: `File: ${relPath}\nNote: ${validationResult.notice}`,
-									})
+									updateFileResultWithContent(
+										relPath,
+										`File: ${relPath}\nNote: ${validationResult.notice}`,
+									)
 									continue
 								}
 
@@ -322,8 +331,7 @@ export class ReadFileTool extends BaseTool<"read_file"> {
 								imageMemoryTracker.addMemoryUsage(imageResult.sizeInMB)
 								await task.fileContextTracker.trackFileContext(relPath, "read_tool" as RecordSource)
 
-								updateFileResult(relPath, {
-									nativeContent: `File: ${relPath}\nNote: ${imageResult.notice}`,
+								updateFileResultWithContent(relPath, `File: ${relPath}\nNote: ${imageResult.notice}`, {
 									imageDataUrl: imageResult.dataUrl,
 								})
 								continue
@@ -349,12 +357,12 @@ export class ReadFileTool extends BaseTool<"read_file"> {
 
 								await task.fileContextTracker.trackFileContext(relPath, "read_tool" as RecordSource)
 
-								updateFileResult(relPath, {
-									nativeContent:
-										lineCount > 0
-											? `File: ${relPath}\nLines 1-${lineCount}:\n${numberedContent}`
-											: `File: ${relPath}\nNote: File is empty`,
-								})
+								updateFileResultWithContent(
+									relPath,
+									lineCount > 0
+										? `File: ${relPath}\nLines 1-${lineCount}:\n${numberedContent}`
+										: `File: ${relPath}\nNote: File is empty`,
+								)
 								continue
 							} catch (error) {
 								const errorMsg = error instanceof Error ? error.message : String(error)
@@ -368,10 +376,11 @@ export class ReadFileTool extends BaseTool<"read_file"> {
 							}
 						} else {
 							const fileFormat = fileExtension.slice(1) || "bin"
-							updateFileResult(relPath, {
-								notice: `Binary file format: ${fileFormat}`,
-								nativeContent: `File: ${relPath}\nBinary file (${fileFormat}) - content not displayed`,
-							})
+							updateFileResultWithContent(
+								relPath,
+								`File: ${relPath}\nBinary file (${fileFormat}) - content not displayed`,
+								{ notice: `Binary file format: ${fileFormat}` },
+							)
 							continue
 						}
 					}
@@ -387,9 +396,7 @@ export class ReadFileTool extends BaseTool<"read_file"> {
 							nativeRangeResults.push(`Lines ${range.start}-${range.end}:\n${content}`)
 						}
 
-						updateFileResult(relPath, {
-							nativeContent: `File: ${relPath}\n${nativeRangeResults.join("\n\n")}`,
-						})
+						updateFileResultWithContent(relPath, `File: ${relPath}\n${nativeRangeResults.join("\n\n")}`)
 						continue
 					}
 
@@ -401,9 +408,10 @@ export class ReadFileTool extends BaseTool<"read_file"> {
 							)
 							if (defResult) {
 								const notice = `Showing only ${maxReadFileLine} of ${totalLines} total lines. Use line_range if you need to read more lines`
-								updateFileResult(relPath, {
-									nativeContent: `File: ${relPath}\nCode Definitions:\n${defResult}\n\nNote: ${notice}`,
-								})
+								updateFileResultWithContent(
+									relPath,
+									`File: ${relPath}\nCode Definitions:\n${defResult}\n\nNote: ${notice}`,
+								)
 							}
 						} catch (error) {
 							if (error instanceof Error && error.message.startsWith("Unsupported language:")) {
@@ -434,9 +442,7 @@ export class ReadFileTool extends BaseTool<"read_file"> {
 							const notice = `Showing only ${maxReadFileLine} of ${totalLines} total lines. Use line_range if you need to read more lines`
 							toolInfo += `\nNote: ${notice}`
 
-							updateFileResult(relPath, {
-								nativeContent: `File: ${relPath}\n${toolInfo}`,
-							})
+							updateFileResultWithContent(relPath, `File: ${relPath}\n${toolInfo}`)
 						} catch (error) {
 							if (error instanceof Error && error.message.startsWith("Unsupported language:")) {
 								console.warn(`[read_file] Warning: ${error.message}`)
@@ -497,9 +503,7 @@ export class ReadFileTool extends BaseTool<"read_file"> {
 
 					await task.fileContextTracker.trackFileContext(relPath, "read_tool" as RecordSource)
 
-					updateFileResult(relPath, {
-						nativeContent: `File: ${relPath}\n${toolInfo}`,
-					})
+					updateFileResultWithContent(relPath, `File: ${relPath}\n${toolInfo}`)
 				} catch (error) {
 					const errorMsg = error instanceof Error ? error.message : String(error)
 					updateFileResult(relPath, {

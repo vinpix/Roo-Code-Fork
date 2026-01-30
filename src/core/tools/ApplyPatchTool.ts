@@ -193,6 +193,7 @@ export class ApplyPatchTool extends BaseTool<"apply_patch"> {
 
 		// Track file edit operation
 		await task.fileContextTracker.trackFileContext(relPath, "roo_edited" as RecordSource)
+		task.updateFileRegistry?.(relPath, `File: ${relPath}\n${newContent}`)
 		task.didEditFile = true
 
 		const message = await task.diffViewProvider.pushToolWriteResult(task, task.cwd, true)
@@ -254,6 +255,7 @@ export class ApplyPatchTool extends BaseTool<"apply_patch"> {
 		}
 
 		task.didEditFile = true
+		task.removeFileRegistryEntry?.(relPath)
 		pushToolResult(`Successfully deleted ${relPath}`)
 		task.processQueuedMessages()
 	}
@@ -401,6 +403,8 @@ export class ApplyPatchTool extends BaseTool<"apply_patch"> {
 			}
 
 			await task.fileContextTracker.trackFileContext(change.movePath, "roo_edited" as RecordSource)
+			task.updateFileRegistry?.(change.movePath, `File: ${change.movePath}\n${newContent}`)
+			task.removeFileRegistryEntry?.(relPath)
 		} else {
 			// Save changes to the same file
 			if (isPreventFocusDisruptionEnabled) {
@@ -410,6 +414,7 @@ export class ApplyPatchTool extends BaseTool<"apply_patch"> {
 			}
 
 			await task.fileContextTracker.trackFileContext(relPath, "roo_edited" as RecordSource)
+			task.updateFileRegistry?.(relPath, `File: ${relPath}\n${newContent}`)
 		}
 
 		task.didEditFile = true

@@ -171,6 +171,7 @@ export class WriteToFileTool extends BaseTool<"write_to_file"> {
 
 			if (relPath) {
 				await task.fileContextTracker.trackFileContext(relPath, "roo_edited" as RecordSource)
+				task.updateFileRegistry?.(relPath, `File: ${relPath}\n${newContent}`)
 			}
 
 			task.didEditFile = true

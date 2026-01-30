@@ -31,6 +31,14 @@ describe("experiments", () => {
 			})
 		})
 	})
+	describe("AGGREGATED_FILE_CONTEXT", () => {
+		it("is configured correctly", () => {
+			expect(EXPERIMENT_IDS.AGGREGATED_FILE_CONTEXT).toBe("aggregatedFileContext")
+			expect(experimentConfigsMap.AGGREGATED_FILE_CONTEXT).toMatchObject({
+				enabled: false,
+			})
+		})
+	})
 
 	describe("isEnabled", () => {
 		it("returns false when POWER_STEERING experiment is not enabled", () => {
@@ -44,6 +52,7 @@ describe("experiments", () => {
 				multipleNativeToolCalls: false,
 				customTools: false,
 				disableOtherModeAwareness: false,
+				aggregatedFileContext: false,
 			}
 			expect(Experiments.isEnabled(experiments, EXPERIMENT_IDS.POWER_STEERING)).toBe(false)
 		})
@@ -59,6 +68,7 @@ describe("experiments", () => {
 				multipleNativeToolCalls: false,
 				customTools: false,
 				disableOtherModeAwareness: false,
+				aggregatedFileContext: false,
 			}
 			expect(Experiments.isEnabled(experiments, EXPERIMENT_IDS.POWER_STEERING)).toBe(true)
 		})
@@ -74,6 +84,7 @@ describe("experiments", () => {
 				multipleNativeToolCalls: false,
 				customTools: false,
 				disableOtherModeAwareness: false,
+				aggregatedFileContext: false,
 			}
 			expect(Experiments.isEnabled(experiments, EXPERIMENT_IDS.POWER_STEERING)).toBe(false)
 		})

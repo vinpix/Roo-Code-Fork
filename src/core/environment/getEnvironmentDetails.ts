@@ -32,6 +32,7 @@ export async function getEnvironmentDetails(cline: Task, includeFileDetails: boo
 		terminalOutputCharacterLimit = DEFAULT_TERMINAL_OUTPUT_CHARACTER_LIMIT,
 		maxWorkspaceFiles = 200,
 	} = state ?? {}
+	const experimentsConfig = (state?.experiments ?? {}) as Record<ExperimentId, boolean>
 
 	// It could be useful for cline to know if the user went from one or no
 	// file to another between messages, so we always include this context.
@@ -182,6 +183,17 @@ export async function getEnvironmentDetails(cline: Task, includeFileDetails: boo
 		}
 	}
 
+	if (Experiments.isEnabled(experimentsConfig, EXPERIMENT_IDS.AGGREGATED_FILE_CONTEXT)) {
+		const registryEntries = Array.from(cline.fileRegistry ?? new Map<string, string>()).filter(
+			([, content]) => content && content.trim().length > 0,
+		)
+
+		if (registryEntries.length > 0) {
+			details += "\n\n# Current File Context"
+			details += `\n${registryEntries.map(([, content]) => content).join("\n\n---\n\n")}`
+		}
+	}
+
 	if (terminalDetails) {
 		details += terminalDetails
 	}
@@ -222,7 +234,7 @@ export async function getEnvironmentDetails(cline: Task, includeFileDetails: boo
 		mode,
 		customModes,
 		customModePrompts,
-		experiments = {} as Record<ExperimentId, boolean>,
+		experiments = experimentsConfig,
 		customInstructions: globalCustomInstructions,
 		language,
 	} = state ?? {}

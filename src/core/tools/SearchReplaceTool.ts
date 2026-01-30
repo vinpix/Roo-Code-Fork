@@ -217,6 +217,7 @@ export class SearchReplaceTool extends BaseTool<"search_replace"> {
 			// Track file edit operation
 			if (relPath) {
 				await task.fileContextTracker.trackFileContext(relPath, "roo_edited" as RecordSource)
+				task.updateFileRegistry?.(relPath, `File: ${relPath}\n${newContent}`)
 			}
 
 			task.didEditFile = true
