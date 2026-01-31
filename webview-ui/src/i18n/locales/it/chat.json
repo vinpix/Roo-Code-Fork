@@ -28,6 +28,7 @@
 		"openInCloud": "Apri attività in Roo Code Cloud",
 		"openInCloudIntro": "Continua a monitorare o interagire con Roo da qualsiasi luogo. Scansiona, clicca o copia per aprire.",
 		"openApiHistory": "Apri cronologia API",
+		"openApiRequest": "Apri richiesta API",
 		"openUiHistory": "Apri cronologia UI"
 	},
 	"unpin": "Rilascia",

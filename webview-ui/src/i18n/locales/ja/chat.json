@@ -28,6 +28,7 @@
 		"openInCloud": "Roo Code Cloudでタスクを開く",
 		"openInCloudIntro": "どこからでもRooの監視や操作を続けられます。スキャン、クリック、またはコピーして開いてください。",
 		"openApiHistory": "API履歴を開く",
+		"openApiRequest": "APIリクエストを開く",
 		"openUiHistory": "UI履歴を開く"
 	},
 	"unpin": "ピン留めを解除",

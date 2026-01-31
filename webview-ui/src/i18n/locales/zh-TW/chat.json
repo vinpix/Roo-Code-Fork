@@ -28,6 +28,7 @@
 		"openInCloud": "在 Roo Code Cloud 中開啟工作",
 		"openInCloudIntro": "從任何地方繼續監控或與 Roo 互動。掃描、點擊或複製以開啟。",
 		"openApiHistory": "開啟 API 歷史紀錄",
+		"openApiRequest": "開啟 API 請求",
 		"openUiHistory": "開啟 UI 歷史紀錄"
 	},
 	"unpin": "取消釘選",

@@ -3330,6 +3330,34 @@ export const webviewMessageHandler = async (
 			break
 		}
 
+		case "openDebugApiRequest": {
+			const currentTask = provider.getCurrentTask()
+			if (!currentTask) {
+				vscode.window.showErrorMessage("No active task to build request for")
+				break
+			}
+
+			try {
+				const requestSnapshot = await currentTask.getApiRequestSnapshot({ sanitizeEnvironmentDetails: true })
+				const prettifiedContent = JSON.stringify(requestSnapshot, null, 2)
+
+				const tmpDir = os.tmpdir()
+				const timestamp = Date.now()
+				const tempFileName = `roo-debug-api-request-${currentTask.taskId.slice(0, 8)}-${timestamp}.json`
+				const tempFilePath = path.join(tmpDir, tempFileName)
+
+				await fs.writeFile(tempFilePath, prettifiedContent, "utf8")
+
+				const doc = await vscode.workspace.openTextDocument(tempFilePath)
+				await vscode.window.showTextDocument(doc, { preview: true })
+			} catch (error) {
+				const errorMessage = error instanceof Error ? error.message : String(error)
+				provider.log(`Error opening debug API request: ${errorMessage}`)
+				vscode.window.showErrorMessage(`Failed to open debug API request: ${errorMessage}`)
+			}
+			break
+		}
+
 		case "openDebugApiHistory":
 		case "openDebugUiHistory": {
 			const currentTask = provider.getCurrentTask()

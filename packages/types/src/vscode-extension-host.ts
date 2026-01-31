@@ -589,6 +589,7 @@ export interface WebviewMessage {
 		| "refreshBrowserSessionPanel"
 		| "browserPanelDidLaunch"
 		| "openDebugApiHistory"
+		| "openDebugApiRequest"
 		| "openDebugUiHistory"
 		| "downloadErrorDiagnostics"
 		| "requestClaudeCodeRateLimits"

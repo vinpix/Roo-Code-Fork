@@ -1,0 +1,5678 @@
+{
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/command/__tests__/symlink-commands.spec.ts": {
+		"language": "TypeScript",
+		"code": 337,
+		"comment": 38,
+		"blank": 61
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/command/__tests__/frontmatter-commands.spec.ts": {
+		"language": "TypeScript",
+		"code": 401,
+		"comment": 1,
+		"blank": 73
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/ripgrep/index.ts": {
+		"language": "TypeScript",
+		"code": 175,
+		"comment": 63,
+		"blank": 34
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/ripgrep/__tests__/index.spec.ts": {
+		"language": "TypeScript",
+		"code": 33,
+		"comment": 4,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/command/commands.ts": {
+		"language": "TypeScript",
+		"code": 249,
+		"comment": 79,
+		"blank": 40
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/glob/constants.ts": {
+		"language": "TypeScript",
+		"code": 19,
+		"comment": 6,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/glob/__mocks__/list-files.ts": {
+		"language": "TypeScript",
+		"code": 23,
+		"comment": 34,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/command/built-in-commands.ts": {
+		"language": "TypeScript",
+		"code": 310,
+		"comment": 9,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/skills/SkillsManager.ts": {
+		"language": "TypeScript",
+		"code": 227,
+		"comment": 74,
+		"blank": 60
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/browser/UrlContentFetcher.ts": {
+		"language": "TypeScript",
+		"code": 109,
+		"comment": 19,
+		"blank": 16
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/glob/__tests__/gitignore-test.spec.ts": {
+		"language": "TypeScript",
+		"code": 102,
+		"comment": 18,
+		"blank": 27
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/glob/__tests__/list-files-limit.spec.ts": {
+		"language": "TypeScript",
+		"code": 195,
+		"comment": 37,
+		"blank": 43
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/glob/ignore-utils.ts": {
+		"language": "TypeScript",
+		"code": 23,
+		"comment": 15,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/glob/__tests__/gitignore-integration.spec.ts": {
+		"language": "TypeScript",
+		"code": 141,
+		"comment": 31,
+		"blank": 37
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/checkpoints/excludes.ts": {
+		"language": "TypeScript",
+		"code": 199,
+		"comment": 0,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/checkpoints/RepoPerTaskCheckpointService.ts": {
+		"language": "TypeScript",
+		"code": 13,
+		"comment": 0,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/glob/__tests__/list-files.spec.ts": {
+		"language": "TypeScript",
+		"code": 415,
+		"comment": 74,
+		"blank": 72
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/skills/__tests__/SkillsManager.spec.ts": {
+		"language": "TypeScript",
+		"code": 657,
+		"comment": 21,
+		"blank": 153
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/browser/BrowserSession.ts": {
+		"language": "TypeScript",
+		"code": 625,
+		"comment": 164,
+		"blank": 125
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/checkpoints/index.ts": {
+		"language": "TypeScript",
+		"code": 2,
+		"comment": 0,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/checkpoints/ShadowCheckpointService.ts": {
+		"language": "TypeScript",
+		"code": 375,
+		"comment": 41,
+		"blank": 94
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/marketplace/index.ts": {
+		"language": "TypeScript",
+		"code": 3,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/manager.ts": {
+		"language": "TypeScript",
+		"code": 278,
+		"comment": 90,
+		"blank": 55
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/glob/list-files.ts": {
+		"language": "TypeScript",
+		"code": 418,
+		"comment": 198,
+		"blank": 112
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/browser/browserDiscovery.ts": {
+		"language": "TypeScript",
+		"code": 115,
+		"comment": 39,
+		"blank": 28
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/marketplace/SimpleInstaller.ts": {
+		"language": "TypeScript",
+		"code": 282,
+		"comment": 49,
+		"blank": 54
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/roo-config/index.ts": {
+		"language": "TypeScript",
+		"code": 129,
+		"comment": 237,
+		"blank": 35
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/browser/__tests__/UrlContentFetcher.spec.ts": {
+		"language": "TypeScript",
+		"code": 284,
+		"comment": 19,
+		"blank": 67
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/marketplace/__tests__/optional-parameters.spec.ts": {
+		"language": "TypeScript",
+		"code": 58,
+		"comment": 0,
+		"blank": 11
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/mcp/McpHub.ts": {
+		"language": "TypeScript",
+		"code": 1449,
+		"comment": 277,
+		"blank": 242
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/marketplace/RemoteConfigLoader.ts": {
+		"language": "TypeScript",
+		"code": 109,
+		"comment": 1,
+		"blank": 31
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/search/file-search.ts": {
+		"language": "TypeScript",
+		"code": 144,
+		"comment": 20,
+		"blank": 31
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/marketplace/__tests__/SimpleInstaller.spec.ts": {
+		"language": "TypeScript",
+		"code": 262,
+		"comment": 25,
+		"blank": 63
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/browser/__tests__/BrowserSession.spec.ts": {
+		"language": "TypeScript",
+		"code": 474,
+		"comment": 53,
+		"blank": 102
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/checkpoints/__tests__/excludes.spec.ts": {
+		"language": "TypeScript",
+		"code": 87,
+		"comment": 34,
+		"blank": 35
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/marketplace/__tests__/marketplace-setting-check.spec.ts": {
+		"language": "TypeScript",
+		"code": 53,
+		"comment": 6,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/checkpoints/__tests__/ShadowCheckpointService.spec.ts": {
+		"language": "TypeScript",
+		"code": 610,
+		"comment": 118,
+		"blank": 190
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/marketplace/MarketplaceManager.ts": {
+		"language": "TypeScript",
+		"code": 261,
+		"comment": 28,
+		"blank": 48
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/checkpoints/types.ts": {
+		"language": "TypeScript",
+		"code": 30,
+		"comment": 0,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/command/__tests__/built-in-commands.spec.ts": {
+		"language": "TypeScript",
+		"code": 83,
+		"comment": 4,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/marketplace/__tests__/nested-parameters.spec.ts": {
+		"language": "TypeScript",
+		"code": 206,
+		"comment": 1,
+		"blank": 24
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/search-service.ts": {
+		"language": "TypeScript",
+		"code": 49,
+		"comment": 16,
+		"blank": 10
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/search/__tests__/file-search.spec.ts": {
+		"language": "TypeScript",
+		"code": 77,
+		"comment": 7,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/marketplace/__tests__/RemoteConfigLoader.spec.ts": {
+		"language": "TypeScript",
+		"code": 260,
+		"comment": 22,
+		"blank": 54
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/eslint.config.mjs": {
+		"language": "JavaScript",
+		"code": 31,
+		"comment": 2,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/roo-config/__tests__/index.spec.ts": {
+		"language": "TypeScript",
+		"code": 367,
+		"comment": 9,
+		"blank": 118
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/service-factory.ts": {
+		"language": "TypeScript",
+		"code": 211,
+		"comment": 35,
+		"blank": 27
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.it.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/mcp/__tests__/McpHub.spec.ts": {
+		"language": "TypeScript",
+		"code": 1683,
+		"comment": 231,
+		"blank": 318
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/cache-manager.ts": {
+		"language": "TypeScript",
+		"code": 76,
+		"comment": 35,
+		"blank": 10
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/orchestrator.ts": {
+		"language": "TypeScript",
+		"code": 283,
+		"comment": 53,
+		"blank": 52
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/languageParser.ts": {
+		"language": "TypeScript",
+		"code": 197,
+		"comment": 23,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/markdownParser.ts": {
+		"language": "TypeScript",
+		"code": 144,
+		"comment": 52,
+		"blank": 32
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/vector-store/qdrant-client.ts": {
+		"language": "TypeScript",
+		"code": 486,
+		"comment": 131,
+		"blank": 68
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/mcp/McpServerManager.ts": {
+		"language": "TypeScript",
+		"code": 48,
+		"comment": 26,
+		"blank": 10
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/mdm/__tests__/MdmService.spec.ts": {
+		"language": "TypeScript",
+		"code": 263,
+		"comment": 12,
+		"blank": 90
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/vector-store/__tests__/qdrant-client.spec.ts": {
+		"language": "TypeScript",
+		"code": 1545,
+		"comment": 41,
+		"blank": 193
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/vitest.setup.ts": {
+		"language": "TypeScript",
+		"code": 11,
+		"comment": 2,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/marketplace/__tests__/MarketplaceManager.spec.ts": {
+		"language": "TypeScript",
+		"code": 313,
+		"comment": 21,
+		"blank": 65
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/config-manager.ts": {
+		"language": "TypeScript",
+		"code": 389,
+		"comment": 97,
+		"blank": 59
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/__tests__/service-factory.spec.ts": {
+		"language": "TypeScript",
+		"code": 633,
+		"comment": 103,
+		"blank": 111
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/index.ts": {
+		"language": "TypeScript",
+		"code": 175,
+		"comment": 111,
+		"blank": 46
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/ollama.ts": {
+		"language": "TypeScript",
+		"code": 218,
+		"comment": 41,
+		"blank": 31
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/__tests__/orchestrator.spec.ts": {
+		"language": "TypeScript",
+		"code": 126,
+		"comment": 12,
+		"blank": 23
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/bedrock.ts": {
+		"language": "TypeScript",
+		"code": 232,
+		"comment": 55,
+		"blank": 37
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/mdm/MdmService.ts": {
+		"language": "TypeScript",
+		"code": 126,
+		"comment": 44,
+		"blank": 33
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/openai.ts": {
+		"language": "TypeScript",
+		"code": 167,
+		"comment": 36,
+		"blank": 26
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/mistral.ts": {
+		"language": "TypeScript",
+		"code": 54,
+		"comment": 30,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/openrouter.ts": {
+		"language": "TypeScript",
+		"code": 298,
+		"comment": 78,
+		"blank": 57
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/__tests__/cache-manager.spec.ts": {
+		"language": "TypeScript",
+		"code": 136,
+		"comment": 14,
+		"blank": 47
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/state-manager.ts": {
+		"language": "TypeScript",
+		"code": 86,
+		"comment": 6,
+		"blank": 24
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/gemini.ts": {
+		"language": "TypeScript",
+		"code": 54,
+		"comment": 31,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/__tests__/config-manager.spec.ts": {
+		"language": "TypeScript",
+		"code": 1524,
+		"comment": 145,
+		"blank": 263
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.pl.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/vercel-ai-gateway.ts": {
+		"language": "TypeScript",
+		"code": 54,
+		"comment": 39,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/shared/validation-helpers.ts": {
+		"language": "TypeScript",
+		"code": 145,
+		"comment": 51,
+		"blank": 34
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/__tests__/manager.spec.ts": {
+		"language": "TypeScript",
+		"code": 454,
+		"comment": 76,
+		"blank": 82
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/shared/__tests__/get-relative-path.spec.ts": {
+		"language": "TypeScript",
+		"code": 50,
+		"comment": 6,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/__tests__/gemini.spec.ts": {
+		"language": "TypeScript",
+		"code": 130,
+		"comment": 28,
+		"blank": 36
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/__tests__/openai-compatible-rate-limit.spec.ts": {
+		"language": "TypeScript",
+		"code": 133,
+		"comment": 33,
+		"blank": 49
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/shared/__tests__/validation-helpers.spec.ts": {
+		"language": "TypeScript",
+		"code": 76,
+		"comment": 0,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/openai-compatible.ts": {
+		"language": "TypeScript",
+		"code": 337,
+		"comment": 100,
+		"blank": 60
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/__tests__/vercel-ai-gateway.spec.ts": {
+		"language": "TypeScript",
+		"code": 118,
+		"comment": 26,
+		"blank": 32
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.ru.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/__tests__/bedrock.spec.ts": {
+		"language": "TypeScript",
+		"code": 528,
+		"comment": 25,
+		"blank": 104
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/__tests__/openai.spec.ts": {
+		"language": "TypeScript",
+		"code": 402,
+		"comment": 30,
+		"blank": 110
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/__tests__/openrouter.spec.ts": {
+		"language": "TypeScript",
+		"code": 331,
+		"comment": 8,
+		"blank": 71
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/shared/get-relative-path.ts": {
+		"language": "TypeScript",
+		"code": 9,
+		"comment": 20,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/__tests__/openai-compatible.spec.ts": {
+		"language": "TypeScript",
+		"code": 808,
+		"comment": 74,
+		"blank": 204
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/processors/index.ts": {
+		"language": "TypeScript",
+		"code": 3,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/constants/index.ts": {
+		"language": "TypeScript",
+		"code": 19,
+		"comment": 6,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/setup.ts": {
+		"language": "TypeScript",
+		"code": 48,
+		"comment": 11,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.de.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/index.ts": {
+		"language": "TypeScript",
+		"code": 14,
+		"comment": 22,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/processors/__tests__/scanner.spec.ts": {
+		"language": "TypeScript",
+		"code": 334,
+		"comment": 21,
+		"blank": 44
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/workers/countTokens.ts": {
+		"language": "TypeScript",
+		"code": 16,
+		"comment": 0,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/processors/scanner.ts": {
+		"language": "TypeScript",
+		"code": 364,
+		"comment": 61,
+		"blank": 54
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/assets/icons/icon.svg": {
+		"language": "XML",
+		"code": 12,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/processors/__tests__/parser.vb.spec.ts": {
+		"language": "TypeScript",
+		"code": 215,
+		"comment": 18,
+		"blank": 30
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/__tests__/ollama.spec.ts": {
+		"language": "TypeScript",
+		"code": 248,
+		"comment": 24,
+		"blank": 56
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/interfaces/config.ts": {
+		"language": "TypeScript",
+		"code": 40,
+		"comment": 6,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/workers/types.ts": {
+		"language": "TypeScript",
+		"code": 9,
+		"comment": 0,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/processors/__tests__/parser.spec.ts": {
+		"language": "TypeScript",
+		"code": 786,
+		"comment": 87,
+		"blank": 140
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/interfaces/index.ts": {
+		"language": "TypeScript",
+		"code": 4,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/processors/__tests__/file-watcher.spec.ts": {
+		"language": "TypeScript",
+		"code": 213,
+		"comment": 33,
+		"blank": 43
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/interfaces/cache.ts": {
+		"language": "TypeScript",
+		"code": 6,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/interfaces/vector-store.ts": {
+		"language": "TypeScript",
+		"code": 35,
+		"comment": 49,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/es/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/interfaces/file-processor.ts": {
+		"language": "TypeScript",
+		"code": 60,
+		"comment": 45,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/interfaces/embedder.ts": {
+		"language": "TypeScript",
+		"code": 24,
+		"comment": 14,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/interfaces/manager.ts": {
+		"language": "TypeScript",
+		"code": 35,
+		"comment": 40,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/c-sharp.ts": {
+		"language": "TypeScript",
+		"code": 62,
+		"comment": 3,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/javascript.ts": {
+		"language": "TypeScript",
+		"code": 115,
+		"comment": 8,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/shared/supported-extensions.ts": {
+		"language": "TypeScript",
+		"code": 10,
+		"comment": 21,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/vitest.config.ts": {
+		"language": "TypeScript",
+		"code": 21,
+		"comment": 0,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/vue.ts": {
+		"language": "TypeScript",
+		"code": 29,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/rust.ts": {
+		"language": "TypeScript",
+		"code": 76,
+		"comment": 4,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/php.ts": {
+		"language": "TypeScript",
+		"code": 130,
+		"comment": 42,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/en/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/en/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/scala.ts": {
+		"language": "TypeScript",
+		"code": 44,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/en/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectSolidity.spec.ts": {
+		"language": "TypeScript",
+		"code": 22,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/en/common.json": {
+		"language": "JSON",
+		"code": 256,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.html.spec.ts": {
+		"language": "TypeScript",
+		"code": 55,
+		"comment": 0,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.ruby.spec.ts": {
+		"language": "TypeScript",
+		"code": 86,
+		"comment": 4,
+		"blank": 19
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/es/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/toml.ts": {
+		"language": "TypeScript",
+		"code": 23,
+		"comment": 1,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/python.ts": {
+		"language": "TypeScript",
+		"code": 70,
+		"comment": 3,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/go.ts": {
+		"language": "TypeScript",
+		"code": 22,
+		"comment": 4,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/es/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.go.spec.ts": {
+		"language": "TypeScript",
+		"code": 29,
+		"comment": 21,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.typescript.spec.ts": {
+		"language": "TypeScript",
+		"code": 51,
+		"comment": 0,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/activate/registerCodeActions.ts": {
+		"language": "TypeScript",
+		"code": 40,
+		"comment": 3,
+		"blank": 11
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectPhp.spec.ts": {
+		"language": "TypeScript",
+		"code": 20,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/swift.ts": {
+		"language": "TypeScript",
+		"code": 57,
+		"comment": 17,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectHtml.spec.ts": {
+		"language": "TypeScript",
+		"code": 19,
+		"comment": 1,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectJava.spec.ts": {
+		"language": "TypeScript",
+		"code": 20,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectSystemRDL.spec.ts": {
+		"language": "TypeScript",
+		"code": 20,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/activate/handleUri.ts": {
+		"language": "TypeScript",
+		"code": 43,
+		"comment": 0,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/activate/registerCommands.ts": {
+		"language": "TypeScript",
+		"code": 208,
+		"comment": 29,
+		"blank": 44
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectTsx.spec.ts": {
+		"language": "TypeScript",
+		"code": 18,
+		"comment": 6,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectCpp.spec.ts": {
+		"language": "TypeScript",
+		"code": 17,
+		"comment": 2,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectTypeScript.spec.ts": {
+		"language": "TypeScript",
+		"code": 20,
+		"comment": 1,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.elisp.spec.ts": {
+		"language": "TypeScript",
+		"code": 45,
+		"comment": 9,
+		"blank": 13
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.elixir.spec.ts": {
+		"language": "TypeScript",
+		"code": 68,
+		"comment": 5,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/zig.ts": {
+		"language": "TypeScript",
+		"code": 21,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/embedders/__tests__/mistral.spec.ts": {
+		"language": "TypeScript",
+		"code": 129,
+		"comment": 28,
+		"blank": 37
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/elisp.ts": {
+		"language": "TypeScript",
+		"code": 39,
+		"comment": 1,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.kotlin.spec.ts": {
+		"language": "TypeScript",
+		"code": 19,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/c.ts": {
+		"language": "TypeScript",
+		"code": 52,
+		"comment": 32,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.embedded_template.spec.ts": {
+		"language": "TypeScript",
+		"code": 43,
+		"comment": 0,
+		"blank": 10
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/es/common.json": {
+		"language": "JSON",
+		"code": 262,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.cpp.spec.ts": {
+		"language": "TypeScript",
+		"code": 69,
+		"comment": 23,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/css.ts": {
+		"language": "TypeScript",
+		"code": 67,
+		"comment": 3,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/helpers.ts": {
+		"language": "TypeScript",
+		"code": 78,
+		"comment": 22,
+		"blank": 27
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/elixir.ts": {
+		"language": "TypeScript",
+		"code": 70,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/en/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/activate/CodeActionProvider.ts": {
+		"language": "TypeScript",
+		"code": 90,
+		"comment": 0,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/activate/registerTerminalActions.ts": {
+		"language": "TypeScript",
+		"code": 32,
+		"comment": 0,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/kotlin.ts": {
+		"language": "TypeScript",
+		"code": 99,
+		"comment": 8,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/cpp.ts": {
+		"language": "TypeScript",
+		"code": 81,
+		"comment": 15,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.tsx.spec.ts": {
+		"language": "TypeScript",
+		"code": 72,
+		"comment": 40,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/es/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/ruby.ts": {
+		"language": "TypeScript",
+		"code": 180,
+		"comment": 24,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/solidity.ts": {
+		"language": "TypeScript",
+		"code": 44,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/typescript.ts": {
+		"language": "TypeScript",
+		"code": 107,
+		"comment": 16,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/tsx.ts": {
+		"language": "TypeScript",
+		"code": 73,
+		"comment": 12,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.systemrdl.spec.ts": {
+		"language": "TypeScript",
+		"code": 55,
+		"comment": 3,
+		"blank": 11
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/html.ts": {
+		"language": "TypeScript",
+		"code": 51,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/embedded_template.ts": {
+		"language": "TypeScript",
+		"code": 13,
+		"comment": 6,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/tlaplus.ts": {
+		"language": "TypeScript",
+		"code": 23,
+		"comment": 9,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectRuby.spec.ts": {
+		"language": "TypeScript",
+		"code": 16,
+		"comment": 2,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/activate/__tests__/registerCommands.spec.ts": {
+		"language": "TypeScript",
+		"code": 55,
+		"comment": 0,
+		"blank": 13
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/systemrdl.ts": {
+		"language": "TypeScript",
+		"code": 25,
+		"comment": 8,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/ocaml.ts": {
+		"language": "TypeScript",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectZig.spec.ts": {
+		"language": "TypeScript",
+		"code": 17,
+		"comment": 0,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/index.ts": {
+		"language": "TypeScript",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/lua.ts": {
+		"language": "TypeScript",
+		"code": 30,
+		"comment": 7,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.solidity.spec.ts": {
+		"language": "TypeScript",
+		"code": 65,
+		"comment": 0,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectScala.spec.ts": {
+		"language": "TypeScript",
+		"code": 21,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.rust.spec.ts": {
+		"language": "TypeScript",
+		"code": 67,
+		"comment": 5,
+		"blank": 23
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectGo.spec.ts": {
+		"language": "TypeScript",
+		"code": 42,
+		"comment": 11,
+		"blank": 13
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.scala.spec.ts": {
+		"language": "TypeScript",
+		"code": 61,
+		"comment": 13,
+		"blank": 18
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/queries/java.ts": {
+		"language": "TypeScript",
+		"code": 70,
+		"comment": 3,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.python.spec.ts": {
+		"language": "TypeScript",
+		"code": 46,
+		"comment": 25,
+		"blank": 10
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/activate/handleTask.ts": {
+		"language": "TypeScript",
+		"code": 18,
+		"comment": 0,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.css.spec.ts": {
+		"language": "TypeScript",
+		"code": 57,
+		"comment": 1,
+		"blank": 13
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.c.spec.ts": {
+		"language": "TypeScript",
+		"code": 73,
+		"comment": 19,
+		"blank": 22
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/de/common.json": {
+		"language": "JSON",
+		"code": 262,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectSwift.spec.ts": {
+		"language": "TypeScript",
+		"code": 22,
+		"comment": 5,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/de/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/de/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/de/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectElixir.spec.ts": {
+		"language": "TypeScript",
+		"code": 22,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectEmbeddedTemplate.spec.ts": {
+		"language": "TypeScript",
+		"code": 20,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectVue.spec.ts": {
+		"language": "TypeScript",
+		"code": 18,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/de/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectCSS.spec.ts": {
+		"language": "TypeScript",
+		"code": 21,
+		"comment": 2,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.swift.spec.ts": {
+		"language": "TypeScript",
+		"code": 69,
+		"comment": 19,
+		"blank": 19
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.tlaplus.spec.ts": {
+		"language": "TypeScript",
+		"code": 55,
+		"comment": 3,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectTOML.spec.ts": {
+		"language": "TypeScript",
+		"code": 17,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.ocaml.spec.ts": {
+		"language": "TypeScript",
+		"code": 42,
+		"comment": 0,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.toml.spec.ts": {
+		"language": "TypeScript",
+		"code": 74,
+		"comment": 3,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/markdownIntegration.spec.ts": {
+		"language": "TypeScript",
+		"code": 35,
+		"comment": 13,
+		"blank": 16
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.vue.spec.ts": {
+		"language": "TypeScript",
+		"code": 47,
+		"comment": 12,
+		"blank": 13
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectOCaml.spec.ts": {
+		"language": "TypeScript",
+		"code": 23,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectJson.spec.ts": {
+		"language": "TypeScript",
+		"code": 17,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectC.spec.ts": {
+		"language": "TypeScript",
+		"code": 20,
+		"comment": 1,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectCSharp.spec.ts": {
+		"language": "TypeScript",
+		"code": 19,
+		"comment": 1,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectLua.spec.ts": {
+		"language": "TypeScript",
+		"code": 19,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.java.spec.ts": {
+		"language": "TypeScript",
+		"code": 66,
+		"comment": 16,
+		"blank": 18
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.c-sharp.spec.ts": {
+		"language": "TypeScript",
+		"code": 78,
+		"comment": 11,
+		"blank": 23
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.json.spec.ts": {
+		"language": "TypeScript",
+		"code": 41,
+		"comment": 1,
+		"blank": 10
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectJavaScript.spec.ts": {
+		"language": "TypeScript",
+		"code": 20,
+		"comment": 1,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/activate/__tests__/CodeActionProvider.spec.ts": {
+		"language": "TypeScript",
+		"code": 111,
+		"comment": 2,
+		"blank": 26
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectTLAPlus.spec.ts": {
+		"language": "TypeScript",
+		"code": 17,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectKotlin.spec.ts": {
+		"language": "TypeScript",
+		"code": 17,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectPython.spec.ts": {
+		"language": "TypeScript",
+		"code": 18,
+		"comment": 3,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/languageParser.spec.ts": {
+		"language": "TypeScript",
+		"code": 46,
+		"comment": 2,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectRust.spec.ts": {
+		"language": "TypeScript",
+		"code": 21,
+		"comment": 6,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.zig.spec.ts": {
+		"language": "TypeScript",
+		"code": 32,
+		"comment": 0,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.php.spec.ts": {
+		"language": "TypeScript",
+		"code": 17,
+		"comment": 1,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/markdownParser.spec.ts": {
+		"language": "TypeScript",
+		"code": 420,
+		"comment": 49,
+		"blank": 74
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/tr/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/hi/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/hi/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.lua.spec.ts": {
+		"language": "TypeScript",
+		"code": 40,
+		"comment": 0,
+		"blank": 11
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/hi/common.json": {
+		"language": "JSON",
+		"code": 267,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/hi/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/id/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/parseSourceCodeDefinitions.javascript.spec.ts": {
+		"language": "TypeScript",
+		"code": 48,
+		"comment": 1,
+		"blank": 10
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/fr/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/hi/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/fr/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/tr/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/fr/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/activate/index.ts": {
+		"language": "TypeScript",
+		"code": 5,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/id/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/fr/common.json": {
+		"language": "JSON",
+		"code": 267,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/id/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/pt-BR/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/pt-BR/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/fr/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/pt-BR/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/id/tools.json": {
+		"language": "JSON",
+		"code": 34,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/id/common.json": {
+		"language": "JSON",
+		"code": 267,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/tr/common.json": {
+		"language": "JSON",
+		"code": 267,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/pt-BR/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/tr/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ru/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/pt-BR/common.json": {
+		"language": "JSON",
+		"code": 267,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ru/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/tr/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/zh-CN/common.json": {
+		"language": "JSON",
+		"code": 272,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ru/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/zh-CN/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ja/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ja/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ja/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ru/common.json": {
+		"language": "JSON",
+		"code": 267,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ru/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ja/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ca/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ja/common.json": {
+		"language": "JSON",
+		"code": 267,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/zh-CN/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ca/common.json": {
+		"language": "JSON",
+		"code": 267,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/zh-CN/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ca/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ca/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/it/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/it/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/zh-CN/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/vi/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/vi/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/it/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/processors/parser.ts": {
+		"language": "TypeScript",
+		"code": 423,
+		"comment": 72,
+		"blank": 60
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/vi/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/vi/common.json": {
+		"language": "JSON",
+		"code": 274,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/vi/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/it/common.json": {
+		"language": "JSON",
+		"code": 267,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/nl/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ko/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/nl/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/it/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ko/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ko/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ca/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/nl/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ko/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/nl/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/assets/codicons/codicon.css": {
+		"language": "PostCSS",
+		"code": 1747,
+		"comment": 12,
+		"blank": 11
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/tsconfig.json": {
+		"language": "JSON with Comments",
+		"code": 32,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.zh-CN.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.nl.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/nl/common.json": {
+		"language": "JSON",
+		"code": 267,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.ja.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.json": {
+		"language": "JSON",
+		"code": 586,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/pl/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/code-index/processors/file-watcher.ts": {
+		"language": "TypeScript",
+		"code": 467,
+		"comment": 76,
+		"blank": 58
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/inspectElisp.spec.ts": {
+		"language": "TypeScript",
+		"code": 23,
+		"comment": 1,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/ko/common.json": {
+		"language": "JSON",
+		"code": 267,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.tr.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/assets/images/roo-logo.svg": {
+		"language": "XML",
+		"code": 3,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/pl/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/zh-TW/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/zh-TW/tools.json": {
+		"language": "JSON",
+		"code": 31,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/zh-TW/embeddings.json": {
+		"language": "JSON",
+		"code": 74,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-cpp.ts": {
+		"language": "TypeScript",
+		"code": 179,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/zh-TW/common.json": {
+		"language": "JSON",
+		"code": 267,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/index.ts": {
+		"language": "TypeScript",
+		"code": 146,
+		"comment": 51,
+		"blank": 11
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/pl/marketplace.json": {
+		"language": "JSON",
+		"code": 69,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-json.ts": {
+		"language": "TypeScript",
+		"code": 108,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-javascript.ts": {
+		"language": "TypeScript",
+		"code": 165,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-rust.ts": {
+		"language": "TypeScript",
+		"code": 308,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-toml.ts": {
+		"language": "TypeScript",
+		"code": 72,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__tests__/extension.spec.ts": {
+		"language": "TypeScript",
+		"code": 315,
+		"comment": 20,
+		"blank": 56
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__tests__/history-resume-delegation.spec.ts": {
+		"language": "TypeScript",
+		"code": 466,
+		"comment": 24,
+		"blank": 55
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-swift.ts": {
+		"language": "TypeScript",
+		"code": 298,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-java.ts": {
+		"language": "TypeScript",
+		"code": 193,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-css.ts": {
+		"language": "TypeScript",
+		"code": 97,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-embedded_template.ts": {
+		"language": "TypeScript",
+		"code": 88,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-elisp.ts": {
+		"language": "TypeScript",
+		"code": 51,
+		"comment": 0,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-scala.ts": {
+		"language": "TypeScript",
+		"code": 94,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-html.ts": {
+		"language": "TypeScript",
+		"code": 88,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-c-sharp.ts": {
+		"language": "TypeScript",
+		"code": 390,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-php.ts": {
+		"language": "TypeScript",
+		"code": 335,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/zh-TW/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__tests__/commands.spec.ts": {
+		"language": "TypeScript",
+		"code": 77,
+		"comment": 7,
+		"blank": 13
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__tests__/single-open-invariant.spec.ts": {
+		"language": "TypeScript",
+		"code": 147,
+		"comment": 6,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-vue.ts": {
+		"language": "TypeScript",
+		"code": 90,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-ruby.ts": {
+		"language": "TypeScript",
+		"code": 577,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-zig.ts": {
+		"language": "TypeScript",
+		"code": 42,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-tlaplus.ts": {
+		"language": "TypeScript",
+		"code": 49,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-python.ts": {
+		"language": "TypeScript",
+		"code": 149,
+		"comment": 0,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-lua.ts": {
+		"language": "TypeScript",
+		"code": 138,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-typescript.ts": {
+		"language": "TypeScript",
+		"code": 208,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-go.ts": {
+		"language": "TypeScript",
+		"code": 126,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-elixir.ts": {
+		"language": "TypeScript",
+		"code": 117,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-solidity.ts": {
+		"language": "TypeScript",
+		"code": 102,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-tsx.ts": {
+		"language": "TypeScript",
+		"code": 326,
+		"comment": 1,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-c.ts": {
+		"language": "TypeScript",
+		"code": 452,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__tests__/delegation-events.spec.ts": {
+		"language": "TypeScript",
+		"code": 40,
+		"comment": 2,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__tests__/migrateSettings.spec.ts": {
+		"language": "TypeScript",
+		"code": 162,
+		"comment": 42,
+		"blank": 50
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-kotlin.ts": {
+		"language": "TypeScript",
+		"code": 403,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__tests__/command-mentions.spec.ts": {
+		"language": "TypeScript",
+		"code": 282,
+		"comment": 17,
+		"blank": 63
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__tests__/dist_assets.spec.ts": {
+		"language": "TypeScript",
+		"code": 53,
+		"comment": 1,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__tests__/provider-delegation.spec.ts": {
+		"language": "TypeScript",
+		"code": 72,
+		"comment": 8,
+		"blank": 13
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__tests__/new-task-delegation.spec.ts": {
+		"language": "TypeScript",
+		"code": 33,
+		"comment": 4,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__tests__/command-integration.spec.ts": {
+		"language": "TypeScript",
+		"code": 40,
+		"comment": 4,
+		"blank": 13
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-ocaml.ts": {
+		"language": "TypeScript",
+		"code": 66,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/.prettierignore": {
+		"language": "Ignore",
+		"code": 2,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__tests__/nested-delegation-resume.spec.ts": {
+		"language": "TypeScript",
+		"code": 216,
+		"comment": 27,
+		"blank": 28
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.es.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/support-prompt.ts": {
+		"language": "TypeScript",
+		"code": 181,
+		"comment": 5,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/cost.ts": {
+		"language": "TypeScript",
+		"code": 67,
+		"comment": 7,
+		"blank": 10
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/services/tree-sitter/__tests__/fixtures/sample-systemrdl.ts": {
+		"language": "TypeScript",
+		"code": 86,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/zai-format.ts": {
+		"language": "TypeScript",
+		"code": 184,
+		"comment": 43,
+		"blank": 16
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/language.ts": {
+		"language": "TypeScript",
+		"code": 28,
+		"comment": 10,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/bedrock.ts": {
+		"language": "TypeScript",
+		"code": 1159,
+		"comment": 269,
+		"blank": 150
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/groq.ts": {
+		"language": "TypeScript",
+		"code": 16,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/zai.ts": {
+		"language": "TypeScript",
+		"code": 78,
+		"comment": 16,
+		"blank": 18
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/package.ts": {
+		"language": "TypeScript",
+		"code": 8,
+		"comment": 6,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/native-ollama.ts": {
+		"language": "TypeScript",
+		"code": 307,
+		"comment": 30,
+		"blank": 42
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/caching/__tests__/vercel-ai-gateway.spec.ts": {
+		"language": "TypeScript",
+		"code": 196,
+		"comment": 1,
+		"blank": 37
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/caching/__tests__/vertex.spec.ts": {
+		"language": "TypeScript",
+		"code": 136,
+		"comment": 3,
+		"blank": 40
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/caching/__tests__/gemini.spec.ts": {
+		"language": "TypeScript",
+		"code": 191,
+		"comment": 18,
+		"blank": 58
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/browserUtils.ts": {
+		"language": "TypeScript",
+		"code": 70,
+		"comment": 18,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/vercel-ai-gateway.ts": {
+		"language": "TypeScript",
+		"code": 111,
+		"comment": 2,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/combineCommandSequences.ts": {
+		"language": "TypeScript",
+		"code": 2,
+		"comment": 0,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/combineApiRequests.ts": {
+		"language": "TypeScript",
+		"code": 2,
+		"comment": 0,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/skills.ts": {
+		"language": "TypeScript",
+		"code": 10,
+		"comment": 7,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/requesty.ts": {
+		"language": "TypeScript",
+		"code": 178,
+		"comment": 6,
+		"blank": 35
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/openai.ts": {
+		"language": "TypeScript",
+		"code": 445,
+		"comment": 42,
+		"blank": 78
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/parse-command.ts": {
+		"language": "TypeScript",
+		"code": 150,
+		"comment": 48,
+		"blank": 26
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/base-openai-compatible-provider.ts": {
+		"language": "TypeScript",
+		"code": 210,
+		"comment": 9,
+		"blank": 42
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/context-mentions.ts": {
+		"language": "TypeScript",
+		"code": 42,
+		"comment": 64,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/lite-llm.ts": {
+		"language": "TypeScript",
+		"code": 227,
+		"comment": 60,
+		"blank": 42
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/caching/__tests__/anthropic.spec.ts": {
+		"language": "TypeScript",
+		"code": 141,
+		"comment": 1,
+		"blank": 40
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/string-extensions.d.ts": {
+		"language": "TypeScript",
+		"code": 6,
+		"comment": 18,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fireworks.ts": {
+		"language": "TypeScript",
+		"code": 16,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/claude-code.ts": {
+		"language": "TypeScript",
+		"code": 260,
+		"comment": 66,
+		"blank": 53
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/baseten.ts": {
+		"language": "TypeScript",
+		"code": 16,
+		"comment": 0,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/vsCodeSelectorUtils.ts": {
+		"language": "TypeScript",
+		"code": 5,
+		"comment": 0,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/doubao.ts": {
+		"language": "TypeScript",
+		"code": 72,
+		"comment": 2,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/deepseek.ts": {
+		"language": "TypeScript",
+		"code": 112,
+		"comment": 16,
+		"blank": 23
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/editor/DecorationController.ts": {
+		"language": "TypeScript",
+		"code": 63,
+		"comment": 4,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/editor/EditorUtils.ts": {
+		"language": "TypeScript",
+		"code": 126,
+		"comment": 65,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/tools.ts": {
+		"language": "TypeScript",
+		"code": 270,
+		"comment": 58,
+		"blank": 41
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/editor/__tests__/DiffViewProvider.spec.ts": {
+		"language": "TypeScript",
+		"code": 387,
+		"comment": 57,
+		"blank": 77
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/utils/timeout-config.ts": {
+		"language": "TypeScript",
+		"code": 12,
+		"comment": 10,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/utils/openai-error-handler.ts": {
+		"language": "TypeScript",
+		"code": 4,
+		"comment": 13,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/utils/image-generation.ts": {
+		"language": "TypeScript",
+		"code": 258,
+		"comment": 24,
+		"blank": 32
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/utils/router-tool-preferences.ts": {
+		"language": "TypeScript",
+		"code": 12,
+		"comment": 15,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/utils/error-handler.ts": {
+		"language": "TypeScript",
+		"code": 53,
+		"comment": 49,
+		"blank": 13
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/openrouter.ts": {
+		"language": "TypeScript",
+		"code": 498,
+		"comment": 104,
+		"blank": 83
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/index.ts": {
+		"language": "TypeScript",
+		"code": 36,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/editor/__tests__/EditorUtils.spec.ts": {
+		"language": "TypeScript",
+		"code": 114,
+		"comment": 9,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/qwen-code.ts": {
+		"language": "TypeScript",
+		"code": 274,
+		"comment": 15,
+		"blank": 51
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/sambanova.ts": {
+		"language": "TypeScript",
+		"code": 16,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/openai-codex.ts": {
+		"language": "TypeScript",
+		"code": 915,
+		"comment": 76,
+		"blank": 122
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/io-intelligence.ts": {
+		"language": "TypeScript",
+		"code": 36,
+		"comment": 1,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/lm-studio.ts": {
+		"language": "TypeScript",
+		"code": 191,
+		"comment": 8,
+		"blank": 32
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/moonshot.ts": {
+		"language": "TypeScript",
+		"code": 41,
+		"comment": 3,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/featherless.ts": {
+		"language": "TypeScript",
+		"code": 98,
+		"comment": 1,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/mistral.ts": {
+		"language": "TypeScript",
+		"code": 170,
+		"comment": 24,
+		"blank": 31
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/vscode-lm.ts": {
+		"language": "TypeScript",
+		"code": 399,
+		"comment": 123,
+		"blank": 70
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/cerebras.ts": {
+		"language": "TypeScript",
+		"code": 276,
+		"comment": 35,
+		"blank": 52
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/vertex.ts": {
+		"language": "TypeScript",
+		"code": 17,
+		"comment": 4,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/router-provider.ts": {
+		"language": "TypeScript",
+		"code": 67,
+		"comment": 5,
+		"blank": 16
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fake-ai.ts": {
+		"language": "TypeScript",
+		"code": 51,
+		"comment": 17,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/constants.ts": {
+		"language": "TypeScript",
+		"code": 6,
+		"comment": 0,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/huggingface.ts": {
+		"language": "TypeScript",
+		"code": 109,
+		"comment": 5,
+		"blank": 24
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/core.ts": {
+		"language": "TypeScript",
+		"code": 1,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/minimax.ts": {
+		"language": "TypeScript",
+		"code": 240,
+		"comment": 27,
+		"blank": 40
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/gemini.ts": {
+		"language": "TypeScript",
+		"code": 415,
+		"comment": 59,
+		"blank": 82
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/xai.ts": {
+		"language": "TypeScript",
+		"code": 134,
+		"comment": 7,
+		"blank": 26
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/modes.ts": {
+		"language": "TypeScript",
+		"code": 201,
+		"comment": 40,
+		"blank": 46
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/editor/DiffViewProvider.ts": {
+		"language": "TypeScript",
+		"code": 500,
+		"comment": 109,
+		"blank": 115
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/checkExistApiConfig.ts": {
+		"language": "TypeScript",
+		"code": 22,
+		"comment": 4,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/unbound.ts": {
+		"language": "TypeScript",
+		"code": 167,
+		"comment": 5,
+		"blank": 36
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/deepinfra.ts": {
+		"language": "TypeScript",
+		"code": 135,
+		"comment": 2,
+		"blank": 27
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/openai-native.ts": {
+		"language": "TypeScript",
+		"code": 1079,
+		"comment": 263,
+		"blank": 136
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/vsCodeSelectorUtils.spec.ts": {
+		"language": "TypeScript",
+		"code": 36,
+		"comment": 0,
+		"blank": 10
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/api.spec.ts": {
+		"language": "TypeScript",
+		"code": 391,
+		"comment": 10,
+		"blank": 81
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/language.spec.ts": {
+		"language": "TypeScript",
+		"code": 15,
+		"comment": 1,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/experiments-preventFocusDisruption.spec.ts": {
+		"language": "TypeScript",
+		"code": 21,
+		"comment": 3,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/combineApiRequests.spec.ts": {
+		"language": "TypeScript",
+		"code": 428,
+		"comment": 73,
+		"blank": 131
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/experiments.ts": {
+		"language": "TypeScript",
+		"code": 40,
+		"comment": 0,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/ProfileValidator.spec.ts": {
+		"language": "TypeScript",
+		"code": 288,
+		"comment": 4,
+		"blank": 46
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/checkExistApiConfig.spec.ts": {
+		"language": "TypeScript",
+		"code": 83,
+		"comment": 1,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/vitest-verbosity.ts": {
+		"language": "TypeScript",
+		"code": 15,
+		"comment": 4,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/anthropic.ts": {
+		"language": "TypeScript",
+		"code": 325,
+		"comment": 37,
+		"blank": 35
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/api.ts": {
+		"language": "TypeScript",
+		"code": 121,
+		"comment": 39,
+		"blank": 31
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/modes-empty-prompt-component.spec.ts": {
+		"language": "TypeScript",
+		"code": 63,
+		"comment": 14,
+		"blank": 21
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/combineCommandSequences.spec.ts": {
+		"language": "TypeScript",
+		"code": 168,
+		"comment": 1,
+		"blank": 18
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/errors.ts": {
+		"language": "TypeScript",
+		"code": 5,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/commands.ts": {
+		"language": "TypeScript",
+		"code": 5,
+		"comment": 0,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/utils/__tests__/image-generation.spec.ts": {
+		"language": "TypeScript",
+		"code": 339,
+		"comment": 7,
+		"blank": 72
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/experiments.spec.ts": {
+		"language": "TypeScript",
+		"code": 83,
+		"comment": 1,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/getApiMetrics.spec.ts": {
+		"language": "TypeScript",
+		"code": 252,
+		"comment": 22,
+		"blank": 56
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/pl/mcp.json": {
+		"language": "JSON with Comments",
+		"code": 28,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/i18n/locales/pl/common.json": {
+		"language": "JSON",
+		"code": 267,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/support-prompts.spec.ts": {
+		"language": "TypeScript",
+		"code": 239,
+		"comment": 1,
+		"blank": 28
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/context-mentions.spec.ts": {
+		"language": "TypeScript",
+		"code": 113,
+		"comment": 16,
+		"blank": 21
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/path.ts": {
+		"language": "TypeScript",
+		"code": 81,
+		"comment": 40,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/outputChannelLogger.ts": {
+		"language": "TypeScript",
+		"code": 40,
+		"comment": 8,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/mcp-name.ts": {
+		"language": "TypeScript",
+		"code": 64,
+		"comment": 96,
+		"blank": 29
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/safeWriteJson.ts": {
+		"language": "TypeScript",
+		"code": 152,
+		"comment": 59,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/utils/__tests__/openai-error-handler.spec.ts": {
+		"language": "TypeScript",
+		"code": 134,
+		"comment": 3,
+		"blank": 50
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/utils/requesty.ts": {
+		"language": "TypeScript",
+		"code": 31,
+		"comment": 20,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/tiktoken.ts": {
+		"language": "TypeScript",
+		"code": 76,
+		"comment": 16,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/utils/__tests__/error-handler.spec.ts": {
+		"language": "TypeScript",
+		"code": 204,
+		"comment": 3,
+		"blank": 77
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/shell.ts": {
+		"language": "TypeScript",
+		"code": 240,
+		"comment": 72,
+		"blank": 59
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/tts.ts": {
+		"language": "TypeScript",
+		"code": 62,
+		"comment": 0,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/config.ts": {
+		"language": "TypeScript",
+		"code": 38,
+		"comment": 21,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/utils/__tests__/timeout-config.spec.ts": {
+		"language": "TypeScript",
+		"code": 66,
+		"comment": 5,
+		"blank": 32
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/text-normalization.ts": {
+		"language": "TypeScript",
+		"code": 61,
+		"comment": 28,
+		"blank": 11
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/single-completion-handler.ts": {
+		"language": "TypeScript",
+		"code": 15,
+		"comment": 5,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/object.ts": {
+		"language": "TypeScript",
+		"code": 9,
+		"comment": 7,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/git.ts": {
+		"language": "TypeScript",
+		"code": 268,
+		"comment": 73,
+		"blank": 58
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/migrateSettings.ts": {
+		"language": "TypeScript",
+		"code": 114,
+		"comment": 33,
+		"blank": 26
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/tool-id.ts": {
+		"language": "TypeScript",
+		"code": 20,
+		"comment": 29,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/pathUtils.ts": {
+		"language": "TypeScript",
+		"code": 12,
+		"comment": 9,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/focusPanel.ts": {
+		"language": "TypeScript",
+		"code": 16,
+		"comment": 9,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/autoImportSettings.ts": {
+		"language": "TypeScript",
+		"code": 52,
+		"comment": 18,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/fs.ts": {
+		"language": "TypeScript",
+		"code": 26,
+		"comment": 15,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/utils/__tests__/requesty.spec.ts": {
+		"language": "TypeScript",
+		"code": 109,
+		"comment": 3,
+		"blank": 24
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/networkProxy.ts": {
+		"language": "TypeScript",
+		"code": 245,
+		"comment": 72,
+		"blank": 48
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/json-schema.ts": {
+		"language": "TypeScript",
+		"code": 168,
+		"comment": 110,
+		"blank": 27
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/storage.ts": {
+		"language": "TypeScript",
+		"code": 105,
+		"comment": 28,
+		"blank": 19
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/globalContext.ts": {
+		"language": "TypeScript",
+		"code": 5,
+		"comment": 1,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/ProfileValidator.ts": {
+		"language": "TypeScript",
+		"code": 79,
+		"comment": 1,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/globalFileNames.ts": {
+		"language": "TypeScript",
+		"code": 7,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/base-openai-compatible-provider-timeout.spec.ts": {
+		"language": "TypeScript",
+		"code": 91,
+		"comment": 4,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/roo.ts": {
+		"language": "TypeScript",
+		"code": 326,
+		"comment": 52,
+		"blank": 58
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/openai-native-tools.spec.ts": {
+		"language": "TypeScript",
+		"code": 305,
+		"comment": 19,
+		"blank": 39
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/cerebras.spec.ts": {
+		"language": "TypeScript",
+		"code": 190,
+		"comment": 23,
+		"blank": 37
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/__tests__/modes.spec.ts": {
+		"language": "TypeScript",
+		"code": 577,
+		"comment": 39,
+		"blank": 76
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/unbound.spec.ts": {
+		"language": "TypeScript",
+		"code": 477,
+		"comment": 11,
+		"blank": 62
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/anthropic-vertex.spec.ts": {
+		"language": "TypeScript",
+		"code": 1222,
+		"comment": 34,
+		"blank": 165
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/mistral.spec.ts": {
+		"language": "TypeScript",
+		"code": 438,
+		"comment": 9,
+		"blank": 53
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/getApiMetrics.ts": {
+		"language": "TypeScript",
+		"code": 7,
+		"comment": 0,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/native-ollama.spec.ts": {
+		"language": "TypeScript",
+		"code": 478,
+		"comment": 43,
+		"blank": 88
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/caching/gemini.ts": {
+		"language": "TypeScript",
+		"code": 32,
+		"comment": 6,
+		"blank": 10
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/caching/vertex.ts": {
+		"language": "TypeScript",
+		"code": 34,
+		"comment": 9,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/caching/vercel-ai-gateway.ts": {
+		"language": "TypeScript",
+		"code": 20,
+		"comment": 5,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/tag-matcher.ts": {
+		"language": "TypeScript",
+		"code": 102,
+		"comment": 6,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/caching/anthropic.ts": {
+		"language": "TypeScript",
+		"code": 25,
+		"comment": 11,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/array.ts": {
+		"language": "TypeScript",
+		"code": 13,
+		"comment": 8,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/base-provider.ts": {
+		"language": "TypeScript",
+		"code": 72,
+		"comment": 32,
+		"blank": 19
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/enhance-prompt.spec.ts": {
+		"language": "TypeScript",
+		"code": 117,
+		"comment": 5,
+		"blank": 22
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/embeddingModels.ts": {
+		"language": "TypeScript",
+		"code": 123,
+		"comment": 50,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/bedrock-error-handling.spec.ts": {
+		"language": "TypeScript",
+		"code": 442,
+		"comment": 36,
+		"blank": 83
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/chutes.ts": {
+		"language": "TypeScript",
+		"code": 173,
+		"comment": 8,
+		"blank": 29
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/todo.ts": {
+		"language": "TypeScript",
+		"code": 23,
+		"comment": 0,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/shared/WebviewMessage.ts": {
+		"language": "TypeScript",
+		"code": 2,
+		"comment": 0,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/anthropic-vertex.ts": {
+		"language": "TypeScript",
+		"code": 229,
+		"comment": 32,
+		"blank": 38
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/roo.spec.ts": {
+		"language": "TypeScript",
+		"code": 899,
+		"comment": 51,
+		"blank": 103
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/bedrock-reasoning.spec.ts": {
+		"language": "TypeScript",
+		"code": 267,
+		"comment": 20,
+		"blank": 45
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/deepseek.spec.ts": {
+		"language": "TypeScript",
+		"code": 414,
+		"comment": 28,
+		"blank": 56
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/chutes.spec.ts": {
+		"language": "TypeScript",
+		"code": 285,
+		"comment": 14,
+		"blank": 38
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/countTokens.ts": {
+		"language": "TypeScript",
+		"code": 34,
+		"comment": 3,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/lm-studio-timeout.spec.ts": {
+		"language": "TypeScript",
+		"code": 71,
+		"comment": 3,
+		"blank": 18
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/requesty.spec.ts": {
+		"language": "TypeScript",
+		"code": 336,
+		"comment": 4,
+		"blank": 46
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/openai-native.spec.ts": {
+		"language": "TypeScript",
+		"code": 1247,
+		"comment": 114,
+		"blank": 199
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/openai-codex-native-tool-calls.spec.ts": {
+		"language": "TypeScript",
+		"code": 85,
+		"comment": 5,
+		"blank": 11
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/deepinfra.spec.ts": {
+		"language": "TypeScript",
+		"code": 337,
+		"comment": 4,
+		"blank": 46
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/bedrock-invokedModelId.spec.ts": {
+		"language": "TypeScript",
+		"code": 263,
+		"comment": 47,
+		"blank": 41
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/openai-usage-tracking.spec.ts": {
+		"language": "TypeScript",
+		"code": 199,
+		"comment": 15,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/ollama.ts": {
+		"language": "TypeScript",
+		"code": 100,
+		"comment": 5,
+		"blank": 19
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/autoImportSettings.spec.ts": {
+		"language": "TypeScript",
+		"code": 246,
+		"comment": 19,
+		"blank": 46
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/featherless.spec.ts": {
+		"language": "TypeScript",
+		"code": 216,
+		"comment": 8,
+		"blank": 36
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/zai.spec.ts": {
+		"language": "TypeScript",
+		"code": 451,
+		"comment": 7,
+		"blank": 68
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/tool-id.spec.ts": {
+		"language": "TypeScript",
+		"code": 139,
+		"comment": 9,
+		"blank": 31
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/gemini-handler.spec.ts": {
+		"language": "TypeScript",
+		"code": 241,
+		"comment": 24,
+		"blank": 34
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/modelCache.ts": {
+		"language": "TypeScript",
+		"code": 223,
+		"comment": 89,
+		"blank": 46
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/storage.spec.ts": {
+		"language": "TypeScript",
+		"code": 117,
+		"comment": 1,
+		"blank": 38
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/roo.ts": {
+		"language": "TypeScript",
+		"code": 118,
+		"comment": 43,
+		"blank": 32
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/gemini.spec.ts": {
+		"language": "TypeScript",
+		"code": 239,
+		"comment": 28,
+		"blank": 57
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/requesty.ts": {
+		"language": "TypeScript",
+		"code": 44,
+		"comment": 0,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/config.spec.ts": {
+		"language": "TypeScript",
+		"code": 227,
+		"comment": 4,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/moonshot.spec.ts": {
+		"language": "TypeScript",
+		"code": 301,
+		"comment": 12,
+		"blank": 47
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/anthropic.spec.ts": {
+		"language": "TypeScript",
+		"code": 615,
+		"comment": 46,
+		"blank": 85
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/huggingface.ts": {
+		"language": "TypeScript",
+		"code": 168,
+		"comment": 46,
+		"blank": 39
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/json-schema.spec.ts": {
+		"language": "TypeScript",
+		"code": 505,
+		"comment": 31,
+		"blank": 81
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/git.spec.ts": {
+		"language": "TypeScript",
+		"code": 781,
+		"comment": 50,
+		"blank": 164
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/cost.spec.ts": {
+		"language": "TypeScript",
+		"code": 142,
+		"comment": 47,
+		"blank": 37
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/vercel-ai-gateway.spec.ts": {
+		"language": "TypeScript",
+		"code": 508,
+		"comment": 3,
+		"blank": 77
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/safeWriteJson.test.ts": {
+		"language": "TypeScript",
+		"code": 288,
+		"comment": 90,
+		"blank": 103
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/litellm.ts": {
+		"language": "TypeScript",
+		"code": 61,
+		"comment": 14,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/modelEndpointCache.ts": {
+		"language": "TypeScript",
+		"code": 74,
+		"comment": 10,
+		"blank": 21
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/object.spec.ts": {
+		"language": "TypeScript",
+		"code": 33,
+		"comment": 0,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/outputChannelLogger.spec.ts": {
+		"language": "TypeScript",
+		"code": 66,
+		"comment": 2,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/base-openai-compatible-provider.spec.ts": {
+		"language": "TypeScript",
+		"code": 485,
+		"comment": 12,
+		"blank": 52
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/networkProxy.spec.ts": {
+		"language": "TypeScript",
+		"code": 240,
+		"comment": 11,
+		"blank": 58
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/text-normalization.spec.ts": {
+		"language": "TypeScript",
+		"code": 86,
+		"comment": 1,
+		"blank": 18
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/lite-llm.spec.ts": {
+		"language": "TypeScript",
+		"code": 565,
+		"comment": 47,
+		"blank": 112
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/io-intelligence.ts": {
+		"language": "TypeScript",
+		"code": 122,
+		"comment": 9,
+		"blank": 28
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/vercel-ai-gateway.ts": {
+		"language": "TypeScript",
+		"code": 76,
+		"comment": 17,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/deepinfra.ts": {
+		"language": "TypeScript",
+		"code": 57,
+		"comment": 1,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/migrateSettings.spec.ts": {
+		"language": "TypeScript",
+		"code": 179,
+		"comment": 55,
+		"blank": 61
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/mcp-name.spec.ts": {
+		"language": "TypeScript",
+		"code": 273,
+		"comment": 22,
+		"blank": 56
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/chutes.ts": {
+		"language": "TypeScript",
+		"code": 61,
+		"comment": 9,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/vertex.spec.ts": {
+		"language": "TypeScript",
+		"code": 96,
+		"comment": 19,
+		"blank": 27
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/diagnostics/index.ts": {
+		"language": "TypeScript",
+		"code": 165,
+		"comment": 59,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/tiktoken.spec.ts": {
+		"language": "TypeScript",
+		"code": 222,
+		"comment": 29,
+		"blank": 46
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/path.spec.ts": {
+		"language": "TypeScript",
+		"code": 146,
+		"comment": 6,
+		"blank": 28
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/versionedSettings.ts": {
+		"language": "TypeScript",
+		"code": 42,
+		"comment": 71,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/__tests__/shell.spec.ts": {
+		"language": "TypeScript",
+		"code": 378,
+		"comment": 37,
+		"blank": 74
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/openrouter.spec.ts": {
+		"language": "TypeScript",
+		"code": 585,
+		"comment": 22,
+		"blank": 95
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/bedrock-vpc-endpoint.spec.ts": {
+		"language": "TypeScript",
+		"code": 140,
+		"comment": 27,
+		"blank": 23
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/bedrock-inference-profiles.spec.ts": {
+		"language": "TypeScript",
+		"code": 239,
+		"comment": 16,
+		"blank": 45
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/claude-code.spec.ts": {
+		"language": "TypeScript",
+		"code": 445,
+		"comment": 41,
+		"blank": 121
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/openai-codex.spec.ts": {
+		"language": "TypeScript",
+		"code": 19,
+		"comment": 2,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/openai-timeout.spec.ts": {
+		"language": "TypeScript",
+		"code": 115,
+		"comment": 3,
+		"blank": 27
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/sambanova.spec.ts": {
+		"language": "TypeScript",
+		"code": 127,
+		"comment": 1,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/constants.spec.ts": {
+		"language": "TypeScript",
+		"code": 43,
+		"comment": 4,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/io-intelligence.spec.ts": {
+		"language": "TypeScript",
+		"code": 261,
+		"comment": 6,
+		"blank": 37
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/bedrock-custom-arn.spec.ts": {
+		"language": "TypeScript",
+		"code": 175,
+		"comment": 38,
+		"blank": 42
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/claude-code-caching.spec.ts": {
+		"language": "TypeScript",
+		"code": 133,
+		"comment": 9,
+		"blank": 28
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/lmstudio.spec.ts": {
+		"language": "TypeScript",
+		"code": 148,
+		"comment": 2,
+		"blank": 18
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/lmstudio-native-tools.spec.ts": {
+		"language": "TypeScript",
+		"code": 329,
+		"comment": 11,
+		"blank": 38
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/groq.spec.ts": {
+		"language": "TypeScript",
+		"code": 161,
+		"comment": 4,
+		"blank": 28
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/base-provider.spec.ts": {
+		"language": "TypeScript",
+		"code": 229,
+		"comment": 6,
+		"blank": 49
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/fireworks.spec.ts": {
+		"language": "TypeScript",
+		"code": 531,
+		"comment": 6,
+		"blank": 58
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/openai.spec.ts": {
+		"language": "TypeScript",
+		"code": 1107,
+		"comment": 43,
+		"blank": 133
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/qwen-code-native-tools.spec.ts": {
+		"language": "TypeScript",
+		"code": 328,
+		"comment": 9,
+		"blank": 37
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/minimax.spec.ts": {
+		"language": "TypeScript",
+		"code": 355,
+		"comment": 2,
+		"blank": 51
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/openai-native-usage.spec.ts": {
+		"language": "TypeScript",
+		"code": 341,
+		"comment": 13,
+		"blank": 69
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/bedrock.spec.ts": {
+		"language": "TypeScript",
+		"code": 985,
+		"comment": 82,
+		"blank": 197
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/bedrock-native-tools.spec.ts": {
+		"language": "TypeScript",
+		"code": 495,
+		"comment": 28,
+		"blank": 88
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/unbound.ts": {
+		"language": "TypeScript",
+		"code": 41,
+		"comment": 1,
+		"blank": 11
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/vscode-lm.spec.ts": {
+		"language": "TypeScript",
+		"code": 409,
+		"comment": 14,
+		"blank": 57
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/__tests__/xai.spec.ts": {
+		"language": "TypeScript",
+		"code": 478,
+		"comment": 33,
+		"blank": 77
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/lmstudio.ts": {
+		"language": "TypeScript",
+		"code": 85,
+		"comment": 22,
+		"blank": 23
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/anthropic-filter.ts": {
+		"language": "TypeScript",
+		"code": 32,
+		"comment": 15,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/image-cleaning.ts": {
+		"language": "TypeScript",
+		"code": 22,
+		"comment": 7,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/model-params.ts": {
+		"language": "TypeScript",
+		"code": 142,
+		"comment": 27,
+		"blank": 23
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/mistral-format.ts": {
+		"language": "TypeScript",
+		"code": 140,
+		"comment": 27,
+		"blank": 16
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/minimax-format.ts": {
+		"language": "TypeScript",
+		"code": 74,
+		"comment": 33,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/diagnostics/__tests__/diagnostics.spec.ts": {
+		"language": "TypeScript",
+		"code": 435,
+		"comment": 92,
+		"blank": 90
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/r1-format.ts": {
+		"language": "TypeScript",
+		"code": 183,
+		"comment": 46,
+		"blank": 16
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/modelCache.spec.ts": {
+		"language": "TypeScript",
+		"code": 350,
+		"comment": 40,
+		"blank": 87
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/openrouter.spec.ts": {
+		"language": "TypeScript",
+		"code": 379,
+		"comment": 10,
+		"blank": 47
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/vercel-ai-gateway.spec.ts": {
+		"language": "TypeScript",
+		"code": 263,
+		"comment": 6,
+		"blank": 39
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/modelEndpointCache.spec.ts": {
+		"language": "TypeScript",
+		"code": 130,
+		"comment": 8,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/versionedSettings.spec.ts": {
+		"language": "TypeScript",
+		"code": 233,
+		"comment": 2,
+		"blank": 47
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/openrouter.ts": {
+		"language": "TypeScript",
+		"code": 184,
+		"comment": 34,
+		"blank": 52
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/lmstudio.test.ts": {
+		"language": "TypeScript",
+		"code": 390,
+		"comment": 7,
+		"blank": 61
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/litellm.spec.ts": {
+		"language": "TypeScript",
+		"code": 606,
+		"comment": 9,
+		"blank": 86
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/stream.ts": {
+		"language": "TypeScript",
+		"code": 76,
+		"comment": 25,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/chutes.spec.ts": {
+		"language": "TypeScript",
+		"code": 275,
+		"comment": 12,
+		"blank": 56
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/roo.spec.ts": {
+		"language": "TypeScript",
+		"code": 889,
+		"comment": 12,
+		"blank": 120
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/theme/default-themes/dark_vs.json": {
+		"language": "JSON",
+		"code": 391,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/logging/index.ts": {
+		"language": "TypeScript",
+		"code": 11,
+		"comment": 11,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/theme/default-themes/light_vs.json": {
+		"language": "JSON",
+		"code": 416,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/theme/default-themes/dark_modern.json": {
+		"language": "JSON",
+		"code": 128,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/logging/CompactTransport.ts": {
+		"language": "TypeScript",
+		"code": 72,
+		"comment": 34,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/theme/getTheme.ts": {
+		"language": "TypeScript",
+		"code": 125,
+		"comment": 6,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/theme/default-themes/light_plus.json": {
+		"language": "JSON",
+		"code": 194,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/theme/default-themes/hc_light.json": {
+		"language": "JSON",
+		"code": 563,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/logging/types.ts": {
+		"language": "TypeScript",
+		"code": 33,
+		"comment": 71,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/theme/default-themes/light_modern.json": {
+		"language": "JSON",
+		"code": 145,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/theme/default-themes/hc_black.json": {
+		"language": "JSON",
+		"code": 455,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/logging/CompactLogger.ts": {
+		"language": "TypeScript",
+		"code": 71,
+		"comment": 65,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/ollama.test.ts": {
+		"language": "TypeScript",
+		"code": 336,
+		"comment": 6,
+		"blank": 61
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/reasoning.ts": {
+		"language": "TypeScript",
+		"code": 111,
+		"comment": 22,
+		"blank": 28
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/openai-format.ts": {
+		"language": "TypeScript",
+		"code": 324,
+		"comment": 135,
+		"blank": 51
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/__tests__/bedrock-converse-format.spec.ts": {
+		"language": "TypeScript",
+		"code": 301,
+		"comment": 2,
+		"blank": 42
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/logging/__tests__/CompactLogger.spec.ts": {
+		"language": "TypeScript",
+		"code": 281,
+		"comment": 1,
+		"blank": 57
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/logging/__tests__/CompactTransport.spec.ts": {
+		"language": "TypeScript",
+		"code": 181,
+		"comment": 6,
+		"blank": 34
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/utils/logging/__tests__/MockTransport.ts": {
+		"language": "TypeScript",
+		"code": 27,
+		"comment": 1,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/__tests__/stream.spec.ts": {
+		"language": "TypeScript",
+		"code": 96,
+		"comment": 1,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/cache-strategy/multi-point-strategy.ts": {
+		"language": "TypeScript",
+		"code": 207,
+		"comment": 63,
+		"blank": 45
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/__tests__/model-params.spec.ts": {
+		"language": "TypeScript",
+		"code": 829,
+		"comment": 8,
+		"blank": 153
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/fixtures/ollama-model-details.json": {
+		"language": "JSON",
+		"code": 58,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/__tests__/reasoning.spec.ts": {
+		"language": "TypeScript",
+		"code": 911,
+		"comment": 12,
+		"blank": 226
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/fixtures/openrouter-models.json": {
+		"language": "JSON",
+		"code": 25,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/ShellIntegrationManager.ts": {
+		"language": "TypeScript",
+		"code": 107,
+		"comment": 25,
+		"blank": 23
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/fixtures/openrouter-model-endpoints.json": {
+		"language": "JSON",
+		"code": 25,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/__tests__/openai-format.spec.ts": {
+		"language": "TypeScript",
+		"code": 1092,
+		"comment": 64,
+		"blank": 150
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/BaseTerminal.ts": {
+		"language": "TypeScript",
+		"code": 171,
+		"comment": 100,
+		"blank": 50
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/__tests__/mistral-format.spec.ts": {
+		"language": "TypeScript",
+		"code": 291,
+		"comment": 15,
+		"blank": 36
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/__tests__/minimax-format.spec.ts": {
+		"language": "TypeScript",
+		"code": 284,
+		"comment": 10,
+		"blank": 43
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/providers/fetchers/__tests__/fixtures/lmstudio-model-details.json": {
+		"language": "JSON",
+		"code": 14,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/ExecaTerminalProcess.ts": {
+		"language": "TypeScript",
+		"code": 193,
+		"comment": 16,
+		"blank": 47
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/__tests__/r1-format.spec.ts": {
+		"language": "TypeScript",
+		"code": 548,
+		"comment": 12,
+		"blank": 60
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/__tests__/image-cleaning.spec.ts": {
+		"language": "TypeScript",
+		"code": 303,
+		"comment": 9,
+		"blank": 28
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/bedrock-converse-format.ts": {
+		"language": "TypeScript",
+		"code": 173,
+		"comment": 19,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/__tests__/vscode-lm-format.spec.ts": {
+		"language": "TypeScript",
+		"code": 289,
+		"comment": 6,
+		"blank": 54
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/BaseTerminalProcess.ts": {
+		"language": "TypeScript",
+		"code": 138,
+		"comment": 38,
+		"blank": 28
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/vscode-lm-format.ts": {
+		"language": "TypeScript",
+		"code": 155,
+		"comment": 23,
+		"blank": 19
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/cache-strategy/base-strategy.ts": {
+		"language": "TypeScript",
+		"code": 102,
+		"comment": 49,
+		"blank": 22
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/cache-strategy/types.ts": {
+		"language": "TypeScript",
+		"code": 30,
+		"comment": 33,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/types.ts": {
+		"language": "TypeScript",
+		"code": 53,
+		"comment": 0,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/theme/default-themes/dark_plus.json": {
+		"language": "JSON",
+		"code": 193,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/TerminalRegistry.ts": {
+		"language": "TypeScript",
+		"code": 202,
+		"comment": 68,
+		"blank": 59
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/mergePromise.ts": {
+		"language": "TypeScript",
+		"code": 14,
+		"comment": 3,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/__tests__/anthropic-filter.spec.ts": {
+		"language": "TypeScript",
+		"code": 120,
+		"comment": 0,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/gemini-format.ts": {
+		"language": "TypeScript",
+		"code": 141,
+		"comment": 32,
+		"blank": 27
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/__tests__/gemini-format.spec.ts": {
+		"language": "TypeScript",
+		"code": 428,
+		"comment": 2,
+		"blank": 58
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/claude-code/streaming-client.ts": {
+		"language": "TypeScript",
+		"code": 534,
+		"comment": 149,
+		"blank": 77
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/Terminal.ts": {
+		"language": "TypeScript",
+		"code": 114,
+		"comment": 43,
+		"blank": 37
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/workspace/WorkspaceTracker.ts": {
+		"language": "TypeScript",
+		"code": 147,
+		"comment": 8,
+		"blank": 21
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/claude-code/oauth.ts": {
+		"language": "TypeScript",
+		"code": 463,
+		"comment": 92,
+		"blank": 84
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/claude-code/__tests__/streaming-client.spec.ts": {
+		"language": "TypeScript",
+		"code": 472,
+		"comment": 34,
+		"blank": 80
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.vi.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.zh-TW.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/ExecaTerminal.ts": {
+		"language": "TypeScript",
+		"code": 28,
+		"comment": 3,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/claude-code/__tests__/oauth.spec.ts": {
+		"language": "TypeScript",
+		"code": 189,
+		"comment": 13,
+		"blank": 34
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.id.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/extension.ts": {
+		"language": "TypeScript",
+		"code": 333,
+		"comment": 75,
+		"blank": 85
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/turbo.json": {
+		"language": "JSON",
+		"code": 19,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/api/transform/cache-strategy/__tests__/cache-strategy.spec.ts": {
+		"language": "TypeScript",
+		"code": 834,
+		"comment": 130,
+		"blank": 149
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/export-markdown.ts": {
+		"language": "TypeScript",
+		"code": 91,
+		"comment": 8,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/TerminalProcess.ts": {
+		"language": "TypeScript",
+		"code": 267,
+		"comment": 109,
+		"blank": 84
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/workspace/__tests__/WorkspaceTracker.spec.ts": {
+		"language": "TypeScript",
+		"code": 221,
+		"comment": 58,
+		"blank": 72
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/line-counter.ts": {
+		"language": "TypeScript",
+		"code": 118,
+		"comment": 26,
+		"blank": 24
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/.vscodeignore": {
+		"language": "Ignore",
+		"code": 21,
+		"comment": 8,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/read-lines.ts": {
+		"language": "TypeScript",
+		"code": 63,
+		"comment": 35,
+		"blank": 19
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/extract-text-from-xlsx.ts": {
+		"language": "TypeScript",
+		"code": 65,
+		"comment": 5,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/read-file-with-budget.ts": {
+		"language": "TypeScript",
+		"code": 136,
+		"comment": 25,
+		"blank": 22
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/image-handler.ts": {
+		"language": "TypeScript",
+		"code": 96,
+		"comment": 19,
+		"blank": 16
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/process-images.ts": {
+		"language": "TypeScript",
+		"code": 40,
+		"comment": 0,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.pt-BR.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/extract-text.ts": {
+		"language": "TypeScript",
+		"code": 281,
+		"comment": 158,
+		"blank": 63
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/open-file.ts": {
+		"language": "TypeScript",
+		"code": 122,
+		"comment": 18,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/openai-codex/rate-limits.ts": {
+		"language": "TypeScript",
+		"code": 85,
+		"comment": 0,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.ca.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/__tests__/read-lines.spec.ts": {
+		"language": "TypeScript",
+		"code": 105,
+		"comment": 6,
+		"blank": 22
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/esbuild.mjs": {
+		"language": "JavaScript",
+		"code": 108,
+		"comment": 15,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/openai-codex/oauth.ts": {
+		"language": "TypeScript",
+		"code": 524,
+		"comment": 130,
+		"blank": 87
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/extension/__tests__/api-send-message.spec.ts": {
+		"language": "TypeScript",
+		"code": 106,
+		"comment": 22,
+		"blank": 28
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.hi.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/__tests__/open-file.spec.ts": {
+		"language": "TypeScript",
+		"code": 183,
+		"comment": 15,
+		"blank": 41
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/openai-codex/__tests__/rate-limits.spec.ts": {
+		"language": "TypeScript",
+		"code": 42,
+		"comment": 0,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/streamUtils/cmdStream.ts": {
+		"language": "TypeScript",
+		"code": 28,
+		"comment": 13,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/setupTerminalTests.ts": {
+		"language": "TypeScript",
+		"code": 29,
+		"comment": 17,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/extension/api.ts": {
+		"language": "TypeScript",
+		"code": 360,
+		"comment": 11,
+		"blank": 93
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/__tests__/extract-text-large-files.spec.ts": {
+		"language": "TypeScript",
+		"code": 149,
+		"comment": 20,
+		"blank": 53
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/TerminalProcessExec.common.ts": {
+		"language": "TypeScript",
+		"code": 22,
+		"comment": 16,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/__tests__/read-file-tool.spec.ts": {
+		"language": "TypeScript",
+		"code": 98,
+		"comment": 23,
+		"blank": 27
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/__tests__/read-file-with-budget.spec.ts": {
+		"language": "TypeScript",
+		"code": 240,
+		"comment": 16,
+		"blank": 66
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/__tests__/extract-text-from-xlsx.test.ts": {
+		"language": "TypeScript",
+		"code": 158,
+		"comment": 5,
+		"blank": 59
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/ExecaTerminalProcess.spec.ts": {
+		"language": "TypeScript",
+		"code": 137,
+		"comment": 6,
+		"blank": 24
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/__tests__/line-counter.spec.ts": {
+		"language": "TypeScript",
+		"code": 72,
+		"comment": 7,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/ExecaTerminal.spec.ts": {
+		"language": "TypeScript",
+		"code": 24,
+		"comment": 2,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/__tests__/extract-text.spec.ts": {
+		"language": "TypeScript",
+		"code": 494,
+		"comment": 106,
+		"blank": 112
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/TerminalProcessExec.cmd.spec.ts": {
+		"language": "TypeScript",
+		"code": 231,
+		"comment": 53,
+		"blank": 47
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/TerminalProcessExec.bash.spec.ts": {
+		"language": "TypeScript",
+		"code": 321,
+		"comment": 88,
+		"blank": 62
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/TerminalProcess.spec.ts": {
+		"language": "TypeScript",
+		"code": 228,
+		"comment": 19,
+		"blank": 61
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/TerminalProcessInterpretExitCode.spec.ts": {
+		"language": "TypeScript",
+		"code": 109,
+		"comment": 20,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/TerminalProcessExec.pwsh.spec.ts": {
+		"language": "TypeScript",
+		"code": 248,
+		"comment": 57,
+		"blank": 51
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/misc/__tests__/performance/processCarriageReturns.benchmark.ts": {
+		"language": "TypeScript",
+		"code": 284,
+		"comment": 74,
+		"blank": 84
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.ko.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/types/global-agent.d.ts": {
+		"language": "TypeScript",
+		"code": 8,
+		"comment": 35,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/TerminalRegistry.spec.ts": {
+		"language": "TypeScript",
+		"code": 105,
+		"comment": 3,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__mocks__/fs/promises.ts": {
+		"language": "TypeScript",
+		"code": 148,
+		"comment": 23,
+		"blank": 23
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/condense/index.ts": {
+		"language": "TypeScript",
+		"code": 408,
+		"comment": 187,
+		"blank": 85
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/streamUtils/index.ts": {
+		"language": "TypeScript",
+		"code": 33,
+		"comment": 19,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/streamUtils/mockStream.ts": {
+		"language": "TypeScript",
+		"code": 44,
+		"comment": 46,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/streamUtils/pwshStream.ts": {
+		"language": "TypeScript",
+		"code": 40,
+		"comment": 16,
+		"blank": 10
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/condense/__tests__/rewind-after-condense.spec.ts": {
+		"language": "TypeScript",
+		"code": 346,
+		"comment": 108,
+		"blank": 89
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/auto-approval/commands.ts": {
+		"language": "TypeScript",
+		"code": 262,
+		"comment": 89,
+		"blank": 18
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/auto-approval/index.ts": {
+		"language": "TypeScript",
+		"code": 161,
+		"comment": 2,
+		"blank": 31
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/condense/__tests__/index.spec.ts": {
+		"language": "TypeScript",
+		"code": 1406,
+		"comment": 148,
+		"blank": 217
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/auto-approval/AutoApprovalHandler.ts": {
+		"language": "TypeScript",
+		"code": 110,
+		"comment": 26,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/auto-approval/tools.ts": {
+		"language": "TypeScript",
+		"code": 15,
+		"comment": 0,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/auto-approval/__tests__/AutoApprovalHandler.spec.ts": {
+		"language": "TypeScript",
+		"code": 228,
+		"comment": 34,
+		"blank": 74
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/auto-approval/mcp.ts": {
+		"language": "TypeScript",
+		"code": 9,
+		"comment": 0,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/context-tracking/FileContextTrackerTypes.ts": {
+		"language": "TypeScript",
+		"code": 16,
+		"comment": 6,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/condense/__tests__/condense.spec.ts": {
+		"language": "TypeScript",
+		"code": 223,
+		"comment": 18,
+		"blank": 39
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/integrations/terminal/__tests__/streamUtils/bashStream.ts": {
+		"language": "TypeScript",
+		"code": 41,
+		"comment": 20,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/context-tracking/FileContextTracker.ts": {
+		"language": "TypeScript",
+		"code": 189,
+		"comment": 34,
+		"blank": 38
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/message-manager/index.ts": {
+		"language": "TypeScript",
+		"code": 103,
+		"comment": 86,
+		"blank": 30
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/environment/__tests__/getEnvironmentDetails.spec.ts": {
+		"language": "TypeScript",
+		"code": 394,
+		"comment": 10,
+		"blank": 87
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/message-manager/index.spec.ts": {
+		"language": "TypeScript",
+		"code": 655,
+		"comment": 70,
+		"blank": 128
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/message-queue/MessageQueueService.ts": {
+		"language": "TypeScript",
+		"code": 74,
+		"comment": 0,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/AskIgnoredError.ts": {
+		"language": "TypeScript",
+		"code": 7,
+		"comment": 8,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/responses.ts": {
+		"language": "TypeScript",
+		"code": 188,
+		"comment": 19,
+		"blank": 24
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/Task.ts": {
+		"language": "TypeScript",
+		"code": 3166,
+		"comment": 1007,
+		"blank": 604
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/system.ts": {
+		"language": "TypeScript",
+		"code": 222,
+		"comment": 13,
+		"blank": 31
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/validateToolResultIds.ts": {
+		"language": "TypeScript",
+		"code": 150,
+		"comment": 53,
+		"blank": 32
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/types.ts": {
+		"language": "TypeScript",
+		"code": 9,
+		"comment": 5,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/build-tools.ts": {
+		"language": "TypeScript",
+		"code": 101,
+		"comment": 55,
+		"blank": 26
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/__tests__/Task.throttle.test.ts": {
+		"language": "TypeScript",
+		"code": 482,
+		"comment": 53,
+		"blank": 86
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/__tests__/Task.spec.ts": {
+		"language": "TypeScript",
+		"code": 1676,
+		"comment": 197,
+		"blank": 321
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/__tests__/native-tools-filtering.spec.ts": {
+		"language": "TypeScript",
+		"code": 88,
+		"comment": 14,
+		"blank": 21
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/__tests__/duplicate-tool-use-ids.spec.ts": {
+		"language": "TypeScript",
+		"code": 167,
+		"comment": 48,
+		"blank": 48
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/__tests__/ask-queued-message-drain.spec.ts": {
+		"language": "TypeScript",
+		"code": 26,
+		"comment": 5,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/__tests__/flushPendingToolResultsToHistory.spec.ts": {
+		"language": "TypeScript",
+		"code": 286,
+		"comment": 13,
+		"blank": 49
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/__tests__/grace-retry-errors.spec.ts": {
+		"language": "TypeScript",
+		"code": 346,
+		"comment": 25,
+		"blank": 74
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/__tests__/Task.sticky-profile-race.spec.ts": {
+		"language": "TypeScript",
+		"code": 125,
+		"comment": 2,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/__tests__/validateToolResultIds.spec.ts": {
+		"language": "TypeScript",
+		"code": 865,
+		"comment": 25,
+		"blank": 108
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/__tests__/task-tool-history.spec.ts": {
+		"language": "TypeScript",
+		"code": 220,
+		"comment": 17,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/__tests__/reasoning-preservation.test.ts": {
+		"language": "TypeScript",
+		"code": 383,
+		"comment": 54,
+		"blank": 80
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/__tests__/get-prompt-component.spec.ts": {
+		"language": "TypeScript",
+		"code": 74,
+		"comment": 0,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/__tests__/utils.ts": {
+		"language": "TypeScript",
+		"code": 5,
+		"comment": 1,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/__tests__/grounding-sources.test.ts": {
+		"language": "TypeScript",
+		"code": 239,
+		"comment": 29,
+		"blank": 39
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/__tests__/sections.spec.ts": {
+		"language": "TypeScript",
+		"code": 185,
+		"comment": 0,
+		"blank": 47
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/filter-tools-for-mode.ts": {
+		"language": "TypeScript",
+		"code": 265,
+		"comment": 151,
+		"blank": 49
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/attempt_completion.ts": {
+		"language": "TypeScript",
+		"code": 30,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/switch_mode.ts": {
+		"language": "TypeScript",
+		"code": 27,
+		"comment": 0,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task/__tests__/Task.dispose.test.ts": {
+		"language": "TypeScript",
+		"code": 139,
+		"comment": 29,
+		"blank": 33
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/execute_command.ts": {
+		"language": "TypeScript",
+		"code": 40,
+		"comment": 0,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/mcp_server.ts": {
+		"language": "TypeScript",
+		"code": 44,
+		"comment": 15,
+		"blank": 11
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/__tests__/responses-rooignore.spec.ts": {
+		"language": "TypeScript",
+		"code": 154,
+		"comment": 60,
+		"blank": 39
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/access_mcp_resource.ts": {
+		"language": "TypeScript",
+		"code": 37,
+		"comment": 0,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/index.ts": {
+		"language": "TypeScript",
+		"code": 62,
+		"comment": 13,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/apply_patch.ts": {
+		"language": "TypeScript",
+		"code": 58,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/search_and_replace.ts": {
+		"language": "TypeScript",
+		"code": 41,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/search_replace.ts": {
+		"language": "TypeScript",
+		"code": 48,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/edit_file.ts": {
+		"language": "TypeScript",
+		"code": 69,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/__tests__/system-prompt.spec.ts": {
+		"language": "TypeScript",
+		"code": 646,
+		"comment": 34,
+		"blank": 74
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/write_to_file.ts": {
+		"language": "TypeScript",
+		"code": 36,
+		"comment": 0,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/__tests__/add-custom-instructions.spec.ts": {
+		"language": "TypeScript",
+		"code": 375,
+		"comment": 12,
+		"blank": 50
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/search_files.ts": {
+		"language": "TypeScript",
+		"code": 45,
+		"comment": 0,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/__tests__/mcp_server.spec.ts": {
+		"language": "TypeScript",
+		"code": 157,
+		"comment": 8,
+		"blank": 36
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/browser_action.ts": {
+		"language": "TypeScript",
+		"code": 68,
+		"comment": 0,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/new_task.ts": {
+		"language": "TypeScript",
+		"code": 32,
+		"comment": 0,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/update_todo_list.ts": {
+		"language": "TypeScript",
+		"code": 51,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/__tests__/converters.spec.ts": {
+		"language": "TypeScript",
+		"code": 188,
+		"comment": 0,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/generate_image.ts": {
+		"language": "TypeScript",
+		"code": 46,
+		"comment": 0,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/run_slash_command.ts": {
+		"language": "TypeScript",
+		"code": 27,
+		"comment": 0,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/ask_followup_question.ts": {
+		"language": "TypeScript",
+		"code": 56,
+		"comment": 0,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/converters.ts": {
+		"language": "TypeScript",
+		"code": 44,
+		"comment": 57,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/apply_diff.ts": {
+		"language": "TypeScript",
+		"code": 32,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/list_files.ts": {
+		"language": "TypeScript",
+		"code": 37,
+		"comment": 0,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/__tests__/read_file.spec.ts": {
+		"language": "TypeScript",
+		"code": 187,
+		"comment": 4,
+		"blank": 53
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/read_file.ts": {
+		"language": "TypeScript",
+		"code": 87,
+		"comment": 24,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/fetch_instructions.ts": {
+		"language": "TypeScript",
+		"code": 23,
+		"comment": 0,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/system-info.ts": {
+		"language": "TypeScript",
+		"code": 24,
+		"comment": 2,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/tools/native-tools/codebase_search.ts": {
+		"language": "TypeScript",
+		"code": 39,
+		"comment": 0,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/markdown-formatting.ts": {
+		"language": "TypeScript",
+		"code": 7,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/objective.ts": {
+		"language": "TypeScript",
+		"code": 13,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/index.ts": {
+		"language": "TypeScript",
+		"code": 11,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/skills.ts": {
+		"language": "TypeScript",
+		"code": 79,
+		"comment": 11,
+		"blank": 7
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/custom-system-prompt.ts": {
+		"language": "TypeScript",
+		"code": 62,
+		"comment": 17,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/custom-instructions.ts": {
+		"language": "TypeScript",
+		"code": 350,
+		"comment": 106,
+		"blank": 58
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/mcp-servers.ts": {
+		"language": "TypeScript",
+		"code": 75,
+		"comment": 1,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/rules.ts": {
+		"language": "TypeScript",
+		"code": 75,
+		"comment": 18,
+		"blank": 13
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/modes.ts": {
+		"language": "TypeScript",
+		"code": 46,
+		"comment": 2,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/tool-use-guidelines.ts": {
+		"language": "TypeScript",
+		"code": 48,
+		"comment": 10,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/capabilities.ts": {
+		"language": "TypeScript",
+		"code": 16,
+		"comment": 0,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/instructions/instructions.ts": {
+		"language": "TypeScript",
+		"code": 23,
+		"comment": 0,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/tool-use.ts": {
+		"language": "TypeScript",
+		"code": 15,
+		"comment": 2,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/instructions/create-mcp-server.ts": {
+		"language": "TypeScript",
+		"code": 300,
+		"comment": 7,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/instructions/create-mode.ts": {
+		"language": "TypeScript",
+		"code": 58,
+		"comment": 0,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/environment/reminder.ts": {
+		"language": "TypeScript",
+		"code": 32,
+		"comment": 3,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/environment/getEnvironmentDetails.ts": {
+		"language": "TypeScript",
+		"code": 255,
+		"comment": 30,
+		"blank": 60
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/context-management/index.ts": {
+		"language": "TypeScript",
+		"code": 226,
+		"comment": 97,
+		"blank": 37
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/context-management/__tests__/truncation.spec.ts": {
+		"language": "TypeScript",
+		"code": 280,
+		"comment": 75,
+		"blank": 83
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/__tests__/objective.spec.ts": {
+		"language": "TypeScript",
+		"code": 36,
+		"comment": 1,
+		"blank": 11
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/context-management/__tests__/context-management.spec.ts": {
+		"language": "TypeScript",
+		"code": 1150,
+		"comment": 182,
+		"blank": 172
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/__tests__/skills.spec.ts": {
+		"language": "TypeScript",
+		"code": 26,
+		"comment": 2,
+		"blank": 5
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/__tests__/system-info.spec.ts": {
+		"language": "TypeScript",
+		"code": 49,
+		"comment": 1,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/__tests__/custom-instructions.spec.ts": {
+		"language": "TypeScript",
+		"code": 1243,
+		"comment": 143,
+		"blank": 213
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/__tests__/custom-instructions-path-detection.spec.ts": {
+		"language": "TypeScript",
+		"code": 41,
+		"comment": 12,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/__tests__/tool-use.spec.ts": {
+		"language": "TypeScript",
+		"code": 39,
+		"comment": 2,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/__tests__/custom-system-prompt.spec.ts": {
+		"language": "TypeScript",
+		"code": 81,
+		"comment": 23,
+		"blank": 31
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/__tests__/tool-use-guidelines.spec.ts": {
+		"language": "TypeScript",
+		"code": 52,
+		"comment": 5,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/sections/__tests__/custom-instructions-global.spec.ts": {
+		"language": "TypeScript",
+		"code": 207,
+		"comment": 30,
+		"blank": 44
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/prompts/__tests__/custom-system-prompt.spec.ts": {
+		"language": "TypeScript",
+		"code": 172,
+		"comment": 15,
+		"blank": 21
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/diff/stats.ts": {
+		"language": "TypeScript",
+		"code": 40,
+		"comment": 21,
+		"blank": 11
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/checkpoints/index.ts": {
+		"language": "TypeScript",
+		"code": 299,
+		"comment": 29,
+		"blank": 65
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/assistant-message/presentAssistantMessage.ts": {
+		"language": "TypeScript",
+		"code": 841,
+		"comment": 163,
+		"blank": 105
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/assistant-message/__tests__/presentAssistantMessage-custom-tool.spec.ts": {
+		"language": "TypeScript",
+		"code": 264,
+		"comment": 22,
+		"blank": 41
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/assistant-message/__tests__/presentAssistantMessage-images.spec.ts": {
+		"language": "TypeScript",
+		"code": 282,
+		"comment": 35,
+		"blank": 54
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/mentions/index.ts": {
+		"language": "TypeScript",
+		"code": 351,
+		"comment": 28,
+		"blank": 51
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/assistant-message/__tests__/presentAssistantMessage-unknown-tool.spec.ts": {
+		"language": "TypeScript",
+		"code": 206,
+		"comment": 25,
+		"blank": 42
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/checkpoints/__tests__/checkpoint.test.ts": {
+		"language": "TypeScript",
+		"code": 450,
+		"comment": 45,
+		"blank": 99
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/diff/strategies/multi-search-replace.ts": {
+		"language": "TypeScript",
+		"code": 612,
+		"comment": 82,
+		"blank": 87
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/assistant-message/__tests__/NativeToolCallParser.spec.ts": {
+		"language": "TypeScript",
+		"code": 214,
+		"comment": 3,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/diff/strategies/multi-file-search-replace.ts": {
+		"language": "TypeScript",
+		"code": 714,
+		"comment": 69,
+		"blank": 102
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/diff/strategies/__tests__/multi-search-replace.spec.ts": {
+		"language": "TypeScript",
+		"code": 1137,
+		"comment": 3,
+		"blank": 111
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/mentions/resolveImageMentions.ts": {
+		"language": "TypeScript",
+		"code": 106,
+		"comment": 19,
+		"blank": 21
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/mentions/__tests__/index.spec.ts": {
+		"language": "TypeScript",
+		"code": 115,
+		"comment": 4,
+		"blank": 41
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/assistant-message/index.ts": {
+		"language": "TypeScript",
+		"code": 2,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/mentions/__tests__/processUserContentMentions.spec.ts": {
+		"language": "TypeScript",
+		"code": 299,
+		"comment": 3,
+		"blank": 37
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/assistant-message/NativeToolCallParser.ts": {
+		"language": "TypeScript",
+		"code": 700,
+		"comment": 150,
+		"blank": 111
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/mentions/processUserContentMentions.ts": {
+		"language": "TypeScript",
+		"code": 113,
+		"comment": 14,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/diff/strategies/__tests__/multi-file-search-replace-8char.spec.ts": {
+		"language": "TypeScript",
+		"code": 153,
+		"comment": 0,
+		"blank": 37
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/mentions/__tests__/resolveImageMentions.spec.ts": {
+		"language": "TypeScript",
+		"code": 155,
+		"comment": 1,
+		"blank": 38
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/diff/strategies/__tests__/multi-search-replace-trailing-newline.spec.ts": {
+		"language": "TypeScript",
+		"code": 144,
+		"comment": 6,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/ignore/RooIgnoreController.ts": {
+		"language": "TypeScript",
+		"code": 133,
+		"comment": 59,
+		"blank": 22
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/BrowserSessionPanelManager.ts": {
+		"language": "TypeScript",
+		"code": 238,
+		"comment": 38,
+		"blank": 35
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/protect/__tests__/RooProtectedController.spec.ts": {
+		"language": "TypeScript",
+		"code": 134,
+		"comment": 0,
+		"blank": 33
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/diagnosticsHandler.ts": {
+		"language": "TypeScript",
+		"code": 68,
+		"comment": 10,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/checkpointRestoreHandler.ts": {
+		"language": "TypeScript",
+		"code": 74,
+		"comment": 22,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/assistant-message/types.ts": {
+		"language": "TypeScript",
+		"code": 2,
+		"comment": 0,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/getUri.ts": {
+		"language": "TypeScript",
+		"code": 4,
+		"comment": 11,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/getNonce.ts": {
+		"language": "TypeScript",
+		"code": 8,
+		"comment": 8,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/ignore/__tests__/RooIgnoreController.security.spec.ts": {
+		"language": "TypeScript",
+		"code": 179,
+		"comment": 88,
+		"blank": 58
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/messageEnhancer.ts": {
+		"language": "TypeScript",
+		"code": 101,
+		"comment": 28,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/aggregateTaskCosts.ts": {
+		"language": "TypeScript",
+		"code": 46,
+		"comment": 12,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/ClineProvider.ts": {
+		"language": "TypeScript",
+		"code": 2536,
+		"comment": 491,
+		"blank": 461
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/generateSystemPrompt.ts": {
+		"language": "TypeScript",
+		"code": 83,
+		"comment": 8,
+		"blank": 16
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/protect/RooProtectedController.ts": {
+		"language": "TypeScript",
+		"code": 59,
+		"comment": 35,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/ignore/__tests__/RooIgnoreController.spec.ts": {
+		"language": "TypeScript",
+		"code": 283,
+		"comment": 153,
+		"blank": 94
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/webviewMessageHandler.ts": {
+		"language": "TypeScript",
+		"code": 2972,
+		"comment": 327,
+		"blank": 376
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/config/ProviderSettingsManager.ts": {
+		"language": "TypeScript",
+		"code": 660,
+		"comment": 108,
+		"blank": 123
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/config/importExport.ts": {
+		"language": "TypeScript",
+		"code": 157,
+		"comment": 37,
+		"blank": 33
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/config/ContextProxy.ts": {
+		"language": "TypeScript",
+		"code": 310,
+		"comment": 69,
+		"blank": 76
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/config/__tests__/CustomModesManager.spec.ts": {
+		"language": "TypeScript",
+		"code": 1391,
+		"comment": 113,
+		"blank": 257
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/config/__tests__/importExport.spec.ts": {
+		"language": "TypeScript",
+		"code": 1406,
+		"comment": 112,
+		"blank": 278
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/aggregateTaskCosts.spec.ts": {
+		"language": "TypeScript",
+		"code": 257,
+		"comment": 14,
+		"blank": 56
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/generateSystemPrompt.browser-capability.spec.ts": {
+		"language": "TypeScript",
+		"code": 68,
+		"comment": 8,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/context/context-management/__tests__/context-error-handling.test.ts": {
+		"language": "TypeScript",
+		"code": 273,
+		"comment": 4,
+		"blank": 53
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/ClineProvider.apiHandlerRebuild.spec.ts": {
+		"language": "TypeScript",
+		"code": 485,
+		"comment": 29,
+		"blank": 67
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/webviewMessageHandler.routerModels.spec.ts": {
+		"language": "TypeScript",
+		"code": 186,
+		"comment": 14,
+		"blank": 26
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/ignore/__mocks__/RooIgnoreController.ts": {
+		"language": "TypeScript",
+		"code": 23,
+		"comment": 7,
+		"blank": 9
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/config/__tests__/ModeConfig.spec.ts": {
+		"language": "TypeScript",
+		"code": 209,
+		"comment": 1,
+		"blank": 46
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/config/__tests__/ContextProxy.spec.ts": {
+		"language": "TypeScript",
+		"code": 324,
+		"comment": 86,
+		"blank": 97
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/SearchReplaceTool.ts": {
+		"language": "TypeScript",
+		"code": 208,
+		"comment": 24,
+		"blank": 48
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/EditFileTool.ts": {
+		"language": "TypeScript",
+		"code": 393,
+		"comment": 62,
+		"blank": 75
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/config/__tests__/CustomModesManager.exportImportSlugChange.spec.ts": {
+		"language": "TypeScript",
+		"code": 350,
+		"comment": 24,
+		"blank": 64
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/config/__tests__/ProviderSettingsManager.spec.ts": {
+		"language": "TypeScript",
+		"code": 1060,
+		"comment": 49,
+		"blank": 189
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/config/__tests__/CustomModesSettings.spec.ts": {
+		"language": "TypeScript",
+		"code": 141,
+		"comment": 3,
+		"blank": 28
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/ListFilesTool.ts": {
+		"language": "TypeScript",
+		"code": 70,
+		"comment": 0,
+		"blank": 21
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/config/__tests__/CustomModesManager.yamlEdgeCases.spec.ts": {
+		"language": "TypeScript",
+		"code": 382,
+		"comment": 18,
+		"blank": 75
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/SearchAndReplaceTool.ts": {
+		"language": "TypeScript",
+		"code": 224,
+		"comment": 30,
+		"blank": 51
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/config/CustomModesManager.ts": {
+		"language": "TypeScript",
+		"code": 715,
+		"comment": 147,
+		"blank": 154
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/UseMcpToolTool.ts": {
+		"language": "TypeScript",
+		"code": 258,
+		"comment": 22,
+		"blank": 50
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/context/context-management/context-error-handling.ts": {
+		"language": "TypeScript",
+		"code": 85,
+		"comment": 11,
+		"blank": 19
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/worktree/handlers.ts": {
+		"language": "TypeScript",
+		"code": 216,
+		"comment": 19,
+		"blank": 43
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/worktree/index.ts": {
+		"language": "TypeScript",
+		"code": 14,
+		"comment": 7,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/ClineProvider.flicker-free-cancel.spec.ts": {
+		"language": "TypeScript",
+		"code": 247,
+		"comment": 33,
+		"blank": 43
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task-persistence/index.ts": {
+		"language": "TypeScript",
+		"code": 3,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task-persistence/apiMessages.ts": {
+		"language": "TypeScript",
+		"code": 87,
+		"comment": 13,
+		"blank": 10
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/package.nls.fr.json": {
+		"language": "JSON",
+		"code": 50,
+		"comment": 0,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task-persistence/taskMessages.ts": {
+		"language": "TypeScript",
+		"code": 33,
+		"comment": 0,
+		"blank": 10
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/__mocks__/vscode.js": {
+		"language": "JavaScript",
+		"code": 154,
+		"comment": 1,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task-persistence/taskMetadata.ts": {
+		"language": "TypeScript",
+		"code": 92,
+		"comment": 12,
+		"blank": 16
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/MultiApplyDiffTool.ts": {
+		"language": "TypeScript",
+		"code": 16,
+		"comment": 0,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/webviewMessageHandler.delete.spec.ts": {
+		"language": "TypeScript",
+		"code": 411,
+		"comment": 80,
+		"blank": 77
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/ClineProvider.sticky-mode.spec.ts": {
+		"language": "TypeScript",
+		"code": 888,
+		"comment": 154,
+		"blank": 192
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/GenerateImageTool.ts": {
+		"language": "TypeScript",
+		"code": 216,
+		"comment": 10,
+		"blank": 45
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/task-persistence/__tests__/taskMessages.spec.ts": {
+		"language": "TypeScript",
+		"code": 54,
+		"comment": 3,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/ExecuteCommandTool.ts": {
+		"language": "TypeScript",
+		"code": 299,
+		"comment": 18,
+		"blank": 63
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/webviewMessageHandler.edit.spec.ts": {
+		"language": "TypeScript",
+		"code": 328,
+		"comment": 25,
+		"blank": 45
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/ClineProvider.taskHistory.spec.ts": {
+		"language": "TypeScript",
+		"code": 480,
+		"comment": 24,
+		"blank": 93
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/webviewMessageHandler.imageMentions.integration.spec.ts": {
+		"language": "TypeScript",
+		"code": 112,
+		"comment": 2,
+		"blank": 17
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/AttemptCompletionTool.ts": {
+		"language": "TypeScript",
+		"code": 143,
+		"comment": 27,
+		"blank": 39
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/ClineProvider.spec.ts": {
+		"language": "TypeScript",
+		"code": 2902,
+		"comment": 340,
+		"blank": 617
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/diagnosticsHandler.spec.ts": {
+		"language": "TypeScript",
+		"code": 142,
+		"comment": 14,
+		"blank": 33
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/checkpointRestoreHandler.spec.ts": {
+		"language": "TypeScript",
+		"code": 186,
+		"comment": 23,
+		"blank": 34
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/webviewMessageHandler.rooBalance.spec.ts": {
+		"language": "TypeScript",
+		"code": 97,
+		"comment": 0,
+		"blank": 21
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/AskFollowupQuestionTool.ts": {
+		"language": "TypeScript",
+		"code": 43,
+		"comment": 3,
+		"blank": 12
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/webviewMessageHandler.searchFiles.spec.ts": {
+		"language": "TypeScript",
+		"code": 204,
+		"comment": 40,
+		"blank": 54
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/CodebaseSearchTool.ts": {
+		"language": "TypeScript",
+		"code": 118,
+		"comment": 0,
+		"blank": 29
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/validateToolUse.ts": {
+		"language": "TypeScript",
+		"code": 120,
+		"comment": 28,
+		"blank": 31
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/WriteToFileTool.ts": {
+		"language": "TypeScript",
+		"code": 203,
+		"comment": 6,
+		"blank": 53
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/telemetrySettingsTracking.spec.ts": {
+		"language": "TypeScript",
+		"code": 106,
+		"comment": 15,
+		"blank": 35
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/ReadFileTool.ts": {
+		"language": "TypeScript",
+		"code": 564,
+		"comment": 12,
+		"blank": 82
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/BrowserActionTool.ts": {
+		"language": "TypeScript",
+		"code": 225,
+		"comment": 21,
+		"blank": 35
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/webviewMessageHandler.checkpoint.spec.ts": {
+		"language": "TypeScript",
+		"code": 111,
+		"comment": 12,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/SwitchModeTool.ts": {
+		"language": "TypeScript",
+		"code": 65,
+		"comment": 3,
+		"blank": 20
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/helpers/fileTokenBudget.ts": {
+		"language": "TypeScript",
+		"code": 3,
+		"comment": 5,
+		"blank": 2
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/helpers/__tests__/toolResultFormatting.spec.ts": {
+		"language": "TypeScript",
+		"code": 21,
+		"comment": 0,
+		"blank": 6
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/ClineProvider.sticky-profile.spec.ts": {
+		"language": "TypeScript",
+		"code": 678,
+		"comment": 83,
+		"blank": 123
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/webviewMessageHandler.spec.ts": {
+		"language": "TypeScript",
+		"code": 754,
+		"comment": 35,
+		"blank": 122
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/helpers/__tests__/truncateDefinitions.spec.ts": {
+		"language": "TypeScript",
+		"code": 124,
+		"comment": 0,
+		"blank": 37
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/helpers/imageHelpers.ts": {
+		"language": "TypeScript",
+		"code": 125,
+		"comment": 46,
+		"blank": 22
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/helpers/truncateDefinitions.ts": {
+		"language": "TypeScript",
+		"code": 23,
+		"comment": 14,
+		"blank": 8
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/BrowserActionTool.screenshot.spec.ts": {
+		"language": "TypeScript",
+		"code": 23,
+		"comment": 0,
+		"blank": 3
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/useMcpToolTool.spec.ts": {
+		"language": "TypeScript",
+		"code": 494,
+		"comment": 16,
+		"blank": 72
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/applyDiffTool.experiment.spec.ts": {
+		"language": "TypeScript",
+		"code": 106,
+		"comment": 11,
+		"blank": 24
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/readFileTool.spec.ts": {
+		"language": "TypeScript",
+		"code": 1406,
+		"comment": 276,
+		"blank": 325
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/editFileTool.spec.ts": {
+		"language": "TypeScript",
+		"code": 620,
+		"comment": 27,
+		"blank": 127
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/generateImageTool.test.ts": {
+		"language": "TypeScript",
+		"code": 317,
+		"comment": 13,
+		"blank": 42
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/executeCommand.spec.ts": {
+		"language": "TypeScript",
+		"code": 333,
+		"comment": 49,
+		"blank": 73
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/writeToFileTool.spec.ts": {
+		"language": "TypeScript",
+		"code": 365,
+		"comment": 17,
+		"blank": 86
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/newTaskTool.spec.ts": {
+		"language": "TypeScript",
+		"code": 533,
+		"comment": 56,
+		"blank": 89
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/executeCommandTimeout.integration.spec.ts": {
+		"language": "TypeScript",
+		"code": 296,
+		"comment": 41,
+		"blank": 70
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/askFollowupQuestionTool.spec.ts": {
+		"language": "TypeScript",
+		"code": 177,
+		"comment": 7,
+		"blank": 28
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/attemptCompletionTool.spec.ts": {
+		"language": "TypeScript",
+		"code": 389,
+		"comment": 14,
+		"blank": 70
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/searchAndReplaceTool.spec.ts": {
+		"language": "TypeScript",
+		"code": 334,
+		"comment": 11,
+		"blank": 70
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/executeCommandTool.spec.ts": {
+		"language": "TypeScript",
+		"code": 208,
+		"comment": 42,
+		"blank": 40
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/searchReplaceTool.spec.ts": {
+		"language": "TypeScript",
+		"code": 353,
+		"comment": 14,
+		"blank": 72
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/updateTodoListTool.spec.ts": {
+		"language": "TypeScript",
+		"code": 215,
+		"comment": 0,
+		"blank": 29
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/BrowserActionTool.coordinateScaling.spec.ts": {
+		"language": "TypeScript",
+		"code": 57,
+		"comment": 13,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/apply-patch/index.ts": {
+		"language": "TypeScript",
+		"code": 5,
+		"comment": 6,
+		"blank": 4
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/validateToolUse.spec.ts": {
+		"language": "TypeScript",
+		"code": 179,
+		"comment": 15,
+		"blank": 32
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/apply-patch/seek-sequence.ts": {
+		"language": "TypeScript",
+		"code": 84,
+		"comment": 55,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/runSlashCommandTool.spec.ts": {
+		"language": "TypeScript",
+		"code": 383,
+		"comment": 1,
+		"blank": 70
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/multiApplyDiffTool.spec.ts": {
+		"language": "TypeScript",
+		"code": 242,
+		"comment": 11,
+		"blank": 36
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/__tests__/ToolRepetitionDetector.spec.ts": {
+		"language": "TypeScript",
+		"code": 453,
+		"comment": 105,
+		"blank": 143
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/apply-patch/__tests__/seek-sequence.spec.ts": {
+		"language": "TypeScript",
+		"code": 75,
+		"comment": 8,
+		"blank": 15
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/apply-patch/parser.ts": {
+		"language": "TypeScript",
+		"code": 228,
+		"comment": 64,
+		"blank": 41
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/apply-patch/__tests__/parser.spec.ts": {
+		"language": "TypeScript",
+		"code": 287,
+		"comment": 0,
+		"blank": 31
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/helpers/toolResultFormatting.ts": {
+		"language": "TypeScript",
+		"code": 6,
+		"comment": 4,
+		"blank": 1
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/apply-patch/__tests__/apply.spec.ts": {
+		"language": "TypeScript",
+		"code": 174,
+		"comment": 3,
+		"blank": 13
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/apply-patch/apply.ts": {
+		"language": "TypeScript",
+		"code": 123,
+		"comment": 56,
+		"blank": 27
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/accessMcpResourceTool.ts": {
+		"language": "TypeScript",
+		"code": 78,
+		"comment": 2,
+		"blank": 21
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/FetchInstructionsTool.ts": {
+		"language": "TypeScript",
+		"code": 56,
+		"comment": 1,
+		"blank": 19
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/UpdateTodoListTool.ts": {
+		"language": "TypeScript",
+		"code": 191,
+		"comment": 2,
+		"blank": 29
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/BaseTool.ts": {
+		"language": "TypeScript",
+		"code": 65,
+		"comment": 85,
+		"blank": 13
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/ToolRepetitionDetector.ts": {
+		"language": "TypeScript",
+		"code": 61,
+		"comment": 37,
+		"blank": 14
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/ApplyPatchTool.ts": {
+		"language": "TypeScript",
+		"code": 352,
+		"comment": 31,
+		"blank": 67
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/NewTaskTool.ts": {
+		"language": "TypeScript",
+		"code": 110,
+		"comment": 13,
+		"blank": 29
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/RunSlashCommandTool.ts": {
+		"language": "TypeScript",
+		"code": 102,
+		"comment": 6,
+		"blank": 25
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/SearchFilesTool.ts": {
+		"language": "TypeScript",
+		"code": 74,
+		"comment": 0,
+		"blank": 22
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/tools/ApplyDiffTool.ts": {
+		"language": "TypeScript",
+		"code": 228,
+		"comment": 15,
+		"blank": 58
+	},
+	"file:///Users/kietle/Desktop/Roo-Code-Fork/src/core/webview/__tests__/messageEnhancer.test.ts": {
+		"language": "TypeScript",
+		"code": 274,
+		"comment": 23,
+		"blank": 69
+	}
+}

@@ -28,6 +28,7 @@
 		"openInCloud": "Ouvrir la tâche dans Roo Code Cloud",
 		"openInCloudIntro": "Continue à surveiller ou interagir avec Roo depuis n'importe où. Scanne, clique ou copie pour ouvrir.",
 		"openApiHistory": "Ouvrir l'historique de l'API",
+		"openApiRequest": "Ouvrir la requête API",
 		"openUiHistory": "Ouvrir l'historique de l'UI"
 	},
 	"unpin": "Désépingler",

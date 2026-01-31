@@ -10,7 +10,7 @@ import { useExtensionState } from "@/context/ExtensionStateContext"
 import { DeleteTaskDialog } from "../history/DeleteTaskDialog"
 import { ShareButton } from "./ShareButton"
 import { CloudTaskButton } from "./CloudTaskButton"
-import { CopyIcon, DownloadIcon, Trash2Icon, FileJsonIcon, MessageSquareCodeIcon } from "lucide-react"
+import { CopyIcon, DownloadIcon, Trash2Icon, FileJsonIcon, MessageSquareCodeIcon, FileCodeIcon } from "lucide-react"
 import { LucideIconButton } from "./LucideIconButton"
 
 interface TaskActionsProps {
@@ -71,6 +71,11 @@ export const TaskActions = ({ item, buttonsDisabled }: TaskActionsProps) => {
 						icon={FileJsonIcon}
 						title={t("chat:task.openApiHistory")}
 						onClick={() => vscode.postMessage({ type: "openDebugApiHistory" })}
+					/>
+					<LucideIconButton
+						icon={FileCodeIcon}
+						title={t("chat:task.openApiRequest")}
+						onClick={() => vscode.postMessage({ type: "openDebugApiRequest" })}
 					/>
 					<LucideIconButton
 						icon={MessageSquareCodeIcon}

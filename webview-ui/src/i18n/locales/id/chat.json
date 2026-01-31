@@ -28,6 +28,7 @@
 		"openInCloud": "Buka tugas di Roo Code Cloud",
 		"openInCloudIntro": "Terus pantau atau berinteraksi dengan Roo dari mana saja. Pindai, klik atau salin untuk membuka.",
 		"openApiHistory": "Buka Riwayat API",
+		"openApiRequest": "Buka Permintaan API",
 		"openUiHistory": "Buka Riwayat UI"
 	},
 	"history": {

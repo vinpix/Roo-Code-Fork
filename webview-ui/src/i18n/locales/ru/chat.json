@@ -28,6 +28,7 @@
 		"openInCloud": "Открыть задачу в Roo Code Cloud",
 		"openInCloudIntro": "Продолжай отслеживать или взаимодействовать с Roo откуда угодно. Отсканируй, нажми или скопируй для открытия.",
 		"openApiHistory": "Открыть историю API",
+		"openApiRequest": "Открыть запрос API",
 		"openUiHistory": "Открыть историю UI"
 	},
 	"unpin": "Открепить",

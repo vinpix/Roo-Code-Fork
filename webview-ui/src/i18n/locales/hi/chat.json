@@ -28,6 +28,7 @@
 		"openInCloud": "Roo Code Cloud में कार्य खोलें",
 		"openInCloudIntro": "कहीं से भी Roo की निगरानी या इंटरैक्ट करना जारी रखें। खोलने के लिए स्कैन करें, क्लिक करें या कॉपी करें।",
 		"openApiHistory": "API इतिहास खोलें",
+		"openApiRequest": "API अनुरोध खोलें",
 		"openUiHistory": "UI इतिहास खोलें"
 	},
 	"unpin": "पिन करें",

@@ -43,6 +43,7 @@ vi.mock("react-i18next", () => ({
 				"chat:task.connectToCloudDescription": "Sign in to Roo Code Cloud to share tasks",
 				"chat:task.sharingDisabledByOrganization": "Sharing disabled by organization",
 				"chat:task.openApiHistory": "Open API History",
+				"chat:task.openApiRequest": "Open API Request",
 				"chat:task.openUiHistory": "Open UI History",
 				"cloud:cloudBenefitsTitle": "Connect to Roo Code Cloud",
 				"cloud:cloudBenefitHistory": "Access your task history from anywhere",
@@ -399,9 +400,11 @@ describe("TaskActions", () => {
 			render(<TaskActions item={mockItem} buttonsDisabled={false} />)
 
 			const apiHistoryButton = screen.queryByLabelText("Open API History")
+			const apiRequestButton = screen.queryByLabelText("Open API Request")
 			const uiHistoryButton = screen.queryByLabelText("Open UI History")
 
 			expect(apiHistoryButton).not.toBeInTheDocument()
+			expect(apiRequestButton).not.toBeInTheDocument()
 			expect(uiHistoryButton).not.toBeInTheDocument()
 		})
 
@@ -415,9 +418,11 @@ describe("TaskActions", () => {
 			render(<TaskActions item={mockItem} buttonsDisabled={false} />)
 
 			const apiHistoryButton = screen.queryByLabelText("Open API History")
+			const apiRequestButton = screen.queryByLabelText("Open API Request")
 			const uiHistoryButton = screen.queryByLabelText("Open UI History")
 
 			expect(apiHistoryButton).not.toBeInTheDocument()
+			expect(apiRequestButton).not.toBeInTheDocument()
 			expect(uiHistoryButton).not.toBeInTheDocument()
 		})
 
@@ -432,9 +437,11 @@ describe("TaskActions", () => {
 			render(<TaskActions item={mockItem} buttonsDisabled={false} />)
 
 			const apiHistoryButton = screen.getByLabelText("Open API History")
+			const apiRequestButton = screen.getByLabelText("Open API Request")
 			const uiHistoryButton = screen.getByLabelText("Open UI History")
 
 			expect(apiHistoryButton).toBeInTheDocument()
+			expect(apiRequestButton).toBeInTheDocument()
 			expect(uiHistoryButton).toBeInTheDocument()
 		})
 
@@ -449,9 +456,11 @@ describe("TaskActions", () => {
 			render(<TaskActions item={undefined} buttonsDisabled={false} />)
 
 			const apiHistoryButton = screen.queryByLabelText("Open API History")
+			const apiRequestButton = screen.queryByLabelText("Open API Request")
 			const uiHistoryButton = screen.queryByLabelText("Open UI History")
 
 			expect(apiHistoryButton).not.toBeInTheDocument()
+			expect(apiRequestButton).not.toBeInTheDocument()
 			expect(uiHistoryButton).not.toBeInTheDocument()
 		})
 
@@ -470,6 +479,24 @@ describe("TaskActions", () => {
 
 			expect(mockPostMessage).toHaveBeenCalledWith({
 				type: "openDebugApiHistory",
+			})
+		})
+
+		it("sends openDebugApiRequest message when Open API Request button is clicked", () => {
+			mockUseExtensionState.mockReturnValue({
+				sharingEnabled: true,
+				cloudIsAuthenticated: true,
+				cloudUserInfo: { organizationName: "Test Organization" },
+				debug: true,
+			} as any)
+
+			render(<TaskActions item={mockItem} buttonsDisabled={false} />)
+
+			const apiRequestButton = screen.getByLabelText("Open API Request")
+			fireEvent.click(apiRequestButton)
+
+			expect(mockPostMessage).toHaveBeenCalledWith({
+				type: "openDebugApiRequest",
 			})
 		})
 

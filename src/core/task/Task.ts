@@ -138,6 +138,13 @@ const DEFAULT_USAGE_COLLECTION_TIMEOUT_MS = 5000 // 5 seconds
 const FORCED_CONTEXT_REDUCTION_PERCENT = 75 // Keep 75% of context (remove 25%) on context window errors
 const MAX_CONTEXT_WINDOW_RETRIES = 3 // Maximum retries for context window errors
 
+type ReasoningItemForRequest = {
+	type: "reasoning"
+	encrypted_content: string
+	id?: string
+	summary?: any[]
+}
+
 export interface TaskOptions extends CreateTaskOptions {
 	provider: ClineProvider
 	apiConfiguration: ProviderSettings
@@ -4300,16 +4307,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 		options?: {
 			pruneReadFileToolResults?: boolean
 		},
-	): Array<
-		Anthropic.Messages.MessageParam | { type: "reasoning"; encrypted_content: string; id?: string; summary?: any[] }
-	> {
-		type ReasoningItemForRequest = {
-			type: "reasoning"
-			encrypted_content: string
-			id?: string
-			summary?: any[]
-		}
-
+	): Array<Anthropic.Messages.MessageParam | ReasoningItemForRequest> {
 		const shouldPruneReadFileToolResults = options?.pruneReadFileToolResults === true
 		const toolUseIdToName = new Map<string, string>()
 		const toolUseIdToReadFilePaths = new Map<string, string[]>()
@@ -4605,6 +4603,134 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 
 		return cleanConversationHistory
 	}
+
+	private sanitizeEnvironmentDetailsForDebug(
+		messages: Array<Anthropic.Messages.MessageParam | ReasoningItemForRequest>,
+	): Array<Anthropic.Messages.MessageParam | ReasoningItemForRequest> {
+		const isEnvironmentDetailsText = (text: string) => {
+			const trimmed = text.trim()
+			return trimmed.startsWith("<environment_details>") && trimmed.endsWith("</environment_details>")
+		}
+
+		const sanitizeText = (text: string) => {
+			if (!isEnvironmentDetailsText(text)) {
+				return text
+			}
+			return "<environment_details>\n[Environment details omitted]\n</environment_details>"
+		}
+
+		return messages.map((message) => {
+			if (!("role" in message)) {
+				return message
+			}
+
+			const content = message.content
+			if (typeof content === "string") {
+				const sanitized = sanitizeText(content)
+				return sanitized === content ? message : { ...message, content: sanitized }
+			}
+
+			if (!Array.isArray(content)) {
+				return message
+			}
+
+			let didChange = false
+			const sanitizedContent = content.map((block) => {
+				if (block && (block as any).type === "text" && typeof (block as any).text === "string") {
+					const newText = sanitizeText((block as any).text)
+					if (newText !== (block as any).text) {
+						didChange = true
+						return { ...(block as Anthropic.Messages.TextBlockParam), text: newText }
+					}
+				}
+				return block
+			})
+
+			return didChange ? { ...message, content: sanitizedContent } : message
+		})
+	}
+
+	public async getApiRequestSnapshot(options?: { sanitizeEnvironmentDetails?: boolean }): Promise<{
+		createdAt: string
+		provider: ProviderSettings["apiProvider"] | undefined
+		model: string
+		systemPrompt: string
+		messages: Array<Anthropic.Messages.MessageParam | ReasoningItemForRequest>
+		metadata: ApiHandlerCreateMessageMetadata
+	}> {
+		const provider = this.providerRef.deref()
+		if (!provider) {
+			throw new Error("Provider reference lost while building API request snapshot")
+		}
+
+		const state = await provider.getState()
+		const apiConfiguration = state?.apiConfiguration ?? this.apiConfiguration
+		const systemPrompt = await this.getSystemPrompt()
+		const effectiveHistory = getEffectiveApiHistory(this.apiConversationHistory)
+		const messagesSinceLastSummary = getMessagesSinceLastSummary(effectiveHistory)
+		const messagesWithoutImages = maybeRemoveImageBlocks(messagesSinceLastSummary, this.api)
+		const aggregatedFileContextEnabled = experiments.isEnabled(
+			state?.experiments ?? {},
+			EXPERIMENT_IDS.AGGREGATED_FILE_CONTEXT,
+		)
+
+		const cleanConversationHistory = this.buildCleanConversationHistory(messagesWithoutImages as ApiMessage[], {
+			pruneReadFileToolResults: aggregatedFileContextEnabled,
+		})
+
+		const finalMessages =
+			options?.sanitizeEnvironmentDetails && aggregatedFileContextEnabled
+				? this.sanitizeEnvironmentDetailsForDebug(cleanConversationHistory)
+				: cleanConversationHistory
+
+		const modelInfo = this.api.getModel().info
+		let allTools: OpenAI.Chat.ChatCompletionTool[] = []
+		let allowedFunctionNames: string[] | undefined
+
+		const supportsAllowedFunctionNames = apiConfiguration?.apiProvider === "gemini"
+
+		const toolsResult = await buildNativeToolsArrayWithRestrictions({
+			provider,
+			cwd: this.cwd,
+			mode: state?.mode,
+			customModes: state?.customModes,
+			experiments: state?.experiments,
+			apiConfiguration,
+			maxReadFileLine: state?.maxReadFileLine ?? -1,
+			maxConcurrentFileReads: state?.maxConcurrentFileReads ?? 5,
+			browserToolEnabled: state?.browserToolEnabled ?? true,
+			modelInfo,
+			diffEnabled: this.diffEnabled,
+			includeAllToolsWithRestrictions: supportsAllowedFunctionNames,
+		})
+
+		allTools = toolsResult.tools
+		allowedFunctionNames = toolsResult.allowedFunctionNames
+
+		const shouldIncludeTools = allTools.length > 0
+		const metadata: ApiHandlerCreateMessageMetadata = {
+			mode: state?.mode,
+			taskId: this.taskId,
+			...(shouldIncludeTools
+				? {
+						tools: allTools,
+						tool_choice: "auto",
+						parallelToolCalls: false,
+						...(allowedFunctionNames ? { allowedFunctionNames } : {}),
+					}
+				: {}),
+		}
+
+		return {
+			createdAt: new Date().toISOString(),
+			provider: apiConfiguration?.apiProvider,
+			model: this.api.getModel().id,
+			systemPrompt,
+			messages: finalMessages,
+			metadata,
+		}
+	}
+
 	public async checkpointRestore(options: CheckpointRestoreOptions) {
 		return checkpointRestore(this, options)
 	}

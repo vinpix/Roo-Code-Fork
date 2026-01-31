@@ -10,6 +10,98 @@ import { maybeRemoveImageBlocks } from "../../api/transform/image-cleaning"
 import { findLast } from "../../shared/array"
 
 /**
+ * Checks if a text block is an environment_details block
+ */
+function isEnvironmentDetailsBlock(block: Anthropic.Messages.ContentBlockParam): boolean {
+	if (block.type !== "text" || typeof block.text !== "string") {
+		return false
+	}
+	const trimmed = block.text.trim()
+	return trimmed.startsWith("<environment_details>") && trimmed.endsWith("</environment_details>")
+}
+
+/**
+ * Checks if a tool_use block is a read_file tool
+ */
+function isReadFileToolUse(block: Anthropic.Messages.ContentBlockParam): boolean {
+	if ((block as any).type !== "tool_use") {
+		return false
+	}
+	const name = (block as any).name
+	return name === "read_file" || name === "search_and_replace"
+}
+
+/**
+ * Checks if a tool_result block is from a read_file tool
+ */
+function isReadFileToolResult(
+	block: Anthropic.Messages.ContentBlockParam,
+	toolUseIdToName: Map<string, string>,
+): boolean {
+	if ((block as any).type !== "tool_result") {
+		return false
+	}
+	const toolUseId = (block as any).tool_use_id
+	if (!toolUseId) return false
+	const toolName = toolUseIdToName.get(toolUseId)
+	return toolName === "read_file" || toolName === "search_and_replace"
+}
+
+/**
+ * Filters out environment details and read_file tool results from messages
+ * to reduce context size before condensing
+ */
+function filterMessagesForCondensing(messages: ApiMessage[]): ApiMessage[] {
+	// Build a map of tool_use_id -> tool_name from assistant messages
+	const toolUseIdToName = new Map<string, string>()
+	for (const msg of messages) {
+		if (msg.role === "assistant" && Array.isArray(msg.content)) {
+			for (const block of msg.content) {
+				if ((block as any).type === "tool_use" && (block as any).id) {
+					toolUseIdToName.set((block as any).id, (block as any).name)
+				}
+			}
+		}
+	}
+
+	return messages.map((msg) => {
+		// For user messages, filter out environment_details and read_file tool_results
+		if (msg.role === "user" && Array.isArray(msg.content)) {
+			const filteredContent = msg.content
+				.map((block) => {
+					// Skip environment_details blocks
+					if (isEnvironmentDetailsBlock(block)) {
+						return null
+					}
+					// Replace read_file tool_results with a placeholder
+					if (isReadFileToolResult(block, toolUseIdToName)) {
+						return {
+							...(block as Anthropic.ToolResultBlockParam),
+							content: "[File content omitted for condensing]",
+						} satisfies Anthropic.ToolResultBlockParam
+					}
+					return block
+				})
+				.filter((block): block is NonNullable<typeof block> => block !== null)
+
+			// If all content was filtered out, return a placeholder
+			if (filteredContent.length === 0) {
+				return {
+					...msg,
+					content: [{ type: "text" as const, text: "[Environment details and file contents omitted]" }],
+				}
+			}
+
+			return { ...msg, content: filteredContent }
+		}
+
+		// For assistant messages with tool_use, we keep them as-is
+		// (tool_use blocks are needed for context)
+		return msg
+	})
+}
+
+/**
  * Checks if a message contains tool_result blocks.
  * For native tools protocol, user messages with tool_result blocks require
  * corresponding tool_use blocks from the previous assistant turn.
@@ -265,7 +357,11 @@ export async function summarizeConversation(
 	const messagesBeforeKeep = summarySliceEnd > 0 ? messages.slice(0, summarySliceEnd) : []
 
 	// Get messages to summarize, including the first message and excluding the last N messages
-	const messagesToSummarize = getMessagesSinceLastSummary(messagesBeforeKeep)
+	let messagesToSummarize = getMessagesSinceLastSummary(messagesBeforeKeep)
+
+	// Filter out environment details and read_file tool results to reduce context size
+	// This makes condensing faster by removing unnecessary content
+	messagesToSummarize = filterMessagesForCondensing(messagesToSummarize)
 
 	if (messagesToSummarize.length <= 1) {
 		const error =
