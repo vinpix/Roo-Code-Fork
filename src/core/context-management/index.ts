@@ -251,6 +251,7 @@ export async function manageContext({
 	profileThresholds,
 	currentProfileId,
 	useNativeTools,
+	prepareMessagesForSummarize,
 }: ContextManagementOptions): Promise<ContextManagementResult> {
 	let error: string | undefined
 	let cost = 0

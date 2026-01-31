@@ -20,7 +20,7 @@ import {
 	type TaskMetadata,
 	type TaskEvents,
 	type ProviderSettings,
-	type GlobalState,
+	type ExtensionState,
 	type TokenUsage,
 	type ToolUsage,
 	type ToolName,
@@ -4405,7 +4405,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 		})
 	}
 
-	private prepareMessagesForCondense(messages: ApiMessage[], state?: GlobalState): ApiMessage[] {
+	private prepareMessagesForCondense(messages: ApiMessage[], state?: ExtensionState): ApiMessage[] {
 		const aggregatedFileContextEnabled = experiments.isEnabled(
 			state?.experiments ?? {},
 			EXPERIMENT_IDS.AGGREGATED_FILE_CONTEXT,
@@ -4596,7 +4596,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 
 	private async buildApiRequestPayload(options?: {
 		sanitizeEnvironmentDetails?: boolean
-		state?: GlobalState
+		state?: ExtensionState
 		systemPrompt?: string
 	}): Promise<{
 		provider: ProviderSettings["apiProvider"] | undefined
