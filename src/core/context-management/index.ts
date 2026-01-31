@@ -220,6 +220,7 @@ export type ContextManagementOptions = {
 	profileThresholds: Record<string, number>
 	currentProfileId: string
 	useNativeTools?: boolean
+	prepareMessagesForSummarize?: (messages: ApiMessage[]) => ApiMessage[]
 }
 
 export type ContextManagementResult = SummarizeResponse & {
@@ -304,6 +305,7 @@ export async function manageContext({
 				customCondensingPrompt,
 				condensingApiHandler,
 				useNativeTools,
+				prepareMessagesForSummarize,
 			)
 			if (result.error) {
 				error = result.error

@@ -8,7 +8,6 @@ import EventEmitter from "events"
 import { AskIgnoredError } from "./AskIgnoredError"
 
 import { Anthropic } from "@anthropic-ai/sdk"
-import OpenAI from "openai"
 import debounce from "lodash.debounce"
 import delay from "delay"
 import pWaitFor from "p-wait-for"
@@ -21,6 +20,7 @@ import {
 	type TaskMetadata,
 	type TaskEvents,
 	type ProviderSettings,
+	type GlobalState,
 	type TokenUsage,
 	type ToolUsage,
 	type ToolName,
@@ -1616,7 +1616,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 		// to ensure tool_use/tool_result pairs are complete in history
 		await this.flushPendingToolResultsToHistory()
 
-		const systemPrompt = await this.getSystemPrompt()
+		const baseSystemPrompt = await this.getSystemPrompt()
 
 		// Get condensing configuration
 		const state = await this.providerRef.deref()?.getState()
@@ -1656,13 +1656,14 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 		} = await summarizeConversation(
 			this.apiConversationHistory,
 			this.api, // Main API handler (fallback)
-			systemPrompt, // Default summarization prompt (fallback)
+			baseSystemPrompt, // Default summarization prompt (fallback)
 			this.taskId,
 			prevContextTokens,
 			false, // manual trigger
 			customCondensingPrompt, // User's custom prompt
 			condensingApiHandler, // Specific handler for condensing
 			useNativeTools,
+			(messages) => this.prepareMessagesForCondense(messages, state),
 		)
 		if (error) {
 			this.say(
@@ -3777,6 +3778,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 			profileThresholds,
 			currentProfileId,
 			useNativeTools,
+			prepareMessagesForSummarize: (messages) => this.prepareMessagesForCondense(messages, state),
 		})
 
 		if (truncateResult.messages !== this.apiConversationHistory) {
@@ -3862,10 +3864,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 		const state = await this.providerRef.deref()?.getState()
 
 		const {
-			apiConfiguration,
 			autoApprovalEnabled,
-			requestDelaySeconds,
-			mode,
 			autoCondenseContext = true,
 			autoCondenseContextPercent = 100,
 			profileThresholds = {},
@@ -3908,7 +3907,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 		// in the caller.
 		Task.lastGlobalApiRequestTime = performance.now()
 
-		const systemPrompt = await this.getSystemPrompt()
+		const baseSystemPrompt = await this.getSystemPrompt()
 		const { contextTokens } = this.getTokenUsage()
 
 		if (contextTokens) {
@@ -3968,13 +3967,14 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 				apiHandler: this.api,
 				autoCondenseContext,
 				autoCondenseContextPercent,
-				systemPrompt,
+				systemPrompt: baseSystemPrompt,
 				taskId: this.taskId,
 				customCondensingPrompt,
 				condensingApiHandler,
 				profileThresholds,
 				currentProfileId,
 				useNativeTools,
+				prepareMessagesForSummarize: (messages) => this.prepareMessagesForCondense(messages, state),
 			})
 			if (truncateResult.messages !== this.apiConversationHistory) {
 				await this.overwriteApiConversationHistory(truncateResult.messages)
@@ -4030,19 +4030,11 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 			}
 		}
 
-		// Get the effective API history by filtering out condensed messages
-		// This allows non-destructive condensing where messages are tagged but not deleted,
-		// enabling accurate rewind operations while still sending condensed history to the API.
-		const effectiveHistory = getEffectiveApiHistory(this.apiConversationHistory)
-		const messagesSinceLastSummary = getMessagesSinceLastSummary(effectiveHistory)
-		const messagesWithoutImages = maybeRemoveImageBlocks(messagesSinceLastSummary, this.api)
-		const aggregatedFileContextEnabled = experiments.isEnabled(
-			state?.experiments ?? {},
-			EXPERIMENT_IDS.AGGREGATED_FILE_CONTEXT,
-		)
-		const cleanConversationHistory = this.buildCleanConversationHistory(messagesWithoutImages as ApiMessage[], {
-			pruneReadFileToolResults: aggregatedFileContextEnabled,
-		})
+		// Build the API request payload from the effective history (condense/truncation applied).
+		const requestPayload = await this.buildApiRequestPayload({ state, systemPrompt: baseSystemPrompt })
+		const cleanConversationHistory = requestPayload.messages
+		const systemPrompt = requestPayload.systemPrompt
+		const metadata = requestPayload.metadata
 
 		// Check auto-approval limits
 		const approvalResult = await this.autoApprovalHandler.checkAutoApprovalLimits(
@@ -4056,70 +4048,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 			throw new Error("Auto-approval limit reached and user did not approve continuation")
 		}
 
-		// Tool calling is native-only.
-		// Whether we include tools is determined by whether we have any tools to send.
-		const modelInfo = this.api.getModel().info
-
-		// Build complete tools array: native tools + dynamic MCP tools
-		// When includeAllToolsWithRestrictions is true, returns all tools but provides
-		// allowedFunctionNames for providers (like Gemini) that need to see all tool
-		// definitions in history while restricting callable tools for the current mode.
-		// Only Gemini currently supports this - other providers filter tools normally.
-		let allTools: OpenAI.Chat.ChatCompletionTool[] = []
-		let allowedFunctionNames: string[] | undefined
-
-		// Gemini requires all tool definitions to be present for history compatibility,
-		// but uses allowedFunctionNames to restrict which tools can be called.
-		// Other providers (Anthropic, OpenAI, etc.) don't support this feature yet,
-		// so they continue to receive only the filtered tools for the current mode.
-		const supportsAllowedFunctionNames = apiConfiguration?.apiProvider === "gemini"
-
-		{
-			const provider = this.providerRef.deref()
-			if (!provider) {
-				throw new Error("Provider reference lost during tool building")
-			}
-
-			const toolsResult = await buildNativeToolsArrayWithRestrictions({
-				provider,
-				cwd: this.cwd,
-				mode,
-				customModes: state?.customModes,
-				experiments: state?.experiments,
-				apiConfiguration,
-				maxReadFileLine: state?.maxReadFileLine ?? -1,
-				maxConcurrentFileReads: state?.maxConcurrentFileReads ?? 5,
-				browserToolEnabled: state?.browserToolEnabled ?? true,
-				modelInfo,
-				diffEnabled: this.diffEnabled,
-				includeAllToolsWithRestrictions: supportsAllowedFunctionNames,
-			})
-			allTools = toolsResult.tools
-			allowedFunctionNames = toolsResult.allowedFunctionNames
-		}
-
-		const shouldIncludeTools = allTools.length > 0
-
-		// Parallel tool calls are disabled - feature is on hold
-		// Previously resolved from experiments.isEnabled(..., EXPERIMENT_IDS.MULTIPLE_NATIVE_TOOL_CALLS)
-		const parallelToolCallsEnabled = false
-
-		const metadata: ApiHandlerCreateMessageMetadata = {
-			mode: mode,
-			taskId: this.taskId,
-			suppressPreviousResponseId: this.skipPrevResponseIdOnce,
-			// Include tools whenever they are present.
-			...(shouldIncludeTools
-				? {
-						tools: allTools,
-						tool_choice: "auto",
-						parallelToolCalls: parallelToolCallsEnabled,
-						// When mode restricts tools, provide allowedFunctionNames so providers
-						// like Gemini can see all tools in history but only call allowed ones
-						...(allowedFunctionNames ? { allowedFunctionNames } : {}),
-					}
-				: {}),
-		}
+		metadata.suppressPreviousResponseId = this.skipPrevResponseIdOnce
 
 		// Create an AbortController to allow cancelling the request mid-stream
 		this.currentRequestAbortController = new AbortController()
@@ -4302,15 +4231,16 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 		return checkpointSave(this, force, suppressMessage)
 	}
 
-	private buildCleanConversationHistory(
+	private pruneApiMessagesForRequest(
 		messages: ApiMessage[],
 		options?: {
 			pruneReadFileToolResults?: boolean
 		},
-	): Array<Anthropic.Messages.MessageParam | ReasoningItemForRequest> {
+	): ApiMessage[] {
 		const shouldPruneReadFileToolResults = options?.pruneReadFileToolResults === true
 		const toolUseIdToName = new Map<string, string>()
 		const toolUseIdToReadFilePaths = new Map<string, string[]>()
+
 		const isEnvironmentDetailsBlock = (block: unknown): block is Anthropic.Messages.TextBlockParam => {
 			if (!block || (block as any).type !== "text") {
 				return false
@@ -4322,6 +4252,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 				text.trim().endsWith("</environment_details>")
 			)
 		}
+
 		const messageHasEnvironmentDetails = (content: unknown): boolean => {
 			if (Array.isArray(content)) {
 				return content.some((block) => isEnvironmentDetailsBlock(block))
@@ -4332,6 +4263,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 			}
 			return false
 		}
+
 		const latestEnvDetailsUserIndex = (() => {
 			for (let i = messages.length - 1; i >= 0; i--) {
 				const msg = messages[i]
@@ -4365,44 +4297,44 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 			return []
 		}
 
-		const registerToolUses = (content: unknown) => {
-			if (!Array.isArray(content)) {
-				return
+		for (const msg of messages) {
+			if (msg.role !== "assistant" || !Array.isArray(msg.content)) {
+				continue
 			}
 
-			for (const block of content) {
-				if (block && (block as any).type === "tool_use") {
-					const toolUseId = (block as any).id
-					const toolName = (block as any).name
+			for (const block of msg.content) {
+				if (!block || (block as any).type !== "tool_use") {
+					continue
+				}
 
-					if (toolUseId && typeof toolName === "string") {
-						toolUseIdToName.set(toolUseId, toolName)
+				const toolUseId = (block as any).id
+				const toolName = (block as any).name
+
+				if (toolUseId && typeof toolName === "string") {
+					toolUseIdToName.set(toolUseId, toolName)
+				}
+
+				if (toolUseId && toolName === "read_file") {
+					const rawInput = (block as any).input ?? (block as any).params ?? (block as any).arguments
+					let parsedInput = rawInput
+					if (typeof rawInput === "string") {
+						try {
+							parsedInput = JSON.parse(rawInput)
+						} catch {
+							parsedInput = rawInput
+						}
 					}
-
-					if (toolUseId && toolName === "read_file") {
-						const rawInput = (block as any).input ?? (block as any).params ?? (block as any).arguments
-						let parsedInput = rawInput
-						if (typeof rawInput === "string") {
-							try {
-								parsedInput = JSON.parse(rawInput)
-							} catch {
-								parsedInput = rawInput
-							}
-						}
-						const filePaths = extractReadFilePaths(parsedInput)
-						if (filePaths.length > 0) {
-							toolUseIdToReadFilePaths.set(toolUseId, filePaths)
-						}
+					const filePaths = extractReadFilePaths(parsedInput)
+					if (filePaths.length > 0) {
+						toolUseIdToReadFilePaths.set(toolUseId, filePaths)
 					}
 				}
 			}
 		}
 
-		const maybePruneReadFileToolResults = (
-			content: unknown,
-		): Anthropic.Messages.ContentBlockParam[] | string | undefined => {
+		const maybePruneReadFileToolResults = (content: unknown) => {
 			if (!shouldPruneReadFileToolResults || !Array.isArray(content) || this.fileRegistry.size === 0) {
-				return content as Anthropic.Messages.ContentBlockParam[] | string | undefined
+				return content
 			}
 
 			let didPrune = false
@@ -4446,36 +4378,48 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 				} satisfies Anthropic.ToolResultBlockParam
 			})
 
-			return didPrune ? (prunedContent as Anthropic.Messages.ContentBlockParam[]) : (content as any)
+			return didPrune ? prunedContent : content
 		}
-		const maybePruneEnvironmentDetails = (
-			content: unknown,
-			keepEnvironmentDetails: boolean,
-		): Anthropic.Messages.ContentBlockParam[] | string | undefined => {
+
+		const maybePruneEnvironmentDetails = (content: unknown, keepEnvironmentDetails: boolean) => {
 			if (keepEnvironmentDetails || !Array.isArray(content)) {
-				return content as Anthropic.Messages.ContentBlockParam[] | string | undefined
+				return content
 			}
 			const filteredContent = content.filter((block) => !isEnvironmentDetailsBlock(block))
-			return filteredContent.length === content.length
-				? (content as Anthropic.Messages.ContentBlockParam[] | string | undefined)
-				: (filteredContent as Anthropic.Messages.ContentBlockParam[])
+			return filteredContent.length === content.length ? content : filteredContent
 		}
 
+		return messages.map((msg, index) => {
+			if (msg.role !== "user") {
+				return msg
+			}
+
+			let prunedContent = maybePruneReadFileToolResults(msg.content)
+			prunedContent = maybePruneEnvironmentDetails(prunedContent, index === latestEnvDetailsUserIndex)
+
+			if (prunedContent !== msg.content) {
+				return { ...msg, content: prunedContent as ApiMessage["content"] }
+			}
+
+			return msg
+		})
+	}
+
+	private prepareMessagesForCondense(messages: ApiMessage[], state?: GlobalState): ApiMessage[] {
+		const aggregatedFileContextEnabled = experiments.isEnabled(
+			state?.experiments ?? {},
+			EXPERIMENT_IDS.AGGREGATED_FILE_CONTEXT,
+		)
+		return this.pruneApiMessagesForRequest(messages, { pruneReadFileToolResults: aggregatedFileContextEnabled })
+	}
+
+	private buildCleanConversationHistory(
+		messages: ApiMessage[],
+	): Array<Anthropic.Messages.MessageParam | ReasoningItemForRequest> {
 		const cleanConversationHistory: (Anthropic.Messages.MessageParam | ReasoningItemForRequest)[] = []
 
-		for (let i = 0; i < messages.length; i++) {
-			const msg = messages[i]
-			if (msg.role === "assistant") {
-				registerToolUses(msg.content)
-			}
-
-			let prunedContent = msg.role === "user" ? maybePruneReadFileToolResults(msg.content) : (msg.content as any)
-			if (msg.role === "user") {
-				const keepEnvironmentDetails = i === latestEnvDetailsUserIndex
-				prunedContent = maybePruneEnvironmentDetails(prunedContent, keepEnvironmentDetails)
-			}
-			const messageForProcessing =
-				msg.role === "user" && prunedContent !== msg.content ? { ...msg, content: prunedContent } : msg
+		for (const msg of messages) {
+			const messageForProcessing = msg
 
 			// Standalone reasoning: send encrypted, skip plain text
 			if (messageForProcessing.type === "reasoning") {
@@ -4650,8 +4594,11 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 		})
 	}
 
-	public async getApiRequestSnapshot(options?: { sanitizeEnvironmentDetails?: boolean }): Promise<{
-		createdAt: string
+	private async buildApiRequestPayload(options?: {
+		sanitizeEnvironmentDetails?: boolean
+		state?: GlobalState
+		systemPrompt?: string
+	}): Promise<{
 		provider: ProviderSettings["apiProvider"] | undefined
 		model: string
 		systemPrompt: string
@@ -4660,12 +4607,12 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 	}> {
 		const provider = this.providerRef.deref()
 		if (!provider) {
-			throw new Error("Provider reference lost while building API request snapshot")
+			throw new Error("Provider reference lost while building API request payload")
 		}
 
-		const state = await provider.getState()
+		const state = options?.state ?? (await provider.getState())
 		const apiConfiguration = state?.apiConfiguration ?? this.apiConfiguration
-		const systemPrompt = await this.getSystemPrompt()
+		const systemPrompt = options?.systemPrompt ?? (await this.getSystemPrompt())
 		const effectiveHistory = getEffectiveApiHistory(this.apiConversationHistory)
 		const messagesSinceLastSummary = getMessagesSinceLastSummary(effectiveHistory)
 		const messagesWithoutImages = maybeRemoveImageBlocks(messagesSinceLastSummary, this.api)
@@ -4674,9 +4621,10 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 			EXPERIMENT_IDS.AGGREGATED_FILE_CONTEXT,
 		)
 
-		const cleanConversationHistory = this.buildCleanConversationHistory(messagesWithoutImages as ApiMessage[], {
+		const prunedMessages = this.pruneApiMessagesForRequest(messagesWithoutImages as ApiMessage[], {
 			pruneReadFileToolResults: aggregatedFileContextEnabled,
 		})
+		const cleanConversationHistory = this.buildCleanConversationHistory(prunedMessages)
 
 		const finalMessages =
 			options?.sanitizeEnvironmentDetails && aggregatedFileContextEnabled
@@ -4684,9 +4632,6 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 				: cleanConversationHistory
 
 		const modelInfo = this.api.getModel().info
-		let allTools: OpenAI.Chat.ChatCompletionTool[] = []
-		let allowedFunctionNames: string[] | undefined
-
 		const supportsAllowedFunctionNames = apiConfiguration?.apiProvider === "gemini"
 
 		const toolsResult = await buildNativeToolsArrayWithRestrictions({
@@ -4704,30 +4649,50 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 			includeAllToolsWithRestrictions: supportsAllowedFunctionNames,
 		})
 
-		allTools = toolsResult.tools
-		allowedFunctionNames = toolsResult.allowedFunctionNames
-
-		const shouldIncludeTools = allTools.length > 0
+		const shouldIncludeTools = toolsResult.tools.length > 0
 		const metadata: ApiHandlerCreateMessageMetadata = {
 			mode: state?.mode,
 			taskId: this.taskId,
 			...(shouldIncludeTools
 				? {
-						tools: allTools,
+						tools: toolsResult.tools,
 						tool_choice: "auto",
 						parallelToolCalls: false,
-						...(allowedFunctionNames ? { allowedFunctionNames } : {}),
+						...(toolsResult.allowedFunctionNames
+							? { allowedFunctionNames: toolsResult.allowedFunctionNames }
+							: {}),
 					}
 				: {}),
 		}
 
 		return {
-			createdAt: new Date().toISOString(),
 			provider: apiConfiguration?.apiProvider,
 			model: this.api.getModel().id,
 			systemPrompt,
 			messages: finalMessages,
 			metadata,
+		}
+	}
+
+	public async getApiRequestSnapshot(options?: { sanitizeEnvironmentDetails?: boolean }): Promise<{
+		createdAt: string
+		provider: ProviderSettings["apiProvider"] | undefined
+		model: string
+		systemPrompt: string
+		messages: Array<Anthropic.Messages.MessageParam | ReasoningItemForRequest>
+		metadata: ApiHandlerCreateMessageMetadata
+	}> {
+		const payload = await this.buildApiRequestPayload({
+			sanitizeEnvironmentDetails: options?.sanitizeEnvironmentDetails,
+		})
+
+		return {
+			createdAt: new Date().toISOString(),
+			provider: payload.provider,
+			model: payload.model,
+			systemPrompt: payload.systemPrompt,
+			messages: payload.messages,
+			metadata: payload.metadata,
 		}
 	}
 

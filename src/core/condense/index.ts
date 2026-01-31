@@ -317,6 +317,7 @@ export type SummarizeResponse = {
  * @param {string} customCondensingPrompt - Optional custom prompt to use for condensing
  * @param {ApiHandler} condensingApiHandler - Optional specific API handler to use for condensing
  * @param {boolean} useNativeTools - Whether native tools protocol is being used (requires tool_use/tool_result pairing)
+ * @param {(messages: ApiMessage[]) => ApiMessage[]} prepareMessagesForSummarize - Optional hook to pre-process messages for summarization
  * @returns {SummarizeResponse} - The result of the summarization operation (see above)
  */
 export async function summarizeConversation(
@@ -329,6 +330,7 @@ export async function summarizeConversation(
 	customCondensingPrompt?: string,
 	condensingApiHandler?: ApiHandler,
 	useNativeTools?: boolean,
+	prepareMessagesForSummarize?: (messages: ApiMessage[]) => ApiMessage[],
 ): Promise<SummarizeResponse> {
 	TelemetryService.instance.captureContextCondensed(
 		taskId,
@@ -361,7 +363,9 @@ export async function summarizeConversation(
 
 	// Filter out environment details and read_file tool results to reduce context size
 	// This makes condensing faster by removing unnecessary content
-	messagesToSummarize = filterMessagesForCondensing(messagesToSummarize)
+	messagesToSummarize = prepareMessagesForSummarize
+		? prepareMessagesForSummarize(messagesToSummarize)
+		: filterMessagesForCondensing(messagesToSummarize)
 
 	if (messagesToSummarize.length <= 1) {
 		const error =
