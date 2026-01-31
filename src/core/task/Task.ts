@@ -20,7 +20,6 @@ import {
 	type TaskMetadata,
 	type TaskEvents,
 	type ProviderSettings,
-	type ExtensionState,
 	type TokenUsage,
 	type ToolUsage,
 	type ToolName,
@@ -137,6 +136,8 @@ const MAX_EXPONENTIAL_BACKOFF_SECONDS = 600 // 10 minutes
 const DEFAULT_USAGE_COLLECTION_TIMEOUT_MS = 5000 // 5 seconds
 const FORCED_CONTEXT_REDUCTION_PERCENT = 75 // Keep 75% of context (remove 25%) on context window errors
 const MAX_CONTEXT_WINDOW_RETRIES = 3 // Maximum retries for context window errors
+
+type ProviderState = Awaited<ReturnType<ClineProvider["getState"]>>
 
 type ReasoningItemForRequest = {
 	type: "reasoning"
@@ -4405,7 +4406,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 		})
 	}
 
-	private prepareMessagesForCondense(messages: ApiMessage[], state?: ExtensionState): ApiMessage[] {
+	private prepareMessagesForCondense(messages: ApiMessage[], state?: ProviderState): ApiMessage[] {
 		const aggregatedFileContextEnabled = experiments.isEnabled(
 			state?.experiments ?? {},
 			EXPERIMENT_IDS.AGGREGATED_FILE_CONTEXT,
@@ -4596,7 +4597,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 
 	private async buildApiRequestPayload(options?: {
 		sanitizeEnvironmentDetails?: boolean
-		state?: ExtensionState
+		state?: ProviderState
 		systemPrompt?: string
 	}): Promise<{
 		provider: ProviderSettings["apiProvider"] | undefined
